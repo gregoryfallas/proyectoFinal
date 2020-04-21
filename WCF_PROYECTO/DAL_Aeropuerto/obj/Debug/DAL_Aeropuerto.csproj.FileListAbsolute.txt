@@ -26,3 +26,9 @@ C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropue
 C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.csproj.CoreCompileInputs.cache
 C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.dll
 C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.pdb
+C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\WCF_PROYECTO\DAL_Aeropuerto\bin\Debug\DAL_Aeropuerto.dll
+C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\WCF_PROYECTO\DAL_Aeropuerto\bin\Debug\DAL_Aeropuerto.pdb
+C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\WCF_PROYECTO\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.csprojAssemblyReference.cache
+C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\WCF_PROYECTO\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.csproj.CoreCompileInputs.cache
+C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\WCF_PROYECTO\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.dll
+C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\WCF_PROYECTO\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.pdb

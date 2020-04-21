@@ -21,8 +21,9 @@ C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\DAL\bin\Debug\Clas
 C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\DAL\obj\Debug\ClassLibrary2.dll
 C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\DAL\obj\Debug\ClassLibrary2.pdb
-C:\Users\soporteapp\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\DAL\bin\Debug\ClassLibrary2.dll
-C:\Users\soporteapp\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\DAL\bin\Debug\ClassLibrary2.pdb
-C:\Users\soporteapp\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-C:\Users\soporteapp\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\DAL\obj\Debug\ClassLibrary2.dll
-C:\Users\soporteapp\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\DAL\obj\Debug\ClassLibrary2.pdb
+C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\Web_Consumo\DAL\bin\Debug\ClassLibrary2.dll
+C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\Web_Consumo\DAL\bin\Debug\ClassLibrary2.pdb
+C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\Web_Consumo\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\Web_Consumo\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\Web_Consumo\DAL\obj\Debug\ClassLibrary2.dll
+C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\Web_Consumo\DAL\obj\Debug\ClassLibrary2.pdb

@@ -7,10 +7,9 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Text;
 
-
 namespace Web_Consumo
 {
-    public partial class Aviones : System.Web.UI.Page
+    public partial class Aviones1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -295,7 +294,6 @@ namespace Web_Consumo
                 }
             }
         }
-
 
     }
 }
