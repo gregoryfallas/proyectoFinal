@@ -41,7 +41,7 @@
           <!-- Menu Administracion vuelos -->
              <li class="nav-header">Administracion de Vuelos</li>
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="Aviones1.aspx" class="nav-link">
               <i class="fas fa-plane"></i>
               <p>
                  Aviones
@@ -49,7 +49,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
+            <a href="Vuelos.aspx" class="nav-link">
               <i class="fas fa-plane-departure"></i>
               <p>
                  Vuelos
@@ -57,7 +57,7 @@
             </a>
           </li>
              <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
+            <a href="tblDestinos.aspx" class="nav-link">
               <i class="fas fa-map-marked-alt"></i>
               <p>
                 Destinos
@@ -65,7 +65,7 @@
             </a>
           </li>
              <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
+            <a href="Paises.aspx" class="nav-link">
               <i class="fas fa-globe-americas"></i>
               <p>
                 Paises
@@ -92,7 +92,7 @@
              <!-- Menu Empleados -->
              <li class="nav-header">Empleados</li>'
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="empleados.aspx" class="nav-link">
               <i class="fas fa-address-card"></i>
               <p>
                 Empleados
@@ -138,7 +138,7 @@
             <!-- Menu desplegable configuracion -->
           <li class="nav-header">Configuracion</li>
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="Aerolinea1.aspx" class="nav-link">
               <i class="fas fa-building"></i>
               <p>
                 Aerolinea
@@ -146,7 +146,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
+            <a href="Estados.aspx" class="nav-link">
               <i class="fas fa-info-circle"></i>
               <p>
                 Estados
