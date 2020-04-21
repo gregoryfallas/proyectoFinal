@@ -71,61 +71,11 @@
   <ItemGroup>
     <Content Include="about.html" />
     <Content Include="Aerolinea.aspx" />
-    <Content Include="Aerolinea1.aspx" />
-    <Content Include="Aviones1.aspx" />
+    <Content Include="Aviones.aspx" />
     <Content Include="bin\BLL.dll" />
     <Content Include="bin\ClassLibrary2.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="bin\roslyn\csc.exe" />
-    <Content Include="bin\roslyn\csi.exe" />
-    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
-    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
-    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
-    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
-    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
-    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
-    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
-    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
-    <Content Include="bin\roslyn\System.AppContext.dll" />
-    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
-    <Content Include="bin\roslyn\System.Console.dll" />
-    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
-    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
-    <Content Include="bin\roslyn\System.IO.Compression.dll" />
-    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
-    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
-    <Content Include="bin\roslyn\System.IO.Pipes.AccessControl.dll" />
-    <Content Include="bin\roslyn\System.IO.Pipes.dll" />
-    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
-    <Content Include="bin\roslyn\System.Security.AccessControl.dll" />
-    <Content Include="bin\roslyn\System.Security.Claims.dll" />
-    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
-    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
-    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
-    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
-    <Content Include="bin\roslyn\System.Security.Principal.Windows.dll" />
-    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
-    <Content Include="bin\roslyn\System.ValueTuple.dll" />
-    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
-    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
-    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
-    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
-    <Content Include="bin\roslyn\vbc.exe" />
-    <Content Include="bin\roslyn\VBCSCompiler.exe" />
-    <Content Include="bin\Web_Consumo.dll" />
-    <Content Include="bin\Web_Consumo.pdb" />
     <Content Include="blog.html" />
-    <Content Include=".gitignore" />
-    <Content Include="bin\roslyn\csc.exe.config" />
-    <Content Include="bin\roslyn\csc.rsp" />
-    <Content Include="bin\roslyn\csi.exe.config" />
-    <Content Include="bin\roslyn\csi.rsp" />
-    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
-    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
-    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
-    <Content Include="bin\roslyn\vbc.exe.config" />
-    <Content Include="bin\roslyn\vbc.rsp" />
-    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <None Include="Connected Services\WCF\BD.wsdl" />
     <None Include="Connected Services\WCF\BD_Aeropuerto.xsd">
       <SubType>Designer</SubType>
@@ -136,8 +86,6 @@
     <None Include="Connected Services\WCF\BD_Aeropuerto2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="CategoriaVuelos.aspx" />
-    <Content Include="Clientes.aspx" />
     <Content Include="Connected Services\WCF\Web_Consumo.WCF.Ins_Mod_Eli_DatosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -170,7 +118,6 @@
     <Content Include="css\jquery-ui.css" />
     <Content Include="css\login.css" />
     <Content Include="css\magnific-popup.css" />
-    <Content Include="css\MyStyles.css" />
     <Content Include="css\nice-select.css" />
     <Content Include="css\owl.carousel.min.css" />
     <Content Include="css\slick.css" />
@@ -192,7 +139,6 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\gijgo-material.svg" />
     <Content Include="fonts\themify.svg" />
-    <Content Include="Formulario web1.aspx" />
     <Content Include="img\about\1.png" />
     <Content Include="img\about\2.png" />
     <Content Include="img\actualizar.png" />
@@ -346,8 +292,6 @@
     <Content Include="js\scrollIt.js" />
     <Content Include="js\slick.min.js" />
     <Content Include="js\Tablas\Aviones.js" />
-    <Content Include="js\Tablas\CategoriasVuelos.js" />
-    <Content Include="js\Tablas\Clientes.js" />
     <Content Include="js\Tablas\Empleados.js" />
     <Content Include="js\Tablas\General.js" />
     <Content Include="js\Tablas\Paises.js" />
@@ -363,12 +307,11 @@
     <Content Include="readme.txt" />
     <Content Include="single-blog.html" />
     <Content Include="tbl_Destinos.aspx" />
-    <Content Include="TiposAviones-Eliminar.aspx" />
+    <Content Include="tbl_TiposEmpleados.aspx" />
+    <Content Include="tbl_Usuarios.aspx" />
     <Content Include="TiposAviones.aspx" />
-    <Content Include="TiposCliente-Eliminar.aspx" />
-    <Content Include="TiposClientes-Eliminar.aspx" />
+    <Content Include="TiposCliente.aspx" />
     <Content Include="TiposClientes.aspx" />
-    <Content Include="TiposEmpleados.aspx" />
     <Content Include="travel doc\css\font-awesome.min.css" />
     <Content Include="travel doc\css\main.css" />
     <Content Include="travel doc\css\MiLabel.css" />
@@ -425,7 +368,6 @@
     <Content Include="travel doc\syntax-highlighter\styles\shThemeMidnight.css" />
     <Content Include="travel doc\syntax-highlighter\styles\shThemeRDark.css" />
     <Content Include="travel_destination.html" />
-    <Content Include="Usuarios.aspx" />
     <Content Include="Vuelos-Eliminar.aspx" />
     <Content Include="Vuelos.aspx" />
     <Content Include="Web.config" />
@@ -438,33 +380,12 @@
     <Compile Include="Aerolinea.aspx.designer.cs">
       <DependentUpon>Aerolinea.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Aerolinea1.aspx.cs">
-      <DependentUpon>Aerolinea1.aspx</DependentUpon>
+    <Compile Include="Aviones.aspx.cs">
+      <DependentUpon>Aviones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Aerolinea1.aspx.designer.cs">
-      <DependentUpon>Aerolinea1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Aviones1.aspx.cs">
-      <DependentUpon>Aviones1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Aviones1.aspx.designer.cs">
-      <DependentUpon>Aviones1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CategoriaVuelos.aspx.cs">
-      <DependentUpon>CategoriaVuelos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CategoriaVuelos.aspx.designer.cs">
-      <DependentUpon>CategoriaVuelos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Clientes.aspx.cs">
-      <DependentUpon>Clientes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Clientes.aspx.designer.cs">
-      <DependentUpon>Clientes.aspx</DependentUpon>
+    <Compile Include="Aviones.aspx.designer.cs">
+      <DependentUpon>Aviones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\WCF\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -503,13 +424,6 @@
     </Compile>
     <Compile Include="Estados.aspx.designer.cs">
       <DependentUpon>Estados.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Formulario web1.aspx.cs">
-      <DependentUpon>Formulario web1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Formulario web1.aspx.designer.cs">
-      <DependentUpon>Formulario web1.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -554,12 +468,19 @@
     <Compile Include="tbl_Destinos.aspx.designer.cs">
       <DependentUpon>tbl_Destinos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TiposAviones-Eliminar.aspx.cs">
-      <DependentUpon>TiposAviones-Eliminar.aspx</DependentUpon>
+    <Compile Include="tbl_TiposEmpleados.aspx.cs">
+      <DependentUpon>tbl_TiposEmpleados.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TiposAviones-Eliminar.aspx.designer.cs">
-      <DependentUpon>TiposAviones-Eliminar.aspx</DependentUpon>
+    <Compile Include="tbl_TiposEmpleados.aspx.designer.cs">
+      <DependentUpon>tbl_TiposEmpleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Usuarios.aspx.cs">
+      <DependentUpon>tbl_Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tbl_Usuarios.aspx.designer.cs">
+      <DependentUpon>tbl_Usuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="TiposAviones.aspx.cs">
       <DependentUpon>TiposAviones.aspx</DependentUpon>
@@ -568,19 +489,12 @@
     <Compile Include="TiposAviones.aspx.designer.cs">
       <DependentUpon>TiposAviones.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TiposCliente-Eliminar.aspx.cs">
-      <DependentUpon>TiposCliente-Eliminar.aspx</DependentUpon>
+    <Compile Include="TiposCliente.aspx.cs">
+      <DependentUpon>TiposCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TiposCliente-Eliminar.aspx.designer.cs">
-      <DependentUpon>TiposCliente-Eliminar.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TiposClientes-Eliminar.aspx.cs">
-      <DependentUpon>TiposClientes-Eliminar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TiposClientes-Eliminar.aspx.designer.cs">
-      <DependentUpon>TiposClientes-Eliminar.aspx</DependentUpon>
+    <Compile Include="TiposCliente.aspx.designer.cs">
+      <DependentUpon>TiposCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="TiposClientes.aspx.cs">
       <DependentUpon>TiposClientes.aspx</DependentUpon>
@@ -588,20 +502,6 @@
     </Compile>
     <Compile Include="TiposClientes.aspx.designer.cs">
       <DependentUpon>TiposClientes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TiposEmpleados.aspx.cs">
-      <DependentUpon>TiposEmpleados.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TiposEmpleados.aspx.designer.cs">
-      <DependentUpon>TiposEmpleados.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Usuarios.aspx.cs">
-      <DependentUpon>Usuarios.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usuarios.aspx.designer.cs">
-      <DependentUpon>Usuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vuelos-Eliminar.aspx.cs">
       <DependentUpon>Vuelos-Eliminar.aspx</DependentUpon>

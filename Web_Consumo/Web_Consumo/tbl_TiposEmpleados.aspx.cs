@@ -1,14 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Text;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Web_Consumo.WCF_BD;
 
-
 namespace Web_Consumo
 {
-    public partial class TiposEmpleados : System.Web.UI.Page
+    public partial class tbl_TiposEmpleados : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -35,11 +37,11 @@ namespace Web_Consumo
                 parametros.Rows.Add("@DescTipo", "1", sDesc);
                 parametros.Rows.Add("@IdEstado", "3", cEstado);
 
-                listarDatos.Ins_Mod_Eli_Datos("SP_Modificar_TiposEmpleados" ,false, parametros, ref sMensajeError);
+                listarDatos.Ins_Mod_Eli_Datos("SP_Modificar_TiposEmpleados", false, parametros, ref sMensajeError);
 
                 if (sMensajeError != string.Empty)
                 {
-                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL MODIFICAR EL ITEM ["+ sDesc + "], ERROR: [" + sMensajeError + "]');", true);
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL MODIFICAR EL ITEM [" + sDesc + "], ERROR: [" + sMensajeError + "]');", true);
                 }
                 else
                 {
@@ -47,7 +49,8 @@ namespace Web_Consumo
                     ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('SE MODIFICO CORRECTAMENTE');", true);
                 }
             }
-            else{
+            else
+            {
                 ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('PARA MODIFICAR UN ITEM SE DEBEN LLENAR TODOS LOS CAMPOS');", true);
             }
         }
@@ -89,14 +92,15 @@ namespace Web_Consumo
         }
 
         protected void btn_Filtrar_Click(object sender, EventArgs e)
-        {            
+        {
             string sFiltrar = inp_Filtrar.Value.ToString();
 
             if (sFiltrar == "")
             {
                 RecargarPagina('L');
             }
-            else{
+            else
+            {
                 RecargarPagina('F');
             }
         }
@@ -117,7 +121,7 @@ namespace Web_Consumo
                 parametros.Rows.Add("@DescTipo", "1", sDesc);
                 parametros.Rows.Add("@IdEstado", "3", cEstado);
 
-                listarDatos.Ins_Mod_Eli_Datos("SP_Insertar_TiposEmpleados",true, parametros, ref sMensajeError);
+                listarDatos.Ins_Mod_Eli_Datos("SP_Insertar_TiposEmpleados", true, parametros, ref sMensajeError);
 
                 if (sMensajeError != string.Empty)
                 {
@@ -127,7 +131,7 @@ namespace Web_Consumo
                 {
                     RecargarPagina('L');
                     ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('SE AGREGO CORRECTAMENTE');", true);
-                }               
+                }
             }
             else
             {
@@ -147,7 +151,7 @@ namespace Web_Consumo
             if (tipo == 'F')
             {
                 parametros = listarDatos.CrearDTParametros();
-                parametros.Rows.Add("@filtro", "1" ,inp_Filtrar.Value.ToString());
+                parametros.Rows.Add("@filtro", "1", inp_Filtrar.Value.ToString());
 
                 ObjListar = listarDatos.ListarFiltrarDatos("SP_Filtrar_TiposEmpleados", parametros, ref sMensajeError);
             }
