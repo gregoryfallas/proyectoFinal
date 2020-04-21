@@ -10,16 +10,7 @@
 namespace Web_Consumo {
     
     
-    public partial class Aviones {
-        
-        /// <summary>
-        /// Control MyForm.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm MyForm;
+    public partial class Aviones1 {
         
         /// <summary>
         /// Control inp_Filtrar.

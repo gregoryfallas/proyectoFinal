@@ -71,7 +71,8 @@
   <ItemGroup>
     <Content Include="about.html" />
     <Content Include="Aerolinea.aspx" />
-    <Content Include="Aviones.aspx" />
+    <Content Include="Aerolinea1.aspx" />
+    <Content Include="Aviones1.aspx" />
     <Content Include="bin\BLL.dll" />
     <Content Include="bin\ClassLibrary2.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
@@ -378,12 +379,19 @@
     <Compile Include="Aerolinea.aspx.designer.cs">
       <DependentUpon>Aerolinea.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Aviones.aspx.cs">
-      <DependentUpon>Aviones.aspx</DependentUpon>
+    <Compile Include="Aerolinea1.aspx.cs">
+      <DependentUpon>Aerolinea1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Aviones.aspx.designer.cs">
-      <DependentUpon>Aviones.aspx</DependentUpon>
+    <Compile Include="Aerolinea1.aspx.designer.cs">
+      <DependentUpon>Aerolinea1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aviones1.aspx.cs">
+      <DependentUpon>Aviones1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aviones1.aspx.designer.cs">
+      <DependentUpon>Aviones1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\WCF\Reference.cs">
       <AutoGen>True</AutoGen>

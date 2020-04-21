@@ -1,10 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Aviones.aspx.cs" Inherits="Web_Consumo.Aviones" %>
-
-<!DOCTYPE html>
-
-<html class="no-js" lang="zxx">
-
-<head>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="Aerolinea1.aspx.cs" Inherits="Web_Consumo.Aerolinea1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Travelo</title>
@@ -32,14 +27,10 @@
     <script type="text/javascript"
             src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.1.min.js"></script>
 
-</head>
 
-<body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-    <form id="MyForm" method="post" runat="server">
-        <!-- header-start -->
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
+
         <header>
             <div class="header-area ">
                 <div id="sticky-header" class="main-header-area">
@@ -107,7 +98,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-9">
-                         <h2 class="tituloH">AVIONES</h2>
+                         <h2 class="tituloH">AEROLINEAS</h2>
                         <div class="row">                           
                             <div class="col-lg-8 col-md-8">
                                  <div class="row">
@@ -138,7 +129,7 @@
 
                         <!-- Modal Header -->
                         <div class="modal-header">
-                            <h4 class="modal-title">TIPOS AVIONES</h4>
+                            <h4 class="modal-title">TIPOS AEROLINEAS</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
 
@@ -146,30 +137,13 @@
                         <div class="modal-body">
                             <div>
                                 <div class="input_field">
-                                    <h4>ID AVION</h4>
-                                    <input runat="server" id="inp_IDAVION" class="form-control" type="text" placeholder="ID AVION">
+                                    <h4>ID TIPO AEROLINEA</h4>
+                                    <input runat="server" id="inp_IDTIPOEMP" class="form-control style_disabled" type="text" placeholder="ID TIPO EMPLEADO">
                                 </div>
                                 <br />
                                 <div class="input_field">
-                                    <h4>NOMBRE DEL AVION</h4>
-                                    <input runat="server" id="inp_NOMAVION" class="form-control" type="text" placeholder="NOMBRE O MODELO AVION">
-                                </div>
-                                <br />
-                                <div class="input_field">
-                                    <h4>DESCRIPCION DEL AVION</h4>
-                                    <input runat="server" id="inp_DESCAVION" class="form-control" type="text" placeholder="DESCRIPCIOIN DEL AVION">
-                                </div>
-                                <br />
-                                <div class="input_field">
-                                    <h4>ID AEROLINEA</h4>
-                                    <select runat="server" id="slc_IDAerolinea" class="form-control" >
-                                    </select>
-                                </div>
-                                <br />
-                                <div class="input_field">
-                                    <h4>TIPO DE AVION</h4>
-                                       <select runat="server" id="slc_IDtpAVION" class="form-control" >
-                                       </select>
+                                    <h4>DESCRIPCION</h4>
+                                    <input runat="server" id="inp_DESCRIP" class="form-control" type="text" placeholder="DESCRIPCION">
                                 </div>
                                 <br />
                                 <div class="input_field">
@@ -242,34 +216,10 @@
                         <div class="modal-body">
                             <div>
                                 <div class="input_field">
-                                    <h4>ID AVION</h4>
-                                    <input runat="server" id="inp_IDAVION_AG" class="form-control" type="text" placeholder="ID AVION">
+                                    <h4>DESCRIPCION</h4>
+                                    <input runat="server" id="inp_DESCRIP_AG" class="form-control" type="text" placeholder="DESCRIPCION">
                                 </div>
                                 <br />
-                                <div class="input_field">
-                                    <h4>NOMBRE AVION</h4>
-                                    <input runat="server" id="inp_NOMAVION_AG" class="form-control" type="text" placeholder="NOMBRE AVION">
-                                </div>
-                                <br />
-                                <div class="input_field">
-                                    <h4>DESCRIPCION DEL AVION</h4>
-                                    <input runat="server" id="inp_DESCAVION_AG" class="form-control" type="text" placeholder="DESCRIPCION DEL AVION">
-                                </div>
-                                <br />
-                                <div class="input_field">
-                                    <h4>ID AEROLINEA</h4>
-                                    <select runat="server" id="slc_IDAerolinea_AG" class="form-control" >
-                                        <option value="0" selected disabled>SELECCIONAR</option>
-                                    </select>
-                                </div>
-                                 <br />
-                                  <div class="input_field">
-                                    <h4>ID TIPO AVION</h4>
-                                    <select runat="server" id="slc_IDtpAVION_AG" class="form-control" >
-                                        <option value="0" selected disabled>SELECCIONAR</option>
-                                    </select>
-                                </div>
-                                 <br />
                                 <div class="input_field">
                                     <h4>ID ESTADO</h4>
                                     <select runat="server" id="slc_IDESTAD_AG" class="form-control" >
@@ -321,7 +271,7 @@
             </div>
         </div>
         <!-- link that opens popup -->
-    </form>
+  
     <!--
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
@@ -347,7 +297,7 @@
     <script src="js/plugins.js"></script>
     <script src="js/gijgo.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <script src="js/Tablas/Aviones.js"></script>
+    <script src="js/Tablas/TiposEmpleados.js"></script>
 
     <!--contact js-->
     <script src="js/contact.js"></script>
@@ -368,6 +318,6 @@
             }
         });
     </script>
-</body>
 
-</html>
+
+</asp:Content>
