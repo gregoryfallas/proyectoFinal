@@ -16,7 +16,7 @@
                 <asp:Label Text="Usuario" CssClass="lblemail" runat="server" />
                 <asp:TextBox ID="txt_Username" runat="server" CssClass="txtemail" placeholder="Nombre de Usuario"/>
                 <asp:Label Text="Contraseña" CssClass="lblpass" runat="server" />
-                <asp:TextBox ID="txt_Password" runat="server" CssClass="txtpass" placeholder="Contraseña"/>
+                <asp:TextBox ID="txt_Password" runat="server" TextMode="Password" CssClass="txtpass" placeholder="Contraseña"/>
                 <asp:Button ID="btn_Login" Text="Login" runat="server" CssClass="btnsubmit" OnClick="btn_Login_Click"/>
             </form>
         </div>

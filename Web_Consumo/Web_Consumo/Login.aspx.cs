@@ -48,7 +48,7 @@ namespace Web_Consumo
                     ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
                     obj_Usuario.sUserName = dt.Rows[0]["Username"].ToString();
                     obj_Usuario.iTipoUsuario = Convert.ToInt32(dt.Rows[0]["IdTipoEmpleado"]);
-                    Response.Redirect("CategoriaVuelos.aspx");
+                    Response.Redirect("tbl_Usuarios.aspx");
                 }
             }
             else
