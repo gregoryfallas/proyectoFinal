@@ -122,7 +122,7 @@
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    &nbsp;&nbsp;&nbsp;
-                   <asp:TextBox ID="txt_ID_Vuelos" runat="server" Width="180px" style="text-align:center" BorderStyle="Solid" CssClass="range" MaxLength="4" OnTextChanged="txt_ID_Vuelos_TextChanged"></asp:TextBox>
+                   <asp:TextBox ID="txt_ID_Vuelos" runat="server" Width="180px" style="text-align:center" BorderStyle="Solid" CssClass="range" MaxLength="4" ></asp:TextBox>
                    <br />
                    <br />
                    <asp:Label ID="lb_ID_Destinos" runat="server" Text="ID Destinos :" Font-Bold="true"></asp:Label>&nbsp;&nbsp;&nbsp;
@@ -152,7 +152,7 @@
                    </asp:Calendar>
                    <br />
                    <asp:Label ID="lb_FechaHoraSalida" runat="server" Text="Fecha-Hora de Salida :" Font-Bold="true"></asp:Label>&nbsp;&nbsp;&nbsp;
-                   &nbsp;&nbsp;&nbsp;<asp:TextBox ID="txt_FechaHoraSalida" runat="server" Width="180px" style="text-align:center" BorderStyle="Solid" CssClass="datetimepicker"></asp:TextBox>&nbsp;&nbsp;&nbsp;<asp:ImageButton ID="ImageButton1" runat="server" Height="28px" ImageUrl="~/img/Calendario1.png" OnClick="ImageButton1_Click" Width="36px" />
+                   &nbsp;&nbsp;&nbsp;<asp:TextBox ID="txt_FechaHoraSalida" TextMode="Date" runat="server" Width="180px" style="text-align:center" BorderStyle="Solid" CssClass="datetimepicker"></asp:TextBox>&nbsp;&nbsp;&nbsp;<asp:ImageButton ID="ImageButton1" runat="server" Height="28px" ImageUrl="~/img/Calendario1.png" OnClick="ImageButton1_Click" Width="36px" />
                    &nbsp;&nbsp;
                    <br />
                    <br />
@@ -166,8 +166,8 @@
                        <TodayDayStyle BackColor="#FFCC66" ForeColor="White" />
                    </asp:Calendar>
                    <asp:Label ID="lb_FechaHoraLlegada" runat="server" Text="Fecha-Hora de Llegada :" Font-Bold="true"></asp:Label>&nbsp;&nbsp;&nbsp;
-                   <asp:TextBox ID="txt_FechaHoraLlegada" runat="server" Width="180px" style="text-align:center" BorderStyle="Solid" CssClass="datepicker"></asp:TextBox>
-                   <asp:ImageButton ID="ImageButton2" runat="server" Height="28px" ImageUrl="~/img/Calendario1.png" OnClick="ImageButton2_Click" Width="36px" />
+                   <asp:TextBox ID="txt_FechaHoraLlegada" TextMode="Date" runat="server" Width="180px" style="text-align:center" BorderStyle="Solid" CssClass="datetimepicker"></asp:TextBox>
+                   <asp:ImageButton ID="ImageButton2" runat="server" Height="28px" ImageUrl="~/img/Calendario1.png" Width="36px" OnClick="ImageButton2_Click" />
                    <br />
                    <br />
                    <asp:Label ID="lb_ID_Estado" runat="server" Text="ID Estado :" Font-Bold="true"></asp:Label>&nbsp;&nbsp;&nbsp;

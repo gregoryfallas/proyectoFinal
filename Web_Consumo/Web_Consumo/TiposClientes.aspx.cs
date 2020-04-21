@@ -1,14 +1,15 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
+using Web_Consumo.WCF_BD;
 
 namespace Web_Consumo
 {
-    public partial class TiposClientes : System.Web.UI.Page
+    public partial class TiposClientes1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,7 +21,7 @@ namespace Web_Consumo
             #region Variables locales
             DataTable dtTabla = new DataTable();
             DataTable dtParametros = new DataTable();
-            WCF.BDClient Obj_WCF_BD = new WCF.BDClient();
+            BDClient Obj_WCF_BD = new BDClient();
             string sNomSP = string.Empty;
             string sError = string.Empty;
             #endregion
@@ -45,12 +46,13 @@ namespace Web_Consumo
 
         }
 
+
         protected void btnAgr_Click(object sender, EventArgs e)
         {
             #region Variables locales
             DataTable dtTabla = new DataTable();
             DataTable dtParametros = new DataTable();
-            WCF.BDClient Obj_WCF_BD = new WCF.BDClient();
+            BDClient Obj_WCF_BD = new BDClient();
             string sNomSP = string.Empty;
             string sError = string.Empty;
             #endregion
@@ -58,7 +60,7 @@ namespace Web_Consumo
             dtParametros = Obj_WCF_BD.CrearDTParametros();
             dtParametros.Rows.Add("@TipoCliente", "1", txtTipo.Text.Trim());
             dtParametros.Rows.Add("@Descripcion", "1", txtDesc.Text.Trim());
-            dtParametros.Rows.Add("@IdEstado", "5", txtEstado.Text.Trim());
+            dtParametros.Rows.Add("@IdEstado", "3", txtEstado.Text.Trim());
             sNomSP = "dbo.SP_Insertar_Tiposclientes";
 
             Obj_WCF_BD.Ins_Mod_Eli_Datos(sNomSP, true, dtParametros, ref sError);
@@ -71,6 +73,8 @@ namespace Web_Consumo
             txtEstado.Text = string.Empty;
 
             CargarDatos();
+
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "msgAlerta", "alert('El Tipo de Cliente ha sido agregado exitosamente');", true);
         }
 
         protected void btnMod_Click(object sender, EventArgs e)
@@ -78,7 +82,7 @@ namespace Web_Consumo
             #region Variables locales
             DataTable dtTabla = new DataTable();
             DataTable dtParametros = new DataTable();
-            WCF.BDClient Obj_WCF_BD = new WCF.BDClient();
+            BDClient Obj_WCF_BD = new BDClient();
             string sNomSP = string.Empty;
             string sError = string.Empty;
             #endregion
@@ -87,7 +91,7 @@ namespace Web_Consumo
             dtParametros.Rows.Add("@IdTipoCliente", "2", txtID.Text.Trim());
             dtParametros.Rows.Add("@TipoCliente", "1", txtTipo.Text.Trim());
             dtParametros.Rows.Add("@Descripcion", "1", txtDesc.Text.Trim());
-            dtParametros.Rows.Add("@IdEstado", "5", txtEstado.Text.Trim());
+            dtParametros.Rows.Add("@IdEstado", "3", txtEstado.Text.Trim());
             sNomSP = "dbo.SP_Modificar_TiposClientes";
 
             Obj_WCF_BD.Ins_Mod_Eli_Datos(sNomSP, false, dtParametros, ref sError);
@@ -100,6 +104,8 @@ namespace Web_Consumo
             txtEstado.Text = string.Empty;
 
             CargarDatos();
+
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "msgAlerta", "alert('El Tipo de Cliente ha sido modificado');", true);
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
@@ -114,12 +120,12 @@ namespace Web_Consumo
         protected void bntEliminar_Click(object sender, EventArgs e)
         {
             DataTable dtParametros = new DataTable();
-            WCF.BDClient Obj_WCF_BD = new WCF.BDClient();
+            BDClient Obj_WCF_BD = new BDClient();
             string sNombSP = string.Empty;
             string sError = string.Empty;
 
             dtParametros = Obj_WCF_BD.CrearDTParametros();
-            dtParametros.Rows.Add("@IdTipoCliente", "1", txtFiltro.Text.Trim());
+            dtParametros.Rows.Add("@IdTipoCliente", "2", txtFiltro.Text.Trim());
             sNombSP = "dbo.SP_Borrar_TiposClientes";
 
             Obj_WCF_BD.Ins_Mod_Eli_Datos(sNombSP, false, dtParametros, ref sError);
@@ -131,14 +137,16 @@ namespace Web_Consumo
             txtTipo.Text = string.Empty;
             txtDesc.Text = string.Empty;
             txtEstado.Text = string.Empty;
+
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "msgAlerta", "alert('El Tipo de Cliente ha sido eliminado de forma correcta');", true);
         }
-        
+
         protected void btnCargar_Click(object sender, EventArgs e)
         {
             #region Variables locales
             DataTable dtTabla = new DataTable();
             DataTable dtParametros = new DataTable();
-            WCF.BDClient Obj_WCF_BD = new WCF.BDClient();
+            BDClient Obj_WCF_BD = new BDClient();
             string sNomSP = string.Empty;
             string sError = string.Empty;
             #endregion

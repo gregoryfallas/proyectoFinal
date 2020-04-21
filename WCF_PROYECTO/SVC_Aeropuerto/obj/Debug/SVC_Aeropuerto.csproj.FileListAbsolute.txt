@@ -76,3 +76,16 @@ C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SVC_Aeropue
 C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SVC_Aeropuerto\obj\Debug\SVC_Aeropuerto.csproj.CopyComplete
 C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SVC_Aeropuerto\obj\Debug\SVC_Aeropuerto.dll
 C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SVC_Aeropuerto\obj\Debug\SVC_Aeropuerto.pdb
+D:\progra-4v2\proyectoFinal\WCF_PROYECTO\SVC_Aeropuerto\bin\Debug\SVC_Aeropuerto.dll.config
+D:\progra-4v2\proyectoFinal\WCF_PROYECTO\SVC_Aeropuerto\bin\Debug\SVC_Aeropuerto.dll
+D:\progra-4v2\proyectoFinal\WCF_PROYECTO\SVC_Aeropuerto\bin\Debug\SVC_Aeropuerto.pdb
+D:\progra-4v2\proyectoFinal\WCF_PROYECTO\SVC_Aeropuerto\bin\Debug\BLL_Aeropuerto.dll
+D:\progra-4v2\proyectoFinal\WCF_PROYECTO\SVC_Aeropuerto\bin\Debug\DAL_Aeropuerto.dll
+D:\progra-4v2\proyectoFinal\WCF_PROYECTO\SVC_Aeropuerto\bin\Debug\BLL_Aeropuerto.pdb
+D:\progra-4v2\proyectoFinal\WCF_PROYECTO\SVC_Aeropuerto\bin\Debug\BLL_Aeropuerto.dll.config
+D:\progra-4v2\proyectoFinal\WCF_PROYECTO\SVC_Aeropuerto\bin\Debug\DAL_Aeropuerto.pdb
+D:\progra-4v2\proyectoFinal\WCF_PROYECTO\SVC_Aeropuerto\obj\Debug\SVC_Aeropuerto.csprojAssemblyReference.cache
+D:\progra-4v2\proyectoFinal\WCF_PROYECTO\SVC_Aeropuerto\obj\Debug\SVC_Aeropuerto.csproj.CoreCompileInputs.cache
+D:\progra-4v2\proyectoFinal\WCF_PROYECTO\SVC_Aeropuerto\obj\Debug\SVC_Aeropuerto.csproj.CopyComplete
+D:\progra-4v2\proyectoFinal\WCF_PROYECTO\SVC_Aeropuerto\obj\Debug\SVC_Aeropuerto.dll
+D:\progra-4v2\proyectoFinal\WCF_PROYECTO\SVC_Aeropuerto\obj\Debug\SVC_Aeropuerto.pdb
