@@ -13,18 +13,6 @@ namespace Web_Consumo
         protected void Page_Load(object sender, EventArgs e)
         {
             CargarDatos();
-            //validadacion del calendario salida
-            if (!IsPostBack)
-            {
-                Calendar1.Visible = false;
-          
-            }
-
-            if (!IsPostBack)
-            {
-                Calendar2.Visible = false;
-
-            }
         }
 
         private void CargarDatos()
@@ -81,50 +69,45 @@ namespace Web_Consumo
 
         protected void btn_Insertar_Click(object sender, EventArgs e)
         {
+            //
             #region VARIABLES LOCALES
-            if (txt_ID_Vuelos != null && txt_ID_Destinos != null && txt_ID_Aerolinea != null && txt_ID_Avion != null && txt_FechaHoraSalida != null && txt_FechaHoraLlegada != null && txt_ID_Estado != null)
-            {
-                DataTable dtParametros = new DataTable();
-                WCF_BD.BDClient Obj_WCF_BD = new WCF_BD.BDClient();
 
-                string sNombSP = string.Empty;
-                string sMsjError = string.Empty;
+            DataTable dtParametros = new DataTable();
+            WCF_BD.BDClient Obj_WCF_BD = new WCF_BD.BDClient();
 
-                #endregion
-           
-                dtParametros = Obj_WCF_BD.CrearDTParametros();
-                dtParametros.Rows.Add("@IdVuelo", "1", txt_ID_Vuelos.Text.Trim());
-                dtParametros.Rows.Add("@IdDestino", "1", txt_ID_Destinos.Text.Trim());
-                dtParametros.Rows.Add("@IdAerolinea", "2", txt_ID_Aerolinea.Text.Trim());
-                dtParametros.Rows.Add("@IdAvion", "1", txt_ID_Avion.Text.Trim());
-                dtParametros.Rows.Add("@FechaHoraSalida", "5", txt_FechaHoraSalida.Text = DateTime.Now.ToLongTimeString());//String.Format("DD/MM/YY hh:mm:ss"));//Text.Trim()); //= ((DateTime).Rows[2]["FechaHoraSalida"]).ToString("dd/MM/yyyy H:MM:ss").ToString());
-                dtParametros.Rows.Add("@FechaHoraLlegada", "5", txt_FechaHoraLlegada.Text.Trim()); //= ((DateTime)dtParametros.Rows[2]["FechaHoraLlegada"]).ToString("dd/MM/yyyy H:MM:ss").ToString());
-                dtParametros.Rows.Add("@IdEstado", "3", txt_ID_Estado.Text.Trim());
-                sNombSP = "SP_Insertar_Vuelos";
+            string sNombSP = string.Empty;
+            string sMsjError = string.Empty;
 
-                Obj_WCF_BD.Ins_Mod_Eli_Datos(sNombSP, false, dtParametros, ref sMsjError);
+            #endregion
 
-                //ESTO MUESTRA UN ERROR EN PANTALLA AL USUARIO
-                if (sMsjError != string.Empty)
-                {   //DEFINE EL MENSAJE A MOSTRAR
-                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Se presento un error a la hora de insertar el estado.');" + sMsjError, true);
-                }
+            dtParametros = Obj_WCF_BD.CrearDTParametros();
+            dtParametros.Rows.Add("@IdVuelo", "1", txt_ID_Vuelos.Text.Trim());
+            dtParametros.Rows.Add("@IdDestino", "1", txt_ID_Destinos.Text.Trim());
+            dtParametros.Rows.Add("@IdAerolinea", "2", txt_ID_Aerolinea.Text.Trim());
+            dtParametros.Rows.Add("@IdAvion", "1", txt_ID_Avion.Text.Trim());
+            dtParametros.Rows.Add("@FechaHoraSalida", "5", txt_FechaHoraSalida.Text.Trim());
+            dtParametros.Rows.Add("FechaHoraLlegada", "5", txt_FechaHoraLlegada.Text.Trim());
+            dtParametros.Rows.Add("@IdEstado", "3", txt_ID_Estado.Text.Trim());
+            sNombSP = "SP_Insertar_Vuelos";
 
-                txt_filtroVuelos.Text = string.Empty;
-                txt_ID_Vuelos.Text = string.Empty;
-                txt_ID_Destinos.Text = string.Empty;
-                txt_ID_Aerolinea.Text = string.Empty;
-                txt_ID_Avion.Text = string.Empty;
-                txt_FechaHoraSalida.Text = string.Empty;
-                txt_FechaHoraLlegada.Text = string.Empty;
-                txt_ID_Estado.Text = string.Empty;
+            Obj_WCF_BD.Ins_Mod_Eli_Datos(sNombSP, false, dtParametros, ref sMsjError);
 
-                CargarDatos();
+            //ESTO MUESTRA UN ERROR EN PANTALLA AL USUARIO
+            if (sMsjError != string.Empty)
+            {   //DEFINE EL MENSAJE A MOSTRAR
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Se presento un error a la hora de insertar el estado.');" + sMsjError, true);
             }
-            else
-            {
-                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('No pueden quedar campos vacios');", true);
-            }
+
+            txt_filtroVuelos.Text = string.Empty;
+            txt_ID_Vuelos.Text = string.Empty;
+            txt_ID_Destinos.Text = string.Empty;
+            txt_ID_Aerolinea.Text = string.Empty;
+            txt_ID_Avion.Text = string.Empty;
+            txt_FechaHoraSalida.Text = string.Empty;
+            txt_FechaHoraLlegada.Text = string.Empty;
+            txt_ID_Estado.Text = string.Empty;
+
+            CargarDatos();
         }
 
         protected void btn_Modificar_Click(object sender, EventArgs e)
@@ -186,7 +169,7 @@ namespace Web_Consumo
 
             #endregion
             ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Para eliminar solamente ingrese el ID del Vuelo.');", true);
-            txt_filtroVuelos.Visible=false;
+            txt_filtroVuelos.Visible = false;
             txt_ID_Vuelos.Text = string.Empty;
             txt_ID_Destinos.Visible = false;
             txt_ID_Aerolinea.Visible = false;
@@ -214,49 +197,5 @@ namespace Web_Consumo
         {
 
         }
-
-        protected void txt_ID_Vuelos_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
-        {
-            if(Calendar1.Visible)
-            {
-                Calendar1.Visible = false;
-            }
-            else
-            {
-                Calendar1.Visible = true;
-            }
-        }
-
-        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
-        {
-            if (Calendar2.Visible)
-            {
-                Calendar2.Visible = false;
-            }
-            else
-            {
-                Calendar2.Visible = true;
-            }
-        }
-
-        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
-        {
-            txt_FechaHoraSalida.Text = Calendar1.SelectedDate.ToLongDateString();
-            Calendar1.Visible = false;
-            
-        }
-
-        protected void Calendar2_SelectionChanged1(object sender, EventArgs e)
-        {
-            txt_FechaHoraLlegada.Text = Calendar2.SelectedDate.ToLongDateString();
-            Calendar2.Visible = false;
-
-        }
-
     }
 }
