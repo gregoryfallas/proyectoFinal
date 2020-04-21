@@ -5,10 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using Web_Consumo.WCF_BD;
 
 namespace Web_Consumo
 {
-    public partial class TiposAviones1 : System.Web.UI.Page
+    public partial class TiposAviones : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -45,7 +46,6 @@ namespace Web_Consumo
 
         }
 
-
         protected void btnAgr_Click(object sender, EventArgs e)
         {
             #region Variables locales
@@ -62,11 +62,11 @@ namespace Web_Consumo
             dtParametros.Rows.Add("@DescTipoAvion", "1", txtDesc.Text.Trim());
             dtParametros.Rows.Add("@CapacidadPasajeros", "2", txtPasaj.Text.Trim());
             dtParametros.Rows.Add("@CapacidadPeso", "4", TxtPeso.Text.Trim());
-            dtParametros.Rows.Add("@IdEstado", "3", txtEstado.Text.Trim());
+            dtParametros.Rows.Add("@IdEstado", "5", txtEstado.Text.Trim());
             sNomSP = "dbo.SP_Insertar_TiposAviones";
 
             Obj_WCF_BD.Ins_Mod_Eli_Datos(sNomSP, false, dtParametros, ref sError);
-
+            
             txtFiltro.Text = string.Empty;
 
             txtID.Text = string.Empty;
@@ -77,8 +77,6 @@ namespace Web_Consumo
             txtEstado.Text = string.Empty;
 
             CargarDatos();
-
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "msgAlerta", "alert('El Tipo de Avion fue agregado correctamente');", true);
 
         }
 
@@ -98,7 +96,7 @@ namespace Web_Consumo
             dtParametros.Rows.Add("@DescTipoAvion", "1", txtDesc.Text.Trim());
             dtParametros.Rows.Add("@CapacidadPasajeros", "2", txtPasaj.Text.Trim());
             dtParametros.Rows.Add("@CapacidadPeso", "4", TxtPeso.Text.Trim());
-            dtParametros.Rows.Add("@IdEstado", "3", txtEstado.Text.Trim());
+            dtParametros.Rows.Add("@IdEstado", "5", txtEstado.Text.Trim());
             sNomSP = "dbo.SP_Modificar_TiposAviones";
 
             Obj_WCF_BD.Ins_Mod_Eli_Datos(sNomSP, false, dtParametros, ref sError);
@@ -113,8 +111,6 @@ namespace Web_Consumo
             txtEstado.Text = string.Empty;
 
             CargarDatos();
-
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "msgAlerta", "alert('El Tipo de Avion ha sido modificado');", true);
 
         }
 
@@ -151,9 +147,6 @@ namespace Web_Consumo
             txtPasaj.Text = string.Empty;
             TxtPeso.Text = string.Empty;
             txtEstado.Text = string.Empty;
-
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "msgAlerta", "alert('El Tipo de Avion se eliminó e forma correcta');", true);
-
         }
 
         protected void btnCargar_Click(object sender, EventArgs e)
@@ -202,7 +195,7 @@ namespace Web_Consumo
                 TxtPeso.Text = string.Empty;
                 txtEstado.Text = string.Empty;
             }
-
+                        
         }
     }
 }

@@ -28,8 +28,13 @@
 }
 
 .myactionButton{
-    width:100px;
+    width:92px;
+    font-size:small;
+    padding-left:1px;
+    padding-right:1px;
 }
 
 .myactionButton_lg {
-    width: 205px;
+    width: 190px;
+    font-size:small;
+}

@@ -144,7 +144,7 @@ namespace BLL_Aeropuerto.DB
             {
                 //Crea la conexión
                 //Obtiene el string de configuration desde el XML AppConfig
-                Obj_DB_DAL.sCadenaCNX = ConfigurationManager.ConnectionStrings["Sql_aut"].ToString();
+                Obj_DB_DAL.sCadenaCNX = ConfigurationManager.ConnectionStrings["Win_Aut"].ToString();
                 //Convierte el string a un Objeto adecuado para el motor de la base de datos
                 Obj_DB_DAL.Obj_SQL_CNX = new SqlConnection(Obj_DB_DAL.sCadenaCNX);
 

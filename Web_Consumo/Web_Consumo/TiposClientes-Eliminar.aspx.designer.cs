@@ -10,7 +10,16 @@
 namespace Web_Consumo {
     
     
-    public partial class TiposAviones1 {
+    public partial class TiposClientes {
+        
+        /// <summary>
+        /// frmData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm frmData;
         
         /// <summary>
         /// divTitle control.
@@ -94,22 +103,22 @@ namespace Web_Consumo {
         protected global::System.Web.UI.WebControls.TextBox txtID;
         
         /// <summary>
-        /// lblNombre control.
+        /// lblTipo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombre;
+        protected global::System.Web.UI.WebControls.Label lblTipo;
         
         /// <summary>
-        /// txtNombre control.
+        /// txtTipo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.TextBox txtTipo;
         
         /// <summary>
         /// lblDesc control.
@@ -128,42 +137,6 @@ namespace Web_Consumo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDesc;
-        
-        /// <summary>
-        /// lblPasaj control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPasaj;
-        
-        /// <summary>
-        /// txtPasaj control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPasaj;
-        
-        /// <summary>
-        /// lblPeso control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPeso;
-        
-        /// <summary>
-        /// TxtPeso control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtPeso;
         
         /// <summary>
         /// lblEstado control.
@@ -202,13 +175,13 @@ namespace Web_Consumo {
         protected global::System.Web.UI.WebControls.Button btnMod;
         
         /// <summary>
-        /// dgvTiposAviones control.
+        /// dgvTiposClientes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dgvTiposAviones;
+        protected global::System.Web.UI.WebControls.GridView dgvTiposClientes;
         
         /// <summary>
         /// div1 control.

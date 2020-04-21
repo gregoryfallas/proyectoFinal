@@ -81,7 +81,7 @@
             </a>
           </li>
              <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
+            <a href="TiposAviones.aspx" class="nav-link">
               <i class="fas fa-fighter-jet"></i>
               <p>
                 Tipos de Aviones
@@ -127,7 +127,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
+            <a href="TiposClientes.aspx" class="nav-link">
               <i class="fas fa-users-cog"></i>
               <p>
                 Tipos de Cliente
