@@ -113,7 +113,7 @@ namespace Web_Consumo
 
         protected void btn_Agregar_Click(object sender, EventArgs e)
         {
-            ////string sId = inp_Idcliente_AG.Value.ToString();
+            string sId = inp_Idcliente_AG.Value.ToString();
             string sCed = inp_Cedula_AG.Value.ToString();
             string sNom = inp_Nombre_AG.Value.ToString();
             string sApe = inp_Apellidos_AG.Value.ToString();
@@ -121,7 +121,7 @@ namespace Web_Consumo
             int iTip = Convert.ToInt32(slc_IdTipoCliente_AG.Value.ToString());
             char cEstado = Convert.ToChar(slc_Idestado_AG.Value.ToString());
 
-            if (sCed != "" && sNom != "" && sApe != "" && sTel != "" && iTip != '0' && cEstado != '0')
+            if (sId != "" && sCed != "" && sNom != "" && sApe != "" && sTel != "" && iTip != '0' && cEstado != '0')
             {
                 WCF_BD.BDClient listarDatos = new WCF_BD.BDClient();
                 String sMensajeError = "";
@@ -129,7 +129,7 @@ namespace Web_Consumo
                 DataTable ObjListar = new DataTable();
 
                 parametros = listarDatos.CrearDTParametros();
-                //parametros.Rows.Add("@IdCliente", "1", sId);
+                parametros.Rows.Add("@IdCliente", "1", sId);
                 parametros.Rows.Add("@Cedula", "1", sCed);
                 parametros.Rows.Add("@Nombre", "1", sNom);
                 parametros.Rows.Add("@Apellidos", "1", sApe);
@@ -139,7 +139,7 @@ namespace Web_Consumo
 
                 listarDatos.Ins_Mod_Eli_Datos("SP_Insertar_Clientes", true, parametros, ref sMensajeError);
 
-                if (sMensajeError != string.Empty)
+                if (sMensajeError == string.Empty)
                 {
                     RecargarPagina('L');
                     ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL AGREGAR EL NUEVO CLIENTE, ERROR: [" + sMensajeError + "]');", true);

@@ -6,7 +6,7 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using Web_Consumo.WCF;
 namespace Web_Consumo
 {
     public partial class CategoriaVuelos : System.Web.UI.Page
