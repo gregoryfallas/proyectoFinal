@@ -11,7 +11,7 @@ namespace Web_Consumo
 {
 
 
-    public partial class Index
+    public partial class About
     {
     }
 }

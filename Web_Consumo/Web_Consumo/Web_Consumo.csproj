@@ -69,13 +69,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="about.html" />
+    <Content Include="About.aspx" />
     <Content Include="Aerolinea.aspx" />
     <Content Include="Aviones.aspx" />
     <Content Include="bin\BLL.dll" />
     <Content Include="bin\ClassLibrary2.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="blog.html" />
+    <Content Include="css\Dashboard.css" />
+    <Content Include="WebForm1.aspx" />
     <None Include="Connected Services\WCF\BD.wsdl" />
     <None Include="Connected Services\WCF\BD_Aeropuerto.xsd">
       <SubType>Designer</SubType>
@@ -104,7 +105,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="contact.html" />
     <Content Include="contact_process.php" />
     <Content Include="css\adminlte.min.css" />
     <Content Include="css\all.min.css" />
@@ -262,8 +262,7 @@
     <Content Include="img\works\2.png" />
     <Content Include="img\works\3.png" />
     <Content Include="img\works\4.png" />
-    <Content Include="index.aspx" />
-    <Content Include="index.html" />
+    <Content Include="Index.aspx" />
     <Content Include="js\ajax-form.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\contact.js" />
@@ -370,6 +369,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Aerolinea.aspx.cs">
       <DependentUpon>Aerolinea.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -422,12 +428,12 @@
     <Compile Include="Estados.aspx.designer.cs">
       <DependentUpon>Estados.aspx</DependentUpon>
     </Compile>
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -513,6 +519,13 @@
     </Compile>
     <Compile Include="Vuelos.aspx.designer.cs">
       <DependentUpon>Vuelos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

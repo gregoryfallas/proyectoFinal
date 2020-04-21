@@ -5,6 +5,7 @@
 <html>
 <head runat="server">
     <title></title>
+    <link href="css/Dashboard.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -28,9 +29,7 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li><a class="active" href="index.aspx">Inicio</a></li>
-                                            <li><a href="about.html">Sobre nosotros</a></li>
-                                            <li><a class="" href="travel_destination.html">Destinos</a></li>
-                                            <li><a href="contact.html">Contacto</a></li>
+                                            <li><a href="about.aspx">Sobre nosotros</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -50,9 +49,8 @@
                                 </div>
                             </div>
                             <div class="seach_icon">
-                                <a data-toggle="modal" data-target="#exampleModalCenter" href="#">
-                                    <i class="fa fa-search"></i>
-                                </a>
+                                <a href="Login.aspx"/>
+                                    <i class="fa fa-user" style="font-size:30px;"></i>
                             </div>
                             <div class="col-12">
                                 <div class="mobile_menu d-block d-lg-none"></div>

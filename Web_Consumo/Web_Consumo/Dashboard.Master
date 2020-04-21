@@ -12,6 +12,7 @@
       <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="css/all.min.css"/>
   <link rel="stylesheet" href="css/style.css"/>
+  <link href="css/Dashboard.css" rel="stylesheet" />
   <!-- IonIcons -->
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
   <!-- Theme style -->
@@ -170,12 +171,10 @@
 <script src="js/AdminPanel/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE -->
 <script src="js/AdminPanel/adminlte.js"></script>
-     <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="Body" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-    </form>
 </body>
   
   </html>
