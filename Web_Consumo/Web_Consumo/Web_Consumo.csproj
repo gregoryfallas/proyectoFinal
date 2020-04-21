@@ -69,12 +69,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="about.html" />
     <Content Include="Aerolinea.aspx" />
     <Content Include="Aviones.aspx" />
     <Content Include="bin\BLL.dll" />
     <Content Include="bin\ClassLibrary2.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Web_Consumo.dll" />
+    <Content Include="bin\Web_Consumo.pdb" />
     <Content Include="blog.html" />
     <None Include="Connected Services\WCF\BD.wsdl" />
     <None Include="Connected Services\WCF\BD_Aeropuerto.xsd">
@@ -308,6 +311,7 @@
     <Content Include="TiposCliente.aspx" />
     <Content Include="TiposClientes.aspx" />
     <Content Include="TiposEmpleados.aspx" />
+    <Content Include="tPaises.aspx" />
     <Content Include="travel doc\css\font-awesome.min.css" />
     <Content Include="travel doc\css\main.css" />
     <Content Include="travel doc\css\MiLabel.css" />
@@ -492,6 +496,13 @@
     </Compile>
     <Compile Include="TiposEmpleados.aspx.designer.cs">
       <DependentUpon>TiposEmpleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tPaises.aspx.cs">
+      <DependentUpon>tPaises.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tPaises.aspx.designer.cs">
+      <DependentUpon>tPaises.aspx</DependentUpon>
     </Compile>
     <Compile Include="Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>

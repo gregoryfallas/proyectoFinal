@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Text;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Web_Consumo.WCF_BD;
 
 namespace Web_Consumo
 {
-    public partial class Paises : System.Web.UI.Page
+    public partial class tPaises : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

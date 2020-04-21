@@ -1,5 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="Paises.aspx.cs" Inherits="Web_Consumo.Paises" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="tPaises.aspx.cs" Inherits="Web_Consumo.tPaises" %>
+
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="zxx">
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Travelo</title>
@@ -26,10 +32,80 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script type="text/javascript"
             src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.1.min.js"></script>
+     <script src="js/Tablas/Paises.js"></script>
 
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
-   <%--<div class="bradcam_area bradcam_bg_4">
+</head>
+    
+<body>
+    
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+    <form id="MyForm" method="post" runat="server">
+        <!-- header-start -->
+        <header>
+            <div class="header-area ">
+                <div id="sticky-header" class="main-header-area">
+                    <div class="container-fluid">
+                        <div class="header_bottom_border">
+                            <div class="row align-items-center">
+                                <div class="col-xl-2 col-lg-2">
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <img src="img/logo.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="main-menu  d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">
+                                                <li><a class="active" href="index.aspx">home</a></li>
+                                                <li><a href="about.html">About</a></li>
+                                                <li><a class="" href="travel_destination.html">Vuelos</a></li>
+                                                <li>
+                                                    <a href="#">Tablas <i class="ti-angle-down"></i></a>
+                                                    <ul class="submenu">
+                                                        <li><a href="destination_details.html">Empleados</a></li>
+                                                        <li><a href="elements.html">Clientes</a></li>
+                                                        <li><a href="TiposEmpleados.aspx">Tipos Empleados</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">blog <i class="ti-angle-down"></i></a>
+                                                    <ul class="submenu">
+                                                        <li><a href="blog.html">blog</a></li>
+                                                        <li><a href="single-blog.html">single-blog</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 d-none d-lg-block">
+                                    <div class="social_wrap d-flex align-items-center justify-content-end">
+                                        <div class="main-menu  d-none d-lg-block">
+                                            <input type="text" name="search" placeholder="Search..">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="seach_icon">
+                                    <a data-toggle="modal" data-target="#exampleModalCenter" href="#">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mobile_menu d-block d-lg-none"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header-end -->
+        <div class="bradcam_area bradcam_bg_4">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -40,7 +116,7 @@
                 </div>
             </div>
         </div>
-    </div>--%>
+    </div>
 
         <div class="destination_details_info">
             <div class="container">
@@ -208,7 +284,7 @@
                 </div>
             </div>
         </div>
-        <%--<div class="section-top-border">
+        <div class="section-top-border">
 				<h3 class="mb-30">Países con mas visitas en el 2019</h3>
 				<div class="progress-table-wrap">
 					<div class="progress-table">
@@ -275,9 +351,9 @@
 						</div>
 					</div>
 				</div>
-			</div>--%>
+			</div>
                 
-        <%--<footer class="footer">
+        <footer class="footer">
             <div class="footer_top">
                 <div class="copy-right_text">
                     <div class="container">
@@ -295,7 +371,7 @@
                     </div>
                 </div>
             </div>
-        </footer>--%>
+        </footer>
 
         <!-- Modal -->
         <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -336,7 +412,7 @@
     <script src="js/plugins.js"></script>
     <script src="js/gijgo.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <script src="js/Tablas/Paises.js"></script>
+   
 
     <!--contact js-->
     <script src="js/contact.js"></script>
@@ -357,6 +433,5 @@
             }
         });
     </script>
+</body>
 
-
-</asp:Content>
