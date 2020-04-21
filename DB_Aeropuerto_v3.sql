@@ -593,6 +593,7 @@ AS
 			[NombreAerolinea],
 			[IdEstado]
 		FROM [dbo].[T_Aerolineas]
+		WHERE [IdAerolinea] NOT LIKE 1
 	END
 GO
 
@@ -663,6 +664,7 @@ AS
 			[IdAerolinea], 
 			[IdEstado]
 		FROM [dbo].[T_Empleados]
+		WHERE UPPER([IdEmpleado]) NOT LIKE 'ADMIN01'
 	END
 GO
 
@@ -690,12 +692,12 @@ GO
 CREATE PROCEDURE [dbo].[SP_Listar_TiposAviones]
 AS
 	BEGIN
-		SELECT [IdTipoAvion], 
-			[NombreTipoAvion], 
-			[DescTipoAvion], 
-			[CapacidadPasajeros], 
-			[CapacidadPeso], 
-			[IdEstado]
+		SELECT [IdTipoAvion] AS ID, 
+			[NombreTipoAvion] AS NOMBRE, 
+			[DescTipoAvion] AS DESCRIPCION, 
+			[CapacidadPasajeros] AS PASAJEROS, 
+			[CapacidadPeso] AS CAPACIDAD_KG, 
+			[IdEstado] AS ESTADO
 		FROM [dbo].[T_TiposAviones]
 	END
 GO
@@ -703,10 +705,10 @@ GO
 CREATE PROCEDURE [dbo].[SP_Listar_TiposClientes]
 AS
 	BEGIN
-		SELECT [IdTipoCliente], 
-			[TipoCliente], 
-			[Descripcion], 
-			[IdEstado]
+		SELECT [IdTipoCliente] AS ID, 
+			[TipoCliente] AS TIPO, 
+			[Descripcion] AS DESCRIPCION, 
+			[IdEstado] AS ESTADO
 		FROM [dbo].[T_TiposClientes]
 	END
 GO
@@ -729,6 +731,7 @@ AS
 			[IdEmpleado], 
 			[IdEstado]
 		FROM [dbo].[T_Usuarios]
+		WHERE UPPER([Username]) NOT LIKE 'ADMIN'
 	END
 GO
 
@@ -758,7 +761,8 @@ AS
 		[NombreAerolinea],
 		[IdEstado]
 	FROM [dbo].[T_Aerolineas]
-	WHERE UPPER([NombreAerolinea]) LIKE UPPER('%' + @filtro + '%') 
+	WHERE UPPER([NombreAerolinea]) LIKE UPPER('%' + @filtro + '%') AND
+		UPPER([NombreAerolinea]) NOT LIKE 'ADMINISTRACION'
 	END
 GO
 
@@ -848,7 +852,8 @@ AS
 			[IdAerolinea], 
 			[IdEstado]
 		FROM [dbo].[T_Empleados]
-		WHERE UPPER([Cedula]) LIKE UPPER('%' + @filtro + '%')
+		WHERE UPPER([Cedula]) LIKE UPPER('%' + @filtro + '%') AND
+			UPPER([IdEmpleado]) NOT LIKE 'ADMIN01'
 	END
 GO
 
@@ -887,14 +892,16 @@ CREATE PROCEDURE [dbo].[SP_Filtrar_TiposAviones]
 )
 AS
 	BEGIN
-		SELECT [IdTipoAvion], 
-			[NombreTipoAvion], 
-			[DescTipoAvion], 
-			[CapacidadPasajeros], 
-			[CapacidadPeso], 
-			[IdEstado]
+		SELECT [IdTipoAvion] AS ID, 
+			[NombreTipoAvion] AS NOMBRE, 
+			[DescTipoAvion] AS DESCRIPCION, 
+			[CapacidadPasajeros] AS PASAJEROS, 
+			[CapacidadPeso] AS CAPACIDAD_KG, 
+			[IdEstado] AS ESTADO
 		FROM [dbo].[T_TiposAviones]
-		WHERE UPPER([NombreTipoAvion]) LIKE UPPER('%' + @filtro + '%')
+		WHERE UPPER([IdTipoAvion]) LIKE UPPER('%' + @filtro + '%') OR
+			UPPER([NombreTipoAvion]) LIKE UPPER('%' + @filtro + '%') OR
+			UPPER([DescTipoAvion]) LIKE UPPER('%' + @filtro + '%')
 	END
 GO
 
@@ -909,7 +916,7 @@ AS
 			[Descripcion], 
 			[IdEstado]
 		FROM [dbo].[T_TiposClientes]
-		WHERE UPPER([IdTipoCliente]) LIKE UPPER('%' + @filtro + '%')
+		WHERE UPPER([TipoCliente]) LIKE UPPER('%' + @filtro + '%')
 	END
 GO
 
@@ -970,7 +977,8 @@ AS
 	BEGIN
 		DELETE
 		FROM [dbo].[T_Aerolineas]
-		WHERE [IdAerolinea] =  @IdAerolinea
+		WHERE [IdAerolinea] =  @IdAerolinea AND
+			[IdAerolinea] NOT LIKE 1
 	END
 GO
 
@@ -1030,7 +1038,8 @@ AS
 	BEGIN
 		DELETE
 		FROM [dbo].[T_Empleados]
-		WHERE [IdEmpleado] = @IdEmpleado
+		WHERE [IdEmpleado] = @IdEmpleado AND
+			UPPER([IdEmpleado]) NOT LIKE 'ADMIN01'
 	END
 GO
 
@@ -1102,7 +1111,8 @@ AS
 	BEGIN
 		DELETE
 		FROM [dbo].[T_Usuarios]
-		WHERE [Username] = @Username
+		WHERE [Username] = @Username AND
+			UPPER([Username]) NOT LIKE 'ADMIN' 
 	END
 GO
 
@@ -1467,7 +1477,8 @@ AS
 		SET
 			[NombreAerolinea] = @NombreAerolinea,
 			[IdEstado] = @IdEstado
-		WHERE [IdAerolinea] = @IdAerolinea
+		WHERE [IdAerolinea] = @IdAerolinea AND
+			[IdAerolinea] NOT LIKE 1
 	END
 GO
 
@@ -1587,7 +1598,8 @@ AS
 			[IdTipoEmpleado] = @IdTipoEmpleado, 
 			[IdAerolinea] = @IdAerolinea,
 			[IdEstado] = @IdEstado
-		WHERE [IdEmpleado] = @IdEmpleado
+		WHERE [IdEmpleado] = @IdEmpleado AND
+				UPPER([IdEmpleado]) NOT LIKE 'ADMIN01'
 	END
 GO
 
@@ -1690,12 +1702,22 @@ CREATE PROCEDURE [dbo].[SP_Modificar_Usuarios]
 )
 AS
 	BEGIN
-		UPDATE [dbo].[T_Usuarios]
-		SET
-			[Password] = @Password, 
-			[IdEmpleado] = @IdEmpleado,
-			[IdEstado] = @IdEstado
-		WHERE [Username] = @Username
+		IF UPPER(@Username) LIKE 'ADMIN'
+			BEGIN
+				UPDATE [dbo].[T_Usuarios]
+				SET
+					[Password] = @Password 
+				WHERE [Username] = @Username
+			END
+		ELSE
+			BEGIN
+				UPDATE [dbo].[T_Usuarios]
+				SET
+					[Password] = @Password, 
+					[IdEmpleado] = @IdEmpleado,
+					[IdEstado] = @IdEstado
+				WHERE [Username] = @Username
+			END
 	END
 GO
 
@@ -1948,4 +1970,37 @@ GO
 INSERT INTO [dbo].[T_TiposEmpleados]([DescTipo],[IdEstado])
 VALUES('Cajero','A')
 GO
+
+--CREACION DEL USUARIO ADMIN
+
+INSERT INTO [dbo].[T_Aerolineas]([NombreAerolinea],[IdEstado])
+VALUES('Administración','A')
+GO
+
+INSERT INTO [dbo].[T_Empleados]([IdEmpleado],[Cedula],[Nombre],[Apellidos],[Direccion],[Edad],[Telefono_Casa],[Telefono_Referencia],[Celular],[Salario],[IdTipoEmpleado],[IdAerolinea],[IdEstado])
+VALUES('ADMIN01','0-0000-0000','Sin nombre','Sin Apellido','Sin dirección',0,'Sin telf','Sin telf','Sin telf',0,15,1,'A')
+GO
+
+INSERT INTO [dbo].[T_Usuarios]([Username],[Password],[IdEmpleado],[IdEstado])
+VALUES('Admin','12345','ADMIN01','A')
+GO
+
+--LOGIN
+
+CREATE PROCEDURE [dbo].[SP_Filtrar_Login]
+(
+    @username VARCHAR(15),
+    @password VARCHAR(8)
+)
+AS
+BEGIN
+    SELECT [T_Usuarios].[Username],
+        [T_Empleados].[IdTipoEmpleado],
+        [T_Usuarios].[Password],
+        [T_Usuarios].[IdEmpleado],
+        [T_Usuarios].[IdEstado]
+    FROM [dbo].[T_Usuarios]
+    INNER JOIN [dbo].[T_Empleados] ON [T_Usuarios].IdEmpleado = [T_Empleados].IdEmpleado
+    WHERE [Username] = @username and [Password] = @password
+END
 

@@ -1,12 +1,17 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="tbl_Destinos.aspx.cs" Inherits="Web_Consumo.tbl_Destinos" %>
+﻿<%@ Page Title="Destinos" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="tbl_Destinos.aspx.cs" Inherits="Web_Consumo.tbl_Destinos" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
+
+
+
+
+<header class="header-area">
     <meta charset="utf-8"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <title>Travelo</title>
+    
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- <link rel="manifest" href="site.webmanifest"> -->
@@ -31,12 +36,15 @@
     <script type="text/javascript"
             src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.1.min.js"></script>
 
-</head>
-<body>
-    <form id="form1" method="post" runat="server">
+</header>
 
 
-         <!-- header-start -->
+<div class="ContendorPrincipal">
+
+    <div class="ContenedorSecundario">
+
+        <!--
+        
         <header>
             <div class="header-area ">
                 <div id="sticky-header" class="main-header-area">
@@ -98,7 +106,8 @@
                 </div>
             </div>
         </header>
-        <!-- header-end -->
+     
+        -->
 
         <div class="destination_details_info">
             <div class="container">
@@ -332,7 +341,7 @@
         <!-- link that opens popup -->
 
      
-    </form>
+    </div>
 
      <!--
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -381,5 +390,6 @@
         });
     </script>
 
-</body>
-</html>
+</div>
+
+</asp:Content>
