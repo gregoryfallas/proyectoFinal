@@ -97,15 +97,27 @@
                                 </div>
                                 <br />
                                 <div class="input_field">
-                                    <h4>TIPO DE AVION</h4>
+                                    <br />
+                                    <div></div>
+                                        <h4>TIPO DE AVION</h4>
+                                    </div>
+                                    <br />
+                                    <div>
                                        <select runat="server" id="slc_IDtpAVION" class="form-control" >
                                        </select>
+                                    </div>
                                 </div>
                                 <br />
                                 <div class="input_field">
-                                    <h4>ID ESTADO</h4>
-                                    <select runat="server" id="slc_IDESTAD" class="form-control" >
-                                    </select>
+                                    <br />
+                                    <div>
+                                        <h4>ID ESTADO</h4>
+                                    </div>
+                                    <br />
+                                    <div>  
+                                        <select runat="server" id="slc_IDESTAD" class="form-control" >
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -117,7 +129,7 @@
                         </div>
                 </div>
             </div>
-        </div>
+
 
         <!-- MODAL PARA ELIMINAR DATOS-->
         <div class="modal fade" id="ModalEliminar">
