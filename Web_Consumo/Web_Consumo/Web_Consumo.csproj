@@ -369,6 +369,7 @@
     <Content Include="travel doc\syntax-highlighter\styles\shThemeMDUltra.css" />
     <Content Include="travel doc\syntax-highlighter\styles\shThemeMidnight.css" />
     <Content Include="travel doc\syntax-highlighter\styles\shThemeRDark.css" />
+    <Content Include="Vuelos.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -496,6 +497,13 @@
     </Compile>
     <Compile Include="TiposClientes.aspx.designer.cs">
       <DependentUpon>TiposClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vuelos.aspx.cs">
+      <DependentUpon>Vuelos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vuelos.aspx.designer.cs">
+      <DependentUpon>Vuelos.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
