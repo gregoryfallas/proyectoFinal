@@ -1,10 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Estados.aspx.cs" Inherits="Web_Consumo.Estados" %>
-
-<!DOCTYPE html>
-
-<html class="no-js" lang="zxx">
-
-<head>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="MP_Estados.aspx.cs" Inherits="Web_Consumo.MP_Estados" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Travelo</title>
@@ -32,13 +27,8 @@
     <script type="text/javascript"
             src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.1.min.js"></script>
 
-</head>
-
-<body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-    <!-- header-start -->
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
     <header>
         <div class="header-area ">
             <div id="sticky-header" class="main-header-area">
@@ -111,43 +101,43 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-9">
                 </div>
-                <form id="form1" runat="server">
-        <div>
-              <asp:Label ID="Label1" runat="server" Text="Descripción : " Font-Bold="true"></asp:Label>
-              <asp:TextBox ID="txt_filtroEstados" runat="server" Width="477px" OnTextChanged="txt_filtroEstados_TextChanged" CssClass="btGrisNegrita"></asp:TextBox>  <br><br />
-              <asp:Button ID="btn_FiltrarEstados" runat="server" Text="Filtrar" OnClick="btn_FiltrarEstados_Click" class="boxed-btn4"/><br><br />
+                <!--<form id="form1" runat="server">-->
+                    <div>
+                        <asp:Label ID="Label1" runat="server" Text="Descripción : " Font-Bold="true"></asp:Label>
+                        <asp:TextBox ID="txt_filtroEstados" runat="server" Width="477px" OnTextChanged="txt_filtroEstados_TextChanged" CssClass="btGrisNegrita"></asp:TextBox>  <br><br />
+                        <asp:Button ID="btn_FiltrarEstados" runat="server" Text="Filtrar" OnClick="btn_FiltrarEstados_Click" class="boxed-btn4"/><br><br />
 
-              <!--<asp:Button ID="btn_Refrescar" runat="server" Text="Refrescar" Width="180px" OnClick="btn_Refrescar_Click"/>-->
-               <div>
-                   <br />
-                   <asp:Label ID="lb_ID_Estados" runat="server" Text="ID ESTADOS : " Font-Bold="true"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   <asp:TextBox ID="txt_ID_Estados" runat="server" Width="180px"></asp:TextBox>
-                   <br />
-                   <br />
-                   <asp:Label ID="lb_Nombre_Estado" runat="server" Text="NOMBRE ESTADO : " Font-Bold="true"></asp:Label>
-                   <asp:TextBox ID="txt_Nombre_Estado" runat="server" Width="180px"></asp:TextBox>
-                   <br />
-                   <br />
-                   <asp:Button ID="btn_Insertar" runat="server" Text="INSERTAR" OnClick="btn_Insertar_Click" class="boxed-btn4"/> &nbsp;
-                   <asp:Button ID="btn_Modificar" runat="server" Text="MODIFICAR" OnClick="btn_Modificar_Click" class="boxed-btn4"/> &nbsp;
-                   <asp:Button ID="btn_EliminarEstados" runat="server" Text="ELIMINAR" OnClick="btn_EliminarEstados_Click" class="boxed-btn4"/>&nbsp;
-                   <br />
-                   <br />
-                   <asp:GridView ID="DGV_DATOS" runat="server" display="block" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical">
-                       <AlternatingRowStyle BackColor="#DCDCDC" />
-                       <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
-                       <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
-                       <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
-                       <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
-                       <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
-                       <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                       <SortedAscendingHeaderStyle BackColor="#0000A9" />
-                       <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                       <SortedDescendingHeaderStyle BackColor="#000065" />
-                   </asp:GridView>
-               </div>        
-        </div>
-    </form>
+                        <!--<asp:Button ID="btn_Refrescar" runat="server" Text="Refrescar" Width="180px" OnClick="btn_Refrescar_Click"/>-->
+                        <div>
+                            <br />
+                            <asp:Label ID="lb_ID_Estados" runat="server" Text="ID ESTADOS : " Font-Bold="true"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:TextBox ID="txt_ID_Estados" runat="server" Width="180px"></asp:TextBox>
+                            <br />
+                            <br />
+                            <asp:Label ID="lb_Nombre_Estado" runat="server" Text="NOMBRE ESTADO : " Font-Bold="true"></asp:Label>
+                            <asp:TextBox ID="txt_Nombre_Estado" runat="server" Width="180px"></asp:TextBox>
+                            <br />
+                            <br />
+                            <asp:Button ID="btn_Insertar" runat="server" Text="INSERTAR" OnClick="btn_Insertar_Click" class="boxed-btn4"/> &nbsp;
+                            <asp:Button ID="btn_Modificar" runat="server" Text="MODIFICAR" OnClick="btn_Modificar_Click" class="boxed-btn4"/> &nbsp;
+                            <asp:Button ID="btn_EliminarEstados" runat="server" Text="ELIMINAR" OnClick="btn_EliminarEstados_Click" class="boxed-btn4"/>&nbsp;
+                            <br />
+                            <br />
+                            <asp:GridView ID="DGV_DATOS" runat="server" display="block" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical">
+                                <AlternatingRowStyle BackColor="#DCDCDC" />
+                                <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+                                <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                                <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+                                <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+                                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                                <SortedAscendingHeaderStyle BackColor="#0000A9" />
+                                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                                <SortedDescendingHeaderStyle BackColor="#000065" />
+                            </asp:GridView>
+                        </div>        
+                </div>
+             <!--</form>-->
 
             </div>
         </div>
@@ -167,7 +157,6 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <form action="/" method="post">
                         <div>
                             <div class="input_field">
                                 <h4>ID ESTADO</h4>
@@ -180,7 +169,6 @@
                             </div>
                             <br />
                         </div>
-                    </form>
                 </div>
 
                 <!-- Modal footer -->
@@ -270,6 +258,4 @@
             }
         });
     </script>
-</body>
-
-</html>
+</asp:Content>

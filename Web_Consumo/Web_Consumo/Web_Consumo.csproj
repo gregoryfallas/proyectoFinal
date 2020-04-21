@@ -107,7 +107,6 @@
     <Content Include="elements.html" />
     <Content Include="Estados-Eliminar.aspx" />
     <Content Include="Estados-Eliminar1.aspx" />
-    <Content Include="Estados.aspx" />
     <Content Include="Estados.html" />
     <Content Include="fonts\fa-brands-400.svg" />
     <Content Include="fonts\fa-regular-400.svg" />
@@ -281,6 +280,8 @@
     <Content Include="js\wow.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="main.html" />
+    <Content Include="MP_Estados.aspx" />
+    <Content Include="MP_Vuelos.aspx" />
     <Content Include="Paises.aspx" />
     <Content Include="readme.txt" />
     <Content Include="single-blog.html" />
@@ -391,13 +392,6 @@
     <Compile Include="Estados-Eliminar1.aspx.designer.cs">
       <DependentUpon>Estados-Eliminar1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Estados.aspx.cs">
-      <DependentUpon>Estados.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Estados.aspx.designer.cs">
-      <DependentUpon>Estados.aspx</DependentUpon>
-    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -411,6 +405,20 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MP_Estados.aspx.cs">
+      <DependentUpon>MP_Estados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MP_Estados.aspx.designer.cs">
+      <DependentUpon>MP_Estados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MP_Vuelos.aspx.cs">
+      <DependentUpon>MP_Vuelos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MP_Vuelos.aspx.designer.cs">
+      <DependentUpon>MP_Vuelos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paises.aspx.cs">
       <DependentUpon>Paises.aspx</DependentUpon>

@@ -8,17 +8,17 @@ using System.Data;//SE IMPORTA LA LIBRERIA
 
 namespace Web_Consumo
 {
-    public partial class Vuelos : System.Web.UI.Page
+    public partial class MP_Vuelos : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             CargarDatos();
-             if(!IsPostBack)
-             {
-                 Calendar1.Visible = false;
-                 Calendar2.Visible = false;
-                 ImageButton2.Visible = false;
-             }
+            if (!IsPostBack)
+            {
+                Calendar1.Visible = false;
+                Calendar2.Visible = false;
+                ImageButton2.Visible = false;
+            }
             ImageButton1.Visible = false;
             ImageButton2.Visible = false;
         }
@@ -213,7 +213,7 @@ namespace Web_Consumo
                 Calendar1.Visible = false;
             }
             else
-                Calendar1.Visible= true;
+                Calendar1.Visible = true;
         }
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)

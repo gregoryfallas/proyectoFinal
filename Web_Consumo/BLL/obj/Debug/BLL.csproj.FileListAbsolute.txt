@@ -38,13 +38,13 @@ C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.
 C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.dll
 C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.pdb
-C:\Users\Moises Coto\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\bin\Debug\BLL.dll.config
-C:\Users\Moises Coto\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\bin\Debug\BLL.dll
-C:\Users\Moises Coto\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\bin\Debug\BLL.pdb
-C:\Users\Moises Coto\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\bin\Debug\ClassLibrary2.dll
-C:\Users\Moises Coto\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\bin\Debug\ClassLibrary2.pdb
-C:\Users\Moises Coto\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
-C:\Users\Moises Coto\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
-C:\Users\Moises Coto\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.csproj.CopyComplete
-C:\Users\Moises Coto\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.dll
-C:\Users\Moises Coto\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.pdb
+D:\progra-4v2\proyectoFinal\Web_Consumo\BLL\bin\Debug\BLL.dll.config
+D:\progra-4v2\proyectoFinal\Web_Consumo\BLL\bin\Debug\BLL.dll
+D:\progra-4v2\proyectoFinal\Web_Consumo\BLL\bin\Debug\BLL.pdb
+D:\progra-4v2\proyectoFinal\Web_Consumo\BLL\bin\Debug\ClassLibrary2.dll
+D:\progra-4v2\proyectoFinal\Web_Consumo\BLL\bin\Debug\ClassLibrary2.pdb
+D:\progra-4v2\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+D:\progra-4v2\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\progra-4v2\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\progra-4v2\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.dll
+D:\progra-4v2\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.pdb

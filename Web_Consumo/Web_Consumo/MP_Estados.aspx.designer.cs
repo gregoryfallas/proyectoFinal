@@ -10,7 +10,7 @@
 namespace Web_Consumo {
     
     
-    public partial class Estados {
+    public partial class MP_Estados {
         
         /// <summary>
         /// form1 control.
