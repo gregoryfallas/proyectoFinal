@@ -34,9 +34,7 @@ namespace Web_Consumo
 
         protected void btn_Agregar_Click(object sender, EventArgs e)
         {
-            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
-
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"].Value != null)
             {
                 string sUSER = inp_USER_AG.Value.ToString();
                 string sPASS = inp_PASS_AG.Value.ToString();
@@ -81,47 +79,38 @@ namespace Web_Consumo
 
         protected void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
-
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"] != null)
             {
-                if (obj_Usuario.iTipoUsuario == 8)
+                if (Request.Cookies["Cookie"].Value == "8")
                 {
                     string sUSER = inp_USER_ELIM.Value.ToString();
+                    if (sUSER != "")
+                    {
+                        WCF_BD.BDClient listarDatos = new WCF_BD.BDClient();
+                        String sMensajeError = "";
+                        DataTable parametros = new DataTable();
+                        DataTable ObjListar = new DataTable();
 
-                    if(obj_Usuario.sUserName == sUSER)
-                    {
-                        ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Este usuario no puede ser eliminado');", true);
-                    }
-                    else
-                    {
-                        if (sUSER != "")
+                        parametros = listarDatos.CrearDTParametros();
+                        parametros.Rows.Add("@Username", "1", sUSER);
+
+                        listarDatos.Ins_Mod_Eli_Datos("SP_Borrar_Usuarios", false, parametros, ref sMensajeError);
+
+                        if (sMensajeError != string.Empty)
                         {
-                            WCF_BD.BDClient listarDatos = new WCF_BD.BDClient();
-                            String sMensajeError = "";
-                            DataTable parametros = new DataTable();
-                            DataTable ObjListar = new DataTable();
-
-                            parametros = listarDatos.CrearDTParametros();
-                            parametros.Rows.Add("@Username", "1", sUSER);
-
-                            listarDatos.Ins_Mod_Eli_Datos("SP_Borrar_Usuarios", false, parametros, ref sMensajeError);
-
-                            if (sMensajeError != string.Empty)
-                            {
-                                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL ELIMINAR EL ITEM [" + sUSER + "], ERROR: [" + sMensajeError + "]');", true);
-                            }
-                            else
-                            {
-                                RecargarPagina('L');
-                                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('SE ELIMINO CORRECTAMENTE');", true);
-                            }
+                            ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL ELIMINAR EL ITEM [" + sUSER + "], ERROR: [" + sMensajeError + "]');", true);
                         }
                         else
                         {
-                            ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL LEER LOS VALORES, FAVOR INTENTARLO NUEVAMENTE');", true);
+                            RecargarPagina('L');
+                            ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('SE ELIMINO CORRECTAMENTE');", true);
                         }
                     }
+                    else
+                    {
+                        ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL LEER LOS VALORES, FAVOR INTENTARLO NUEVAMENTE');", true);
+                    }
+                    
                 }
                 else
                 {
@@ -132,19 +121,12 @@ namespace Web_Consumo
             {
                 ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Sessión caducada, vuelve a iniciar sessión');", true);
             }
-
             
-
-            
-
-
         }
 
         protected void btn_Editar_Click(object sender, EventArgs e)
         {
-            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
-
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"].Value != null)
             {
                 string sUSER = inp_USER_ED.Value.ToString();
                 string sPASS = inp_PASS_ED.Value.ToString();
@@ -199,7 +181,7 @@ namespace Web_Consumo
             {
                 ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-                if (obj_Usuario != null)
+                if (Request.Cookies["Cookie"].Value != null)
                 {
                     parametros = listarDatos.CrearDTParametros();
                     parametros.Rows.Add("@filtro", "1", inp_Filtrar.Value.ToString());
@@ -286,14 +268,6 @@ namespace Web_Consumo
                     foreach (DataRow row in ObjListar.Rows)
                     {
                         slc_IDESTAD_ED.Items.Add(new ListItem(row.ItemArray[1].ToString(), row.ItemArray[0].ToString()));
-                    }
-                }
-
-                if (slc_IDESTAD_AG.Items.Count <= 1)
-                {
-                    foreach (DataRow row in ObjListar.Rows)
-                    {
-                        slc_IDESTAD_AG.Items.Add(new ListItem(row.ItemArray[1].ToString(), row.ItemArray[0].ToString()));
                     }
                 }
             }

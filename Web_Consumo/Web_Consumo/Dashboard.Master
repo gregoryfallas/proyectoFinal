@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Dashboard.Master.cs" Inherits="Web_Consumo.Site1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Dashboard.Master.cs" Inherits="Web_Consumo.Dashboard" %>
 
 <!DOCTYPE html>
 
@@ -23,6 +23,10 @@
 </asp:ContentPlaceHolder>
 </head>
 <body class="hold-transition sidebar-mini">
+    <form id="form1" runat="server">
+        <div>
+            <asp:Button Text="Cerrar Session" runat="server" CssClass="cerrarSession" OnClick="btn_btnCerrarSesion_ServerClick"  />
+        </div>
     <div class="wrapper">
           <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -40,7 +44,6 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Menu Administracion vuelos -->
-          <li><input id="btnCerrarSesion" type="button" value="Cerrar Sesion" /></li>
           <li class="nav-header">Administracion de Vuelos</li>
           <li class="nav-item">
             <a href="Aviones1.aspx" class="nav-link">
@@ -165,15 +168,11 @@
 <script src="js/AdminPanel/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE -->
 <script src="js/AdminPanel/adminlte.js"></script>
-     <!--<form id="form1" runat="server">-->
         <div>
             <asp:ContentPlaceHolder ID="Body" runat="server">
-
-
-
             </asp:ContentPlaceHolder>
         </div>
-   <!-- </form>-->
+   </form>
 </body>
   
   </html>

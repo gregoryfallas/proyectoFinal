@@ -21,7 +21,7 @@ namespace Web_Consumo
         {
             ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"].Value != null)
             {
                 if (obj_Usuario.iTipoUsuario == 8)
                 {
@@ -73,9 +73,9 @@ namespace Web_Consumo
         {
             ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"].Value != null)
             {
-                if (obj_Usuario.iTipoUsuario == 8)
+                if (Request.Cookies["Cookie"].Value == "8")
                 {
                     string idTipoEmp = inp_IDTIP_ELIM.Value.ToString();
                     string sDesc = inp_DESCR_ELIM.Value.ToString();
@@ -123,7 +123,7 @@ namespace Web_Consumo
         {
             ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"].Value != null)
             {
                 string sFiltrar = inp_Filtrar.Value.ToString();
 
@@ -148,7 +148,7 @@ namespace Web_Consumo
 
             ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"].Value != null)
             {
                 string sDesc = inp_DESCRIP_AG.Value.ToString();
                 char cEstado = Convert.ToChar(slc_IDESTAD_AG.Value.ToString());
@@ -199,7 +199,7 @@ namespace Web_Consumo
             {
                 ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-                if (obj_Usuario != null)
+                if (Request.Cookies["Cookie"].Value != null)
                 {
                     parametros = listarDatos.CrearDTParametros();
                     parametros.Rows.Add("@filtro", "0", inp_Filtrar.Value.ToString());
