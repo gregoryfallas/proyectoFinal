@@ -1,0 +1,15 @@
+﻿.wrapper #btnCerrarSesion {
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    background-color: slategray;
+    color: #fff;
+    transition: background-color .15s ease-in-out;
+}
+
+.wrapper #btnCerrarSesion:hover, #btnCerrarSesion:focus {
+        background-color: #0069d9;
+}
+
+.wrapper #btnCerrarSesion:active {
+    background-color: #0062cc;
+}

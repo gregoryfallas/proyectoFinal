@@ -40,7 +40,8 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Menu Administracion vuelos -->
-             <li class="nav-header">Administracion de Vuelos</li>
+          <li><input id="btnCerrarSesion" type="button" value="Cerrar Sesion" /></li>
+          <li class="nav-header">Administracion de Vuelos</li>
           <li class="nav-item">
             <a href="Aviones1.aspx" class="nav-link">
               <i class="fas fa-plane"></i>
@@ -58,7 +59,7 @@
             </a>
           </li>
              <li class="nav-item">
-            <a href="tblDestinos.aspx" class="nav-link">
+            <a href="tbl_Destinos.aspx" class="nav-link">
               <i class="fas fa-map-marked-alt"></i>
               <p>
                 Destinos
@@ -146,14 +147,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="MP_Estados.aspx" class="nav-link">
-              <i class="fas fa-info-circle"></i>
-              <p>
-                Estados
-              </p>
-            </a>
-          </li>
+
                 
                       
         </ul>
