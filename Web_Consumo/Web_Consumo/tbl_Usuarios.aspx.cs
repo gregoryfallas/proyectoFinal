@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace Web_Consumo
 {
-    public partial class Usuarios : System.Web.UI.Page
+    public partial class tbl_Usuarios : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

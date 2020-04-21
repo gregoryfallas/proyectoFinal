@@ -81,8 +81,8 @@
                                                         <li><a href="tiposAviones.html">Tipos Aviones</a></li>
                                                         <li><a href="categoriasVuelos.html">Categorias Vuelos</a></li>
                                                         <li><a href="tiposClientes.aspx">Tipos Clientes</a></li>
-                                                        <li><a href="TiposEmpleados.aspx">Tipos Empleados</a></li>
-                                                        <li><a href="Usuarios.aspx">Usuarios</a></li>
+                                                        <li><a href="tbl_TiposEmpleados.aspx">Tipos Empleados</a></li>
+                                                        <li><a href="tbl_Usuarios.aspx">Usuarios</a></li>
                                                         <li><a href="Estados.aspx">Estados</a></li>
                                                 </ul>
                                             </li>

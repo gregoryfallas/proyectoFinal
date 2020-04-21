@@ -264,6 +264,9 @@
     <Content Include="img\works\4.png" />
     <Content Include="index.aspx" />
     <Content Include="index.html" />
+    <Content Include="js\AdminPanel\adminlte.js" />
+    <Content Include="js\AdminPanel\bootstrap.bundle.min.js" />
+    <Content Include="js\AdminPanel\jquery.min.js" />
     <Content Include="js\ajax-form.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\contact.js" />
@@ -304,10 +307,11 @@
     <Content Include="readme.txt" />
     <Content Include="single-blog.html" />
     <Content Include="tbl_Destinos.aspx" />
+    <Content Include="tbl_TiposEmpleados.aspx" />
+    <Content Include="tbl_Usuarios.aspx" />
     <Content Include="TiposAviones.aspx" />
     <Content Include="TiposCliente.aspx" />
     <Content Include="TiposClientes.aspx" />
-    <Content Include="TiposEmpleados.aspx" />
     <Content Include="travel doc\css\font-awesome.min.css" />
     <Content Include="travel doc\css\main.css" />
     <Content Include="travel doc\css\MiLabel.css" />
@@ -364,7 +368,6 @@
     <Content Include="travel doc\syntax-highlighter\styles\shThemeMidnight.css" />
     <Content Include="travel doc\syntax-highlighter\styles\shThemeRDark.css" />
     <Content Include="travel_destination.html" />
-    <Content Include="Usuarios.aspx" />
     <Content Include="Vuelos-Eliminar.aspx" />
     <Content Include="Vuelos.aspx" />
     <Content Include="Web.config" />
@@ -465,6 +468,20 @@
     <Compile Include="tbl_Destinos.aspx.designer.cs">
       <DependentUpon>tbl_Destinos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="tbl_TiposEmpleados.aspx.cs">
+      <DependentUpon>tbl_TiposEmpleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tbl_TiposEmpleados.aspx.designer.cs">
+      <DependentUpon>tbl_TiposEmpleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Usuarios.aspx.cs">
+      <DependentUpon>tbl_Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tbl_Usuarios.aspx.designer.cs">
+      <DependentUpon>tbl_Usuarios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TiposAviones.aspx.cs">
       <DependentUpon>TiposAviones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -485,20 +502,6 @@
     </Compile>
     <Compile Include="TiposClientes.aspx.designer.cs">
       <DependentUpon>TiposClientes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TiposEmpleados.aspx.cs">
-      <DependentUpon>TiposEmpleados.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TiposEmpleados.aspx.designer.cs">
-      <DependentUpon>TiposEmpleados.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Usuarios.aspx.cs">
-      <DependentUpon>Usuarios.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usuarios.aspx.designer.cs">
-      <DependentUpon>Usuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vuelos-Eliminar.aspx.cs">
       <DependentUpon>Vuelos-Eliminar.aspx</DependentUpon>
