@@ -40,7 +40,6 @@
                             <div class="slider_text text-center">
                                 <h3>Brasil</h3>
                                 <p>El mejor o el peor día para ir a Río de Janeiro, dependiendo de cómo lo mires, es el Domingo de Pascua. En los últimos años, esta ha sido una de las atracciones turísticas que más personas ha recibido durante las festividades religiosas, pasando la enorme cantidad de 14.000 visitantes.</p>
-                                <a href="travel_destination.html" class="boxed-btn3">Ir ahora</a>
                             </div>
                         </div>
                     </div>
@@ -53,7 +52,6 @@
                             <div class="slider_text text-center">
                                 <h3>Reino Unido</h3>
                                 <p>Este conjunto de monumentos históricos de piedra data de 2000 a 3000 a.C. Es un punto de referencia icónico y uno de los símbolos y atraccciones turísticas más conocidas del Reino Unido. Desde que Stonehenge se agregó a la lista del Patrimonio Mundial de la UNESCO en 1982, los visitantes anuales se han disparado a 1.3 millones de turistas por año. ¿Te gustaría visitar este atractivo turístico? </p>
-                                <a href="travel_destination.html" class="boxed-btn3">Ir ahora</a>
                             </div>
                         </div>
                     </div>
@@ -66,7 +64,6 @@
                             <div class="slider_text text-center">
                                 <h3>Perú</h3>
                                 <p>Los turistas cada vez se interesan más por América del Sur, ya que buscan lugares menos conocidos en el mundo. Machu Picchu es uno de los iconos más reconocidos del continente y las cifras de turismo lo reflejan. </p>
-                                <a href="travel_destination.html" class="boxed-btn3">Ir ahora</a>
                             </div>
                         </div>
                     </div>
