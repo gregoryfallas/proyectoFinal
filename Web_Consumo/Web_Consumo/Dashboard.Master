@@ -50,7 +50,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="Vuelos.aspx" class="nav-link">
+            <a href="MP_Vuelos.aspx" class="nav-link">
               <i class="fas fa-plane-departure"></i>
               <p>
                  Vuelos
@@ -147,7 +147,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="Estados.aspx" class="nav-link">
+            <a href="MP_Estados.aspx" class="nav-link">
               <i class="fas fa-info-circle"></i>
               <p>
                 Estados

@@ -76,6 +76,8 @@
     <Content Include="bin\BLL.dll" />
     <Content Include="bin\ClassLibrary2.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="CategoriaVuelos.aspx" />
+    <Content Include="Clientes.aspx" />
     <Content Include="css\Dashboard.css" />
     <Content Include="WebForm1.aspx" />
     <None Include="Connected Services\WCF\BD.wsdl" />
@@ -265,7 +267,6 @@
     <Content Include="img\works\3.png" />
     <Content Include="img\works\4.png" />
     <Content Include="index.aspx" />
-    <Content Include="index.html" />
     <Content Include="js\AdminPanel\adminlte.js" />
     <Content Include="js\AdminPanel\bootstrap.bundle.min.js" />
     <Content Include="js\AdminPanel\jquery.min.js" />
@@ -464,6 +465,7 @@
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
