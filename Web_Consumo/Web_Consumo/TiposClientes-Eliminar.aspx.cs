@@ -8,7 +8,7 @@ using System.Data;
 
 namespace Web_Consumo
 {
-    public partial class TiposAviones1 : System.Web.UI.Page
+    public partial class TiposClientes : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -28,23 +28,22 @@ namespace Web_Consumo
             if (txtFiltro.Text == string.Empty)
             {
                 dtParametros = null;
-                sNomSP = "dbo.SP_Listar_TiposAviones";
+                sNomSP = "dbo.SP_Listar_TiposClientes";
             }
             else
             {
                 dtParametros = Obj_WCF_BD.CrearDTParametros();
                 dtParametros.Rows.Add("@filtro", "1", txtFiltro.Text.Trim());
-                sNomSP = "dbo.SP_Filtrar_TiposAviones";
+                sNomSP = "dbo.SP_Filtrar_TiposClientes";
             }
 
             dtTabla = Obj_WCF_BD.ListarFiltrarDatos(sNomSP, dtParametros, ref sError);
 
-            dgvTiposAviones.DataSource = null;
-            dgvTiposAviones.DataSource = dtTabla;
-            dgvTiposAviones.DataBind();
+            dgvTiposClientes.DataSource = null;
+            dgvTiposClientes.DataSource = dtTabla;
+            dgvTiposClientes.DataBind();
 
         }
-
 
         protected void btnAgr_Click(object sender, EventArgs e)
         {
@@ -57,29 +56,21 @@ namespace Web_Consumo
             #endregion
 
             dtParametros = Obj_WCF_BD.CrearDTParametros();
-            dtParametros.Rows.Add("@IdtipoAvion", "1", txtID.Text.Trim());
-            dtParametros.Rows.Add("@NombreTipoAvion", "1", txtNombre.Text.Trim());
-            dtParametros.Rows.Add("@DescTipoAvion", "1", txtDesc.Text.Trim());
-            dtParametros.Rows.Add("@CapacidadPasajeros", "2", txtPasaj.Text.Trim());
-            dtParametros.Rows.Add("@CapacidadPeso", "4", TxtPeso.Text.Trim());
-            dtParametros.Rows.Add("@IdEstado", "3", txtEstado.Text.Trim());
-            sNomSP = "dbo.SP_Insertar_TiposAviones";
+            dtParametros.Rows.Add("@TipoCliente", "1", txtTipo.Text.Trim());
+            dtParametros.Rows.Add("@Descripcion", "1", txtDesc.Text.Trim());
+            dtParametros.Rows.Add("@IdEstado", "5", txtEstado.Text.Trim());
+            sNomSP = "dbo.SP_Insertar_Tiposclientes";
 
-            Obj_WCF_BD.Ins_Mod_Eli_Datos(sNomSP, false, dtParametros, ref sError);
+            Obj_WCF_BD.Ins_Mod_Eli_Datos(sNomSP, true, dtParametros, ref sError);
 
             txtFiltro.Text = string.Empty;
 
             txtID.Text = string.Empty;
-            txtNombre.Text = string.Empty;
+            txtTipo.Text = string.Empty;
             txtDesc.Text = string.Empty;
-            txtPasaj.Text = string.Empty;
-            TxtPeso.Text = string.Empty;
             txtEstado.Text = string.Empty;
 
             CargarDatos();
-
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "msgAlerta", "alert('El Tipo de Avion fue agregado correctamente');", true);
-
         }
 
         protected void btnMod_Click(object sender, EventArgs e)
@@ -93,39 +84,30 @@ namespace Web_Consumo
             #endregion
 
             dtParametros = Obj_WCF_BD.CrearDTParametros();
-            dtParametros.Rows.Add("@IdtipoAvion", "1", txtID.Text.Trim());
-            dtParametros.Rows.Add("@NombreTipoAvion", "1", txtNombre.Text.Trim());
-            dtParametros.Rows.Add("@DescTipoAvion", "1", txtDesc.Text.Trim());
-            dtParametros.Rows.Add("@CapacidadPasajeros", "2", txtPasaj.Text.Trim());
-            dtParametros.Rows.Add("@CapacidadPeso", "4", TxtPeso.Text.Trim());
-            dtParametros.Rows.Add("@IdEstado", "3", txtEstado.Text.Trim());
-            sNomSP = "dbo.SP_Modificar_TiposAviones";
+            dtParametros.Rows.Add("@IdTipoCliente", "2", txtID.Text.Trim());
+            dtParametros.Rows.Add("@TipoCliente", "1", txtTipo.Text.Trim());
+            dtParametros.Rows.Add("@Descripcion", "1", txtDesc.Text.Trim());
+            dtParametros.Rows.Add("@IdEstado", "5", txtEstado.Text.Trim());
+            sNomSP = "dbo.SP_Modificar_TiposClientes";
 
             Obj_WCF_BD.Ins_Mod_Eli_Datos(sNomSP, false, dtParametros, ref sError);
 
             txtFiltro.Text = string.Empty;
 
             txtID.Text = string.Empty;
-            txtNombre.Text = string.Empty;
+            txtTipo.Text = string.Empty;
             txtDesc.Text = string.Empty;
-            txtPasaj.Text = string.Empty;
-            TxtPeso.Text = string.Empty;
             txtEstado.Text = string.Empty;
 
             CargarDatos();
-
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "msgAlerta", "alert('El Tipo de Avion ha sido modificado');", true);
-
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
             CargarDatos();
             txtID.Text = string.Empty;
-            txtNombre.Text = string.Empty;
+            txtTipo.Text = string.Empty;
             txtDesc.Text = string.Empty;
-            txtPasaj.Text = string.Empty;
-            TxtPeso.Text = string.Empty;
             txtEstado.Text = string.Empty;
         }
 
@@ -137,8 +119,8 @@ namespace Web_Consumo
             string sError = string.Empty;
 
             dtParametros = Obj_WCF_BD.CrearDTParametros();
-            dtParametros.Rows.Add("@IdtipoAvion", "1", txtFiltro.Text.Trim());
-            sNombSP = "dbo.SP_Borrar_TiposAviones";
+            dtParametros.Rows.Add("@IdTipoCliente", "1", txtFiltro.Text.Trim());
+            sNombSP = "dbo.SP_Borrar_TiposClientes";
 
             Obj_WCF_BD.Ins_Mod_Eli_Datos(sNombSP, false, dtParametros, ref sError);
 
@@ -146,16 +128,11 @@ namespace Web_Consumo
             CargarDatos();
 
             txtID.Text = string.Empty;
-            txtNombre.Text = string.Empty;
+            txtTipo.Text = string.Empty;
             txtDesc.Text = string.Empty;
-            txtPasaj.Text = string.Empty;
-            TxtPeso.Text = string.Empty;
             txtEstado.Text = string.Empty;
-
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "msgAlerta", "alert('El Tipo de Avion se eliminó e forma correcta');", true);
-
         }
-
+        
         protected void btnCargar_Click(object sender, EventArgs e)
         {
             #region Variables locales
@@ -169,40 +146,35 @@ namespace Web_Consumo
             if (txtFiltro.Text == string.Empty)
             {
                 dtParametros = null;
-                sNomSP = "dbo.SP_Listar_TiposAviones";
+                sNomSP = "dbo.SP_Listar_TiposClientes";
             }
             else
             {
                 dtParametros = Obj_WCF_BD.CrearDTParametros();
                 dtParametros.Rows.Add("@filtro", "1", txtFiltro.Text.Trim());
-                sNomSP = "dbo.SP_Filtrar_TiposAviones";
+                sNomSP = "dbo.SP_Filtrar_TiposClientes";
             }
 
             dtTabla = Obj_WCF_BD.ListarFiltrarDatos(sNomSP, dtParametros, ref sError);
 
-            dgvTiposAviones.DataSource = null;
-            dgvTiposAviones.DataSource = dtTabla;
-            dgvTiposAviones.DataBind();
+            dgvTiposClientes.DataSource = null;
+            dgvTiposClientes.DataSource = dtTabla;
+            dgvTiposClientes.DataBind();
 
             if (txtFiltro.Text != string.Empty)
             {
                 txtID.Text = dtTabla.Rows[0].ItemArray[0].ToString();
-                txtNombre.Text = dtTabla.Rows[0].ItemArray[1].ToString();
+                txtTipo.Text = dtTabla.Rows[0].ItemArray[1].ToString();
                 txtDesc.Text = dtTabla.Rows[0].ItemArray[2].ToString();
-                txtPasaj.Text = dtTabla.Rows[0].ItemArray[3].ToString();
-                TxtPeso.Text = dtTabla.Rows[0].ItemArray[4].ToString();
-                txtEstado.Text = dtTabla.Rows[0].ItemArray[5].ToString();
+                txtEstado.Text = dtTabla.Rows[0].ItemArray[3].ToString();
             }
             else
             {
                 txtID.Text = string.Empty;
-                txtNombre.Text = string.Empty;
+                txtTipo.Text = string.Empty;
                 txtDesc.Text = string.Empty;
-                txtPasaj.Text = string.Empty;
-                TxtPeso.Text = string.Empty;
                 txtEstado.Text = string.Empty;
             }
-
         }
     }
 }

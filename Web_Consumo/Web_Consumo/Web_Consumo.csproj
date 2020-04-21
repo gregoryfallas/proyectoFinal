@@ -170,6 +170,7 @@
     <Content Include="css\jquery-ui.css" />
     <Content Include="css\login.css" />
     <Content Include="css\magnific-popup.css" />
+    <Content Include="css\MyStyles.css" />
     <Content Include="css\nice-select.css" />
     <Content Include="css\owl.carousel.min.css" />
     <Content Include="css\slick.css" />
@@ -362,8 +363,10 @@
     <Content Include="readme.txt" />
     <Content Include="single-blog.html" />
     <Content Include="tbl_Destinos.aspx" />
+    <Content Include="TiposAviones-Eliminar.aspx" />
     <Content Include="TiposAviones.aspx" />
-    <Content Include="TiposCliente.aspx" />
+    <Content Include="TiposCliente-Eliminar.aspx" />
+    <Content Include="TiposClientes-Eliminar.aspx" />
     <Content Include="TiposClientes.aspx" />
     <Content Include="TiposEmpleados.aspx" />
     <Content Include="travel doc\css\font-awesome.min.css" />
@@ -551,6 +554,13 @@
     <Compile Include="tbl_Destinos.aspx.designer.cs">
       <DependentUpon>tbl_Destinos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TiposAviones-Eliminar.aspx.cs">
+      <DependentUpon>TiposAviones-Eliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TiposAviones-Eliminar.aspx.designer.cs">
+      <DependentUpon>TiposAviones-Eliminar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TiposAviones.aspx.cs">
       <DependentUpon>TiposAviones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -558,12 +568,19 @@
     <Compile Include="TiposAviones.aspx.designer.cs">
       <DependentUpon>TiposAviones.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TiposCliente.aspx.cs">
-      <DependentUpon>TiposCliente.aspx</DependentUpon>
+    <Compile Include="TiposCliente-Eliminar.aspx.cs">
+      <DependentUpon>TiposCliente-Eliminar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TiposCliente.aspx.designer.cs">
-      <DependentUpon>TiposCliente.aspx</DependentUpon>
+    <Compile Include="TiposCliente-Eliminar.aspx.designer.cs">
+      <DependentUpon>TiposCliente-Eliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TiposClientes-Eliminar.aspx.cs">
+      <DependentUpon>TiposClientes-Eliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TiposClientes-Eliminar.aspx.designer.cs">
+      <DependentUpon>TiposClientes-Eliminar.aspx</DependentUpon>
     </Compile>
     <Compile Include="TiposClientes.aspx.cs">
       <DependentUpon>TiposClientes.aspx</DependentUpon>

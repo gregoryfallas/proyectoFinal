@@ -38,13 +38,13 @@ C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.
 C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.dll
 C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.pdb
-C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\Web_Consumo\BLL\bin\Debug\BLL.dll.config
-C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\Web_Consumo\BLL\bin\Debug\BLL.dll
-C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\Web_Consumo\BLL\bin\Debug\BLL.pdb
-C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\Web_Consumo\BLL\bin\Debug\ClassLibrary2.dll
-C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\Web_Consumo\BLL\bin\Debug\ClassLibrary2.pdb
-C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
-C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
-C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.csproj.CopyComplete
-C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.dll
-C:\Users\vf_jd\Desktop\UNIVERSIDAD\PrograIV\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.pdb
+C:\Users\Juan K\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\bin\Debug\BLL.dll.config
+C:\Users\Juan K\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\bin\Debug\BLL.dll
+C:\Users\Juan K\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\bin\Debug\BLL.pdb
+C:\Users\Juan K\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\bin\Debug\ClassLibrary2.dll
+C:\Users\Juan K\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\bin\Debug\ClassLibrary2.pdb
+C:\Users\Juan K\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Juan K\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Juan K\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Juan K\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.dll
+C:\Users\Juan K\Source\Repos\gregoryfallas\proyectoFinal\Web_Consumo\BLL\obj\Debug\BLL.pdb
