@@ -22,7 +22,7 @@ namespace Web_Consumo
         {
             ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"].Value != null)
             {
                 string sId = inp_Idcliente.Value.ToString();
                 string sCed = inp_Cedula.Value.ToString();
@@ -75,11 +75,9 @@ namespace Web_Consumo
 
         protected void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
-
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"].Value != null)
             {
-                if (obj_Usuario.iTipoUsuario == 8)
+                if (Request.Cookies["Cookie"].Value == "8")
                 {
                     string sId = inp_Idcliente_ELIM.Value.ToString();
                     string sCed = inp_Cedula_ELIM.Value.ToString();
@@ -142,9 +140,7 @@ namespace Web_Consumo
 
         protected void btn_Agregar_Click(object sender, EventArgs e)
         {
-            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
-
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"].Value != null)
             {
                 string sId = inp_Idcliente_AG.Value.ToString();
                 string sCed = inp_Cedula_AG.Value.ToString();
@@ -209,7 +205,7 @@ namespace Web_Consumo
             {
                 ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-                if (obj_Usuario != null)
+                if (Request.Cookies["Cookie"].Value != null)
                 {
                     parametros = listarDatos.CrearDTParametros();
                     parametros.Rows.Add("@filtro", "1", inp_Filtrar.Value.ToString());

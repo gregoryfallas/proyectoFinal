@@ -10,7 +10,7 @@
 namespace Web_Consumo {
     
     
-    public partial class Site1 {
+    public partial class Dashboard {
         
         /// <summary>
         /// Head control.

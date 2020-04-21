@@ -19,9 +19,7 @@ namespace Web_Consumo
 
         protected void btn_Editar_Click(object sender, EventArgs e)
         {
-            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
-
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"].Value != null)
             {
                 string sIdDestino = inp_ID_Destino_ED.Value.ToString();
                 int iId_Aerolinea = Convert.ToInt16(slc_ID_Aerolinea_ED.Value.ToString());
@@ -74,12 +72,9 @@ namespace Web_Consumo
 
         protected void btn_EliminarRegist_Click(object sender, EventArgs e)
         {
-
-            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
-
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"].Value != null)
             {
-                if (obj_Usuario.iTipoUsuario == 8)
+                if (Request.Cookies["Cookie"].Value == "8")
                 {
                     string sId_Destino = inp_ID_Dest_Elim.Value.ToString();
                     string sNombreDestino = inp_Nomb_Dest_Elim.Value.ToString();
@@ -125,10 +120,7 @@ namespace Web_Consumo
 
         protected void btn_Agregar_Click(object sender, EventArgs e)
         {
-
-            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
-
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"].Value != null)
             {
                 string sId_Destino = inp_IdDestino_AG.Value.ToString();
                 int iIdAerolinea = Convert.ToUInt16(slc_ID_Aerolinea_AG.Value.ToString());
@@ -206,9 +198,7 @@ namespace Web_Consumo
 
             if (tipo == 'F')
             {
-                ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
-
-                if (obj_Usuario != null)
+                if (Request.Cookies["Cookie"].Value != null)
                 {
                     parametros = listarDatos.CrearDTParametros();
                     parametros.Rows.Add("@filtro", "1", inp_Filtrar.Value.ToString());
