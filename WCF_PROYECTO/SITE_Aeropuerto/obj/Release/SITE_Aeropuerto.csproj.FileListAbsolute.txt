@@ -1,0 +1,16 @@
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SITE_Aeropuerto\bin\SITE_Aeropuerto.dll.config
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SITE_Aeropuerto\bin\SITE_Aeropuerto.dll
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SITE_Aeropuerto\bin\SITE_Aeropuerto.pdb
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SITE_Aeropuerto\bin\SVC_Aeropuerto.dll
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SITE_Aeropuerto\bin\DAL_Aeropuerto.dll
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SITE_Aeropuerto\bin\BLL_Aeropuerto.dll
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SITE_Aeropuerto\bin\SVC_Aeropuerto.pdb
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SITE_Aeropuerto\bin\SVC_Aeropuerto.dll.config
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SITE_Aeropuerto\bin\DAL_Aeropuerto.pdb
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SITE_Aeropuerto\bin\BLL_Aeropuerto.pdb
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SITE_Aeropuerto\bin\BLL_Aeropuerto.dll.config
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SITE_Aeropuerto\obj\Release\SITE_Aeropuerto.csprojAssemblyReference.cache
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SITE_Aeropuerto\obj\Release\SITE_Aeropuerto.csproj.CoreCompileInputs.cache
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SITE_Aeropuerto\obj\Release\SITE_Aeropuerto.csproj.CopyComplete
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SITE_Aeropuerto\obj\Release\SITE_Aeropuerto.dll
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\SITE_Aeropuerto\obj\Release\SITE_Aeropuerto.pdb

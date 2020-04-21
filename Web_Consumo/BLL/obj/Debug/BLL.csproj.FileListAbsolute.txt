@@ -1,0 +1,40 @@
+C:\Users\Administrador\source\repos\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\BLL.dll.config
+C:\Users\Administrador\source\repos\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\BLL.dll
+C:\Users\Administrador\source\repos\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\BLL.pdb
+C:\Users\Administrador\source\repos\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\DAL.dll
+C:\Users\Administrador\source\repos\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\DAL.pdb
+C:\Users\Administrador\source\repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Administrador\source\repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\source\repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Administrador\source\repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.dll
+C:\Users\Administrador\source\repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.pdb
+C:\Users\MoisesCoto\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\BLL.dll.config
+C:\Users\MoisesCoto\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\BLL.dll
+C:\Users\MoisesCoto\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\BLL.pdb
+C:\Users\MoisesCoto\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\DAL.dll
+C:\Users\MoisesCoto\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\DAL.pdb
+C:\Users\MoisesCoto\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\MoisesCoto\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\MoisesCoto\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\MoisesCoto\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.dll
+C:\Users\MoisesCoto\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.pdb
+D:\PROGRA 4\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\BLL.dll.config
+D:\PROGRA 4\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\BLL.dll
+D:\PROGRA 4\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\BLL.pdb
+D:\PROGRA 4\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\ClassLibrary2.dll
+D:\PROGRA 4\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\ClassLibrary2.pdb
+D:\PROGRA 4\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+D:\PROGRA 4\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\PROGRA 4\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\PROGRA 4\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.dll
+D:\PROGRA 4\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.pdb
+C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\BLL.dll.config
+C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\BLL.dll
+C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\BLL.pdb
+C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\ClassLibrary2.dll
+C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\bin\Debug\ClassLibrary2.pdb
+C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.dll
+C:\Users\falla\Source\Repos\gregoryfallas\progra4\Web_Consumo\BLL\obj\Debug\BLL.pdb

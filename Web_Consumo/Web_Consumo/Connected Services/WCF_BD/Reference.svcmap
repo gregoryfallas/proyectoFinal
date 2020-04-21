@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="31e18b1d-5b3f-4f07-9dd8-2403b8834190" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58339/BD_Aeropuerto.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BD_Aeropuerto.xsd" MetadataType="Schema" ID="49d79e54-9e84-42ff-8179-10c7ef44dbf8" SourceId="1" SourceUrl="http://localhost:58339/BD_Aeropuerto.svc?xsd=xsd2" />
+    <MetadataFile FileName="BD.wsdl" MetadataType="Wsdl" ID="aeeefc87-25d6-4a2d-9390-4beba312746f" SourceId="1" SourceUrl="http://localhost:58339/BD_Aeropuerto.svc?wsdl" />
+    <MetadataFile FileName="BD_Aeropuerto1.xsd" MetadataType="Schema" ID="befda1b3-0149-47bb-a467-d4a5695bf86b" SourceId="1" SourceUrl="http://localhost:58339/BD_Aeropuerto.svc?xsd=xsd1" />
+    <MetadataFile FileName="BD_Aeropuerto2.xsd" MetadataType="Schema" ID="1b1a998f-9eff-4af9-b315-41c2fed2cbe6" SourceId="1" SourceUrl="http://localhost:58339/BD_Aeropuerto.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,28 @@
+G:\UAM\Progra IV\P4_Proyecto2_Aeropuerto\DAL_Aeropuerto\bin\Debug\DAL_Aeropuerto.dll
+G:\UAM\Progra IV\P4_Proyecto2_Aeropuerto\DAL_Aeropuerto\bin\Debug\DAL_Aeropuerto.pdb
+G:\UAM\Progra IV\P4_Proyecto2_Aeropuerto\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.csprojResolveAssemblyReference.cache
+G:\UAM\Progra IV\P4_Proyecto2_Aeropuerto\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.dll
+G:\UAM\Progra IV\P4_Proyecto2_Aeropuerto\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.pdb
+C:\Users\Daniel\Desktop\P4_Proyecto2_Aeropuerto_v2\DAL_Aeropuerto\bin\Debug\DAL_Aeropuerto.dll
+C:\Users\Daniel\Desktop\P4_Proyecto2_Aeropuerto_v2\DAL_Aeropuerto\bin\Debug\DAL_Aeropuerto.pdb
+C:\Users\Daniel\Desktop\P4_Proyecto2_Aeropuerto_v2\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.csprojAssemblyReference.cache
+C:\Users\Daniel\Desktop\P4_Proyecto2_Aeropuerto_v2\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Desktop\P4_Proyecto2_Aeropuerto_v2\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.dll
+C:\Users\Daniel\Desktop\P4_Proyecto2_Aeropuerto_v2\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.pdb
+C:\Users\Daniel\source\repos\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\bin\Debug\DAL_Aeropuerto.dll
+C:\Users\Daniel\source\repos\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\bin\Debug\DAL_Aeropuerto.pdb
+C:\Users\Daniel\source\repos\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.csprojAssemblyReference.cache
+C:\Users\Daniel\source\repos\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\source\repos\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.dll
+C:\Users\Daniel\source\repos\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.pdb
+D:\PROGRA 4\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\bin\Debug\DAL_Aeropuerto.dll
+D:\PROGRA 4\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\bin\Debug\DAL_Aeropuerto.pdb
+D:\PROGRA 4\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.csprojAssemblyReference.cache
+D:\PROGRA 4\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.csproj.CoreCompileInputs.cache
+D:\PROGRA 4\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.dll
+D:\PROGRA 4\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.pdb
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\bin\Debug\DAL_Aeropuerto.dll
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\bin\Debug\DAL_Aeropuerto.pdb
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.csproj.CoreCompileInputs.cache
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.dll
+C:\Users\Moises Coto\Source\Repos\gregoryfallas\progra4\WCF_PROYECTO\DAL_Aeropuerto\obj\Debug\DAL_Aeropuerto.pdb

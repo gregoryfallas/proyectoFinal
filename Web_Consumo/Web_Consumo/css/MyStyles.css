@@ -1,0 +1,35 @@
+﻿
+
+.myparr_right {
+    width: 300px;
+    Height: 25px;
+    padding-right: 10px;
+    text-align: right;
+    vertical-align: central;
+    color: black;
+}
+
+.myparr_left {
+    text-align:left;
+    vertical-align:central;
+}
+
+.mylabel {
+    width:300px;
+    padding:10px;
+    text-align:right;
+    vertical-align:central;
+    color:darkblue;
+}
+
+.myTextBox {
+    width: 1500px;
+    padding: 5px;
+}
+
+.myactionButton{
+    width:100px;
+}
+
+.myactionButton_lg {
+    width: 205px;
