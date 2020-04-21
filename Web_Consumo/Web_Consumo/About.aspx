@@ -161,34 +161,34 @@
                                     <img src="img/footer_logo.png" alt="">
                                 </a>
                             </div>
-                            <p>5th flora, 700/D kings road, green <br> lane New York-1782 <br>
-                                <a href="#">+10 367 826 2567</a> <br>
-                                <a href="#">contact@carpenter.com</a>
+                            <p>Edificio Centro Colon 8vo Piso <br> Avenida 1 y 3, Calle 38, Paseo Colon, San Jose <br>
+                                <a href="#">+506 4010 3050</a> <br>
+                                <a href="#">info@travelo.com</a>
                             </p>
-                            <div class="socail_links">
+                         <div class="socail_links">
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="http://facebook.com" target="_blank">
                                             <i class="ti-facebook"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="http://twitter.com" target="_blank">
                                             <i class="ti-twitter-alt"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="http://instagram.com" target="_blank">
                                             <i class="fa fa-instagram"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="http://pinterest.com" target="_blank">
                                             <i class="fa fa-pinterest"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="http://youtube.com" target="_blank">
                                             <i class="fa fa-youtube-play"></i>
                                         </a>
                                     </li>
@@ -203,27 +203,9 @@
                                 Company
                             </h3>
                             <ul class="links">
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#"> Gallery</a></li>
-                                <li><a href="#"> Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 col-lg-3">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Popular destination
-                            </h3>
-                            <ul class="links double_links">
-                                <li><a href="#">Indonesia</a></li>
-                                <li><a href="#">America</a></li>
-                                <li><a href="#">India</a></li>
-                                <li><a href="#">Switzerland</a></li>
-                                <li><a href="#">Italy</a></li>
-                                <li><a href="#">Canada</a></li>
-                                <li><a href="#">Franch</a></li>
-                                <li><a href="#">England</a></li>
+                                <li><a href="Index.aspx">Inicio</a></li>
+                                <li><a href="About.aspx">Acerca de nosotros</a></li>
+                                <li><a href="Login.aspx"> Login</a></li>
                             </ul>
                         </div>
                     </div>
@@ -234,35 +216,20 @@
                             </h3>
                             <div class="instagram_feed">
                                 <div class="single_insta">
-                                    <a href="#">
-                                        <img src="img/instagram/1.png" alt="">
+                                    <a href="https://www.instagram.com/p/B_PgVdXhsgo/" target="_blank">
+                                        <img src="img/instagr/ing1.png" alt="">
                                     </a>
                                 </div>
                                 <div class="single_insta">
-                                    <a href="#">
-                                        <img src="img/instagram/2.png" alt="">
+                                   <a href="https://www.instagram.com/p/B_M-yG3huGp/" target="_blank">
+                                        <img src="img/instagr/ing2.png" alt="">
                                     </a>
                                 </div>
                                 <div class="single_insta">
-                                    <a href="#">
-                                        <img src="img/instagram/3.png" alt="">
+                                    <a href="https://www.instagram.com/p/B_KWbiUBGiC/" target="_blank">
+                                        <img src="img/instagr/ing3.png" alt="">
                                     </a>
-                                </div>
-                                <div class="single_insta">
-                                    <a href="#">
-                                        <img src="img/instagram/4.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="single_insta">
-                                    <a href="#">
-                                        <img src="img/instagram/5.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="single_insta">
-                                    <a href="#">
-                                        <img src="img/instagram/6.png" alt="">
-                                    </a>
-                                </div>
+                                </div>                          
                             </div>
                         </div>
                     </div>
@@ -275,7 +242,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <p class="copy_right text-center">
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
                         </p>
                     </div>
                 </div>
