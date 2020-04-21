@@ -294,6 +294,8 @@
     <Content Include="js\scrollIt.js" />
     <Content Include="js\slick.min.js" />
     <Content Include="js\Tablas\Aviones.js" />
+    <Content Include="js\Tablas\CategoriasVuelos.js" />
+    <Content Include="js\Tablas\Clientes.js" />
     <Content Include="js\Tablas\Empleados.js" />
     <Content Include="js\Tablas\General.js" />
     <Content Include="js\Tablas\Paises.js" />
