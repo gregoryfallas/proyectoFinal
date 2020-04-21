@@ -134,6 +134,7 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\gijgo-material.svg" />
     <Content Include="fonts\themify.svg" />
+    <Content Include="Formulario web1.aspx" />
     <Content Include="img\about\1.png" />
     <Content Include="img\about\2.png" />
     <Content Include="img\actualizar.png" />
@@ -416,6 +417,13 @@
     </Compile>
     <Compile Include="Estados.aspx.designer.cs">
       <DependentUpon>Estados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario web1.aspx.cs">
+      <DependentUpon>Formulario web1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formulario web1.aspx.designer.cs">
+      <DependentUpon>Formulario web1.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
