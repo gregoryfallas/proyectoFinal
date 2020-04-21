@@ -170,12 +170,12 @@
 <script src="js/AdminPanel/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE -->
 <script src="js/AdminPanel/adminlte.js"></script>
-     <form id="form1" runat="server">
+     <!--<form id="form1" runat="server">-->
         <div>
             <asp:ContentPlaceHolder ID="Body" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-    </form>
+   <!-- </form>-->
 </body>
   
   </html>
