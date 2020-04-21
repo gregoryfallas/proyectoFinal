@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data;
+using Web_Consumo.WCF_BD;
 
 namespace Web_Consumo
 {
@@ -20,7 +16,7 @@ namespace Web_Consumo
             #region Variables locales
             DataTable dtTabla = new DataTable();
             DataTable dtParametros = new DataTable();
-            WCF.BDClient Obj_WCF_BD = new WCF.BDClient();
+            BDClient Obj_WCF_BD = new BDClient();
             string sNomSP = string.Empty;
             string sError = string.Empty;
             #endregion
@@ -50,7 +46,7 @@ namespace Web_Consumo
             #region Variables locales
             DataTable dtTabla = new DataTable();
             DataTable dtParametros = new DataTable();
-            WCF.BDClient Obj_WCF_BD = new WCF.BDClient();
+            BDClient Obj_WCF_BD = new BDClient();
             string sNomSP = string.Empty;
             string sError = string.Empty;
             #endregion
@@ -78,7 +74,7 @@ namespace Web_Consumo
             #region Variables locales
             DataTable dtTabla = new DataTable();
             DataTable dtParametros = new DataTable();
-            WCF.BDClient Obj_WCF_BD = new WCF.BDClient();
+            BDClient Obj_WCF_BD = new BDClient();
             string sNomSP = string.Empty;
             string sError = string.Empty;
             #endregion
@@ -114,7 +110,7 @@ namespace Web_Consumo
         protected void bntEliminar_Click(object sender, EventArgs e)
         {
             DataTable dtParametros = new DataTable();
-            WCF.BDClient Obj_WCF_BD = new WCF.BDClient();
+            BDClient Obj_WCF_BD = new BDClient();
             string sNombSP = string.Empty;
             string sError = string.Empty;
 
@@ -138,7 +134,7 @@ namespace Web_Consumo
             #region Variables locales
             DataTable dtTabla = new DataTable();
             DataTable dtParametros = new DataTable();
-            WCF.BDClient Obj_WCF_BD = new WCF.BDClient();
+            BDClient Obj_WCF_BD = new BDClient();
             string sNomSP = string.Empty;
             string sError = string.Empty;
             #endregion
