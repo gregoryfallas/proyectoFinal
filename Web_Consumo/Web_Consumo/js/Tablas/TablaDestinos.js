@@ -1,11 +1,11 @@
 ﻿
 $(document).ready(function () {
-    $("#inp_ID_Destino_ED").val("");
-    $("#slc_ID_Aerolinea_ED").val("0");
-    $("#inp_NombDestino_ED").val("");
-    $("#slc_ID_PaisSalida_ED").val("0");
-    $("#slc_ID_PaisLlegada_ED").val("0");
-    $("#slc_ID_Estado_ED").val("0");
+    $("#Body_inp_ID_Destino_ED").val("");
+    $("#Body_slc_ID_Aerolinea_ED").val("0");
+    $("#Body_inp_NombDestino_ED").val("");
+    $("#Body_slc_ID_PaisSalida_ED").val("0");
+    $("#Body_slc_ID_PaisLlegada_ED").val("0");
+    $("#Body_slc_ID_Estado_ED").val("0");
  
  
 
@@ -18,8 +18,8 @@ $(document).ready(function () {
 
 
     //Se extrae el texto de lo campos Eliminar en el Modal
-    $("#inp_ID_Dest_Elim").val("");
-    $("#inp_Nomb_Dest_Elim").val("");
+    $("#Body_inp_ID_Dest_Elim").val("");
+    $("#Body_inp_Nomb_Dest_Elim").val("");
 
 
 });
@@ -27,12 +27,12 @@ $(document).ready(function () {
 function EDITAR_DEST_MD(vIdDestino, vIdAerolinea, vNomDestino, vPaisSalida,
                         vPaisLlegada,vIdEstado) {
     //ASIGNO LOS VALORES A LOS INPUT
-    $("#inp_ID_Destino_ED").val(vIdDestino);
-    $("#slc_ID_Aerolinea_ED").val(vIdAerolinea);
-    $("#inp_NombDestino_ED").val(vNomDestino);
-    $("#slc_ID_PaisSalida_ED").val(vPaisSalida);
-    $("#slc_ID_PaisLlegada_ED").val(vPaisLlegada);
-    $("#slc_ID_Estado_ED").val(vIdEstado);
+    $("#Body_inp_ID_Destino_ED").val(vIdDestino);
+    $("#Body_slc_ID_Aerolinea_ED").val(vIdAerolinea);
+    $("#Body_inp_NombDestino_ED").val(vNomDestino);
+    $("#Body_slc_ID_PaisSalida_ED").val(vPaisSalida);
+    $("#Body_slc_ID_PaisLlegada_ED").val(vPaisLlegada);
+    $("#Body_slc_ID_Estado_ED").val(vIdEstado);
 
     //ABRIR EL MODAL
     $("#ModalEditar").modal();
@@ -40,8 +40,8 @@ function EDITAR_DEST_MD(vIdDestino, vIdAerolinea, vNomDestino, vPaisSalida,
 
 
 function ELIMINAR_DESTI_MD(vId_Destino, vNombDestino) {
-    $("#inp_ID_Dest_Elim").val(vId_Destino);
-    $("#inp_Nomb_Dest_Elim").val(vNombDestino);
+    $("#Body_inp_ID_Dest_Elim").val(vId_Destino);
+    $("#Body_inp_Nomb_Dest_Elim").val(vNombDestino);
     $("#ModalEliminar").modal();
 }
 

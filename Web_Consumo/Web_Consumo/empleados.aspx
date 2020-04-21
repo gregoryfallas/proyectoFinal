@@ -1,13 +1,14 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="empleados.aspx.cs" Inherits="Web_Consumo.empleados" %>
+﻿<%@ Page Title="Tabla_Empleados" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="empleados.aspx.cs" Inherits="Web_Consumo.empleados" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
 
-<html class="no-js" lang="zxx">
 
-<head>
+<header>
   <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Travelo</title>
+ 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="manifest" href="site.webmanifest"> -->
@@ -31,18 +32,18 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script type="text/javascript"
             src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.1.min.js"></script>
-</head>
+</header>
 
 
-<body>
+<div class="ContenedorPrincipal">
     <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
     <!-- header-start -->
 
-     <form id="MyForm" method="post" runat="server">
+     <div class="ContenedorSecundario">
         <!-- header-start -->
-        <header>
+     <!--   <header>
             <div class="header-area ">
                 <div id="sticky-header" class="main-header-area">
                     <div class="container-fluid">
@@ -103,7 +104,9 @@
                 </div>
             </div>
         </header>
-        <!-- header-end -->
+        <!-- header-end -->  
+         
+         -->
 
         <div class="destination_details_info">
             <div class="container">
@@ -396,7 +399,7 @@
         </div>
         <!-- link that opens popup -->
  
-    </form>
+    </div>
      <!--
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
@@ -445,6 +448,7 @@
 
 
 
-   </body>
+   </div>
 
-</html>
+
+</asp:Content>

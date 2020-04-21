@@ -76,28 +76,6 @@
     <Content Include="bin\ClassLibrary2.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="blog.html" />
-    <None Include="Connected Services\WCF\BD.wsdl" />
-    <None Include="Connected Services\WCF\BD_Aeropuerto.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\WCF\BD_Aeropuerto1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\WCF\BD_Aeropuerto2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Connected Services\WCF\Web_Consumo.WCF.Ins_Mod_Eli_DatosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\WCF\Web_Consumo.WCF.ListarFiltrarDatosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\WCF\configuration91.svcinfo" />
-    <None Include="Connected Services\WCF\configuration.svcinfo" />
-    <None Include="Connected Services\WCF\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <None Include="Connected Services\WCF_BD\configuration91.svcinfo" />
     <None Include="Connected Services\WCF_BD\configuration.svcinfo" />
     <None Include="Connected Services\WCF_BD\Reference.svcmap">
@@ -387,11 +365,6 @@
     <Compile Include="Aviones.aspx.designer.cs">
       <DependentUpon>Aviones.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\WCF\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Connected Services\WCF_BD\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -630,7 +603,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\WCF\" />
     <WCFMetadataStorage Include="Connected Services\WCF_BD\" />
   </ItemGroup>
   <PropertyGroup>
