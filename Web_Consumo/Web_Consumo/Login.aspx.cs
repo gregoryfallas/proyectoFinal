@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using DAL;
 
 namespace Web_Consumo
 {
@@ -28,23 +29,32 @@ namespace Web_Consumo
 
             #endregion
 
-            //ESTE PROCESO  REALIZA EL FILTRADO
-            dtParametros = Obj_WCF_BD.CrearDTParametros();
-            dtParametros.Rows.Add("@username", "1", txt_Username.Text.Trim());
-            dtParametros.Rows.Add("@password", "1", txt_Password.Text.Trim());
-            sNombSP = "SP_Filtrar_Login";
-
-            dt = Obj_WCF_BD.ListarFiltrarDatos(sNombSP, dtParametros, ref sMsjError);
-
-            if(dt.Rows.Count == 0)
+            if (txt_Username.Text.Trim() != string.Empty && txt_Password.Text.Trim() != string.Empty)
             {
-                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Usuario o contraseña Incorrectas');", true);
+                //ESTE PROCESO  REALIZA EL FILTRADO
+                dtParametros = Obj_WCF_BD.CrearDTParametros();
+                dtParametros.Rows.Add("@username", "1", txt_Username.Text.Trim());
+                dtParametros.Rows.Add("@password", "1", txt_Password.Text.Trim());
+                sNombSP = "SP_Filtrar_Login";
+
+                dt = Obj_WCF_BD.ListarFiltrarDatos(sNombSP, dtParametros, ref sMsjError);
+
+                if (dt.Rows.Count == 0)
+                {
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Usuario o contraseña Incorrectas');", true);
+                }
+                else
+                {
+                    ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
+                    obj_Usuario.sUserName = dt.Rows[0]["Username"].ToString();
+                    obj_Usuario.iTipoUsuario = Convert.ToInt32(dt.Rows[0]["IdTipoEmpleado"]);
+                    Response.Redirect("index.aspx");
+                }
             }
             else
             {
-                Response.Redirect("index.aspx");
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Usuario o contraseña estan vacios');", true);
             }
-           
         }
 
         protected void btn_Login_Click(object sender, EventArgs e)

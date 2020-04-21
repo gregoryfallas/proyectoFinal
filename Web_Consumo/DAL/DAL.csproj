@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Catalogo_DAL\Cls_Destinos_DAL.cs" />
     <Compile Include="Catalogo_DAL\Cls_Empleados_DAL.cs" />
+    <Compile Include="Catalogo_DAL\Cls_UsuarioLogueado_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

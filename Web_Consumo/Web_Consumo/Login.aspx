@@ -11,7 +11,7 @@
 <body>
         <div class="loginbox" runat="server">
             <img src=".\img\destination\7.png" alt="Login" class="user" />
-            <h2> Inicio de Sesion </h2>
+            <h2> INICIO DE SESSIÓN </h2><br /><br />
             <form runat="server">
                 <asp:Label Text="Usuario" CssClass="lblemail" runat="server" />
                 <asp:TextBox ID="txt_Username" runat="server" CssClass="txtemail" placeholder="Nombre de Usuario"/>

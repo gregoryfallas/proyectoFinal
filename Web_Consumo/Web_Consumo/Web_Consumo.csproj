@@ -111,6 +111,7 @@
     <Content Include="css\gijgo.css" />
     <Content Include="css\gridViewPaginacion.css" />
     <Content Include="css\jquery-ui.css" />
+    <Content Include="css\login.css" />
     <Content Include="css\magnific-popup.css" />
     <Content Include="css\nice-select.css" />
     <Content Include="css\owl.carousel.min.css" />
@@ -173,6 +174,8 @@
     <Content Include="img\destination\4.png" />
     <Content Include="img\destination\5.png" />
     <Content Include="img\destination\6.png" />
+    <Content Include="img\destination\7.png" />
+    <Content Include="img\destination\fondoLogin.jpg" />
     <Content Include="img\details-img\1.png" />
     <Content Include="img\details-img\2.png" />
     <Content Include="img\details-img\details_banner.png" />
