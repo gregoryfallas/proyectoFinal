@@ -49,63 +49,86 @@ namespace Web_Consumo
 
         protected void btnAgr_Click(object sender, EventArgs e)
         {
-            #region Variables locales
-            DataTable dtTabla = new DataTable();
-            DataTable dtParametros = new DataTable();
-            BDClient Obj_WCF_BD = new BDClient();
-            string sNomSP = string.Empty;
-            string sError = string.Empty;
-            #endregion
+            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-            dtParametros = Obj_WCF_BD.CrearDTParametros();
-            dtParametros.Rows.Add("@TipoCliente", "1", txtTipo.Text.Trim());
-            dtParametros.Rows.Add("@Descripcion", "1", txtDesc.Text.Trim());
-            dtParametros.Rows.Add("@IdEstado", "3", txtEstado.Text.Trim());
-            sNomSP = "dbo.SP_Insertar_Tiposclientes";
+            if (obj_Usuario != null)
+            {
+                #region Variables locales
+                DataTable dtTabla = new DataTable();
+                DataTable dtParametros = new DataTable();
+                BDClient Obj_WCF_BD = new BDClient();
+                string sNomSP = string.Empty;
+                string sError = string.Empty;
+                #endregion
 
-            Obj_WCF_BD.Ins_Mod_Eli_Datos(sNomSP, true, dtParametros, ref sError);
+                dtParametros = Obj_WCF_BD.CrearDTParametros();
+                dtParametros.Rows.Add("@TipoCliente", "1", txtTipo.Text.Trim());
+                dtParametros.Rows.Add("@Descripcion", "1", txtDesc.Text.Trim());
+                dtParametros.Rows.Add("@IdEstado", "3", txtEstado.Text.Trim());
+                sNomSP = "dbo.SP_Insertar_Tiposclientes";
 
-            txtFiltro.Text = string.Empty;
+                Obj_WCF_BD.Ins_Mod_Eli_Datos(sNomSP, true, dtParametros, ref sError);
 
-            txtID.Text = string.Empty;
-            txtTipo.Text = string.Empty;
-            txtDesc.Text = string.Empty;
-            txtEstado.Text = string.Empty;
+                txtFiltro.Text = string.Empty;
 
-            CargarDatos();
+                txtID.Text = string.Empty;
+                txtTipo.Text = string.Empty;
+                txtDesc.Text = string.Empty;
+                txtEstado.Text = string.Empty;
 
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "msgAlerta", "alert('El Tipo de Cliente ha sido agregado exitosamente');", true);
+                CargarDatos();
+
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "msgAlerta", "alert('El Tipo de Cliente ha sido agregado exitosamente');", true);
+        
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Sessión caducada, vuelve a iniciar sessión');", true);
+            }
+
         }
 
         protected void btnMod_Click(object sender, EventArgs e)
         {
-            #region Variables locales
-            DataTable dtTabla = new DataTable();
-            DataTable dtParametros = new DataTable();
-            BDClient Obj_WCF_BD = new BDClient();
-            string sNomSP = string.Empty;
-            string sError = string.Empty;
-            #endregion
+            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-            dtParametros = Obj_WCF_BD.CrearDTParametros();
-            dtParametros.Rows.Add("@IdTipoCliente", "2", txtID.Text.Trim());
-            dtParametros.Rows.Add("@TipoCliente", "1", txtTipo.Text.Trim());
-            dtParametros.Rows.Add("@Descripcion", "1", txtDesc.Text.Trim());
-            dtParametros.Rows.Add("@IdEstado", "3", txtEstado.Text.Trim());
-            sNomSP = "dbo.SP_Modificar_TiposClientes";
+            if (obj_Usuario != null)
+            {
+                #region Variables locales
+                DataTable dtTabla = new DataTable();
+                DataTable dtParametros = new DataTable();
+                BDClient Obj_WCF_BD = new BDClient();
+                string sNomSP = string.Empty;
+                string sError = string.Empty;
+                #endregion
 
-            Obj_WCF_BD.Ins_Mod_Eli_Datos(sNomSP, false, dtParametros, ref sError);
+                dtParametros = Obj_WCF_BD.CrearDTParametros();
+                dtParametros.Rows.Add("@IdTipoCliente", "2", txtID.Text.Trim());
+                dtParametros.Rows.Add("@TipoCliente", "1", txtTipo.Text.Trim());
+                dtParametros.Rows.Add("@Descripcion", "1", txtDesc.Text.Trim());
+                dtParametros.Rows.Add("@IdEstado", "3", txtEstado.Text.Trim());
+                sNomSP = "dbo.SP_Modificar_TiposClientes";
 
-            txtFiltro.Text = string.Empty;
+                Obj_WCF_BD.Ins_Mod_Eli_Datos(sNomSP, false, dtParametros, ref sError);
 
-            txtID.Text = string.Empty;
-            txtTipo.Text = string.Empty;
-            txtDesc.Text = string.Empty;
-            txtEstado.Text = string.Empty;
+                txtFiltro.Text = string.Empty;
 
-            CargarDatos();
+                txtID.Text = string.Empty;
+                txtTipo.Text = string.Empty;
+                txtDesc.Text = string.Empty;
+                txtEstado.Text = string.Empty;
 
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "msgAlerta", "alert('El Tipo de Cliente ha sido modificado');", true);
+                CargarDatos();
+
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "msgAlerta", "alert('El Tipo de Cliente ha sido modificado');", true);
+
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Sessión caducada, vuelve a iniciar sessión');", true);
+            }
+
+            
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
@@ -119,26 +142,45 @@ namespace Web_Consumo
 
         protected void bntEliminar_Click(object sender, EventArgs e)
         {
-            DataTable dtParametros = new DataTable();
-            BDClient Obj_WCF_BD = new BDClient();
-            string sNombSP = string.Empty;
-            string sError = string.Empty;
+            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-            dtParametros = Obj_WCF_BD.CrearDTParametros();
-            dtParametros.Rows.Add("@IdTipoCliente", "2", txtFiltro.Text.Trim());
-            sNombSP = "dbo.SP_Borrar_TiposClientes";
+            if (obj_Usuario != null)
+            {
+                if (obj_Usuario.iTipoUsuario == 8)
+                {
+                    DataTable dtParametros = new DataTable();
+                    BDClient Obj_WCF_BD = new BDClient();
+                    string sNombSP = string.Empty;
+                    string sError = string.Empty;
 
-            Obj_WCF_BD.Ins_Mod_Eli_Datos(sNombSP, false, dtParametros, ref sError);
+                    dtParametros = Obj_WCF_BD.CrearDTParametros();
+                    dtParametros.Rows.Add("@IdTipoCliente", "2", txtFiltro.Text.Trim());
+                    sNombSP = "dbo.SP_Borrar_TiposClientes";
 
-            txtFiltro.Text = string.Empty;
-            CargarDatos();
+                    Obj_WCF_BD.Ins_Mod_Eli_Datos(sNombSP, false, dtParametros, ref sError);
 
-            txtID.Text = string.Empty;
-            txtTipo.Text = string.Empty;
-            txtDesc.Text = string.Empty;
-            txtEstado.Text = string.Empty;
+                    txtFiltro.Text = string.Empty;
+                    CargarDatos();
 
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "msgAlerta", "alert('El Tipo de Cliente ha sido eliminado de forma correcta');", true);
+                    txtID.Text = string.Empty;
+                    txtTipo.Text = string.Empty;
+                    txtDesc.Text = string.Empty;
+                    txtEstado.Text = string.Empty;
+
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "msgAlerta", "alert('El Tipo de Cliente ha sido eliminado de forma correcta');", true);
+
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('El usuario logueado no tiene permisos de Administrador');", true);
+                }
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Sessión caducada, vuelve a iniciar sessión');", true);
+            }
+
+            
         }
 
         protected void btnCargar_Click(object sender, EventArgs e)

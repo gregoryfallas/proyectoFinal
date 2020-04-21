@@ -20,79 +20,108 @@ namespace Web_Consumo
 
         protected void btn_Editar_Click(object sender, EventArgs e)
         {
-            string sId = inp_Idcliente.Value.ToString();
-            string sCed = inp_Cedula.Value.ToString();
-            string sNom = inp_Nombre.Value.ToString();
-            string sApe = inp_Apellidos.Value.ToString();
-            string sTel = inp_Telefono.Value.ToString();
-            int iTip = Convert.ToInt16(slc_IdTipoCliente.Value.ToString());
-            char cEstado = Convert.ToChar(slc_Idestado.Value.ToString());
+            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-            if (sId != "" && sCed != "" && sNom != "" && sApe != "" && sTel != "" && iTip != 0 && cEstado != '0')
+            if (obj_Usuario != null)
             {
-                WCF_BD.BDClient listarDatos = new WCF_BD.BDClient();
-                String sMensajeError = "";
-                DataTable parametros = new DataTable();
-                DataTable ObjListar = new DataTable();
+                string sId = inp_Idcliente.Value.ToString();
+                string sCed = inp_Cedula.Value.ToString();
+                string sNom = inp_Nombre.Value.ToString();
+                string sApe = inp_Apellidos.Value.ToString();
+                string sTel = inp_Telefono.Value.ToString();
+                int iTip = Convert.ToInt16(slc_IdTipoCliente.Value.ToString());
+                char cEstado = Convert.ToChar(slc_Idestado.Value.ToString());
 
-                parametros = listarDatos.CrearDTParametros();
-                parametros.Rows.Add("@IdCliente", "2", sId);
-                parametros.Rows.Add("@Cedula", "1", sCed);
-                parametros.Rows.Add("@Nombre", "1", sNom);
-                parametros.Rows.Add("@Apellidos", "1", sApe);
-                parametros.Rows.Add("@Telefono", "1", sTel);
-                parametros.Rows.Add("@IdTipoCliente", "2", iTip);
-                parametros.Rows.Add("@IdEstado", "3", cEstado);
-
-                listarDatos.Ins_Mod_Eli_Datos("SP_Modificar_Clientes", false, parametros, ref sMensajeError);
-
-                if (sMensajeError != string.Empty)
+                if (sId != "" && sCed != "" && sNom != "" && sApe != "" && sTel != "" && iTip != 0 && cEstado != '0')
                 {
-                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL MODIFICAR EL ITEM [" + sCed + "], ERROR: [" + sMensajeError + "]');", true);
+                    WCF_BD.BDClient listarDatos = new WCF_BD.BDClient();
+                    String sMensajeError = "";
+                    DataTable parametros = new DataTable();
+                    DataTable ObjListar = new DataTable();
+
+                    parametros = listarDatos.CrearDTParametros();
+                    parametros.Rows.Add("@IdCliente", "2", sId);
+                    parametros.Rows.Add("@Cedula", "1", sCed);
+                    parametros.Rows.Add("@Nombre", "1", sNom);
+                    parametros.Rows.Add("@Apellidos", "1", sApe);
+                    parametros.Rows.Add("@Telefono", "1", sTel);
+                    parametros.Rows.Add("@IdTipoCliente", "2", iTip);
+                    parametros.Rows.Add("@IdEstado", "3", cEstado);
+
+                    listarDatos.Ins_Mod_Eli_Datos("SP_Modificar_Clientes", false, parametros, ref sMensajeError);
+
+                    if (sMensajeError != string.Empty)
+                    {
+                        ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL MODIFICAR EL ITEM [" + sCed + "], ERROR: [" + sMensajeError + "]');", true);
+                    }
+                    else
+                    {
+                        RecargarPagina('L');
+                        ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('SE MODIFICO CORRECTAMENTE');", true);
+                    }
                 }
                 else
                 {
-                    RecargarPagina('L');
-                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('SE MODIFICO CORRECTAMENTE');", true);
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('PARA MODIFICAR UN ITEM SE DEBEN LLENAR TODOS LOS CAMPOS');", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('PARA MODIFICAR UN ITEM SE DEBEN LLENAR TODOS LOS CAMPOS');", true);
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Sessión caducada, vuelve a iniciar sessión');", true);
             }
+
+            
         }
 
         protected void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            string sId = inp_Idcliente_ELIM.Value.ToString();
-            string sCed = inp_Cedula_ELIM.Value.ToString();
+            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-            if (sId != "" && sCed != "")
+            if (obj_Usuario != null)
             {
-                WCF_BD.BDClient listarDatos = new WCF_BD.BDClient();
-                String sMensajeError = "";
-                DataTable parametros = new DataTable();
-                DataTable ObjListar = new DataTable();
-
-                parametros = listarDatos.CrearDTParametros();
-                parametros.Rows.Add("@IdCliente", "2", sId);
-
-                listarDatos.Ins_Mod_Eli_Datos("SP_Borrar_Clientes", false, parametros, ref sMensajeError);
-
-                if (sMensajeError != string.Empty)
+                if (obj_Usuario.iTipoUsuario == 8)
                 {
-                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL ELIMINAR EL ITEM [" + sCed + "], ERROR: [" + sMensajeError + "]');", true);
+                    string sId = inp_Idcliente_ELIM.Value.ToString();
+                    string sCed = inp_Cedula_ELIM.Value.ToString();
+
+                    if (sId != "" && sCed != "")
+                    {
+                        WCF_BD.BDClient listarDatos = new WCF_BD.BDClient();
+                        String sMensajeError = "";
+                        DataTable parametros = new DataTable();
+                        DataTable ObjListar = new DataTable();
+
+                        parametros = listarDatos.CrearDTParametros();
+                        parametros.Rows.Add("@IdCliente", "2", sId);
+
+                        listarDatos.Ins_Mod_Eli_Datos("SP_Borrar_Clientes", false, parametros, ref sMensajeError);
+
+                        if (sMensajeError != string.Empty)
+                        {
+                            ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL ELIMINAR EL ITEM [" + sCed + "], ERROR: [" + sMensajeError + "]');", true);
+                        }
+                        else
+                        {
+                            RecargarPagina('L');
+                            ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('SE ELIMINO CORRECTAMENTE');", true);
+                        }
+                    }
+                    else
+                    {
+                        ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL LEER LO VALORES, FAVOR INTENTARLO NUEVAMENTE');", true);
+                    }
                 }
                 else
                 {
-                    RecargarPagina('L');
-                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('SE ELIMINO CORRECTAMENTE');", true);
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('El usuario logueado no tiene permisos de Administrador');", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL LEER LO VALORES, FAVOR INTENTARLO NUEVAMENTE');", true);
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Sessión caducada, vuelve a iniciar sessión');", true);
             }
+
+            
 
 
         }
@@ -113,47 +142,58 @@ namespace Web_Consumo
 
         protected void btn_Agregar_Click(object sender, EventArgs e)
         {
-            string sId = inp_Idcliente_AG.Value.ToString();
-            string sCed = inp_Cedula_AG.Value.ToString();
-            string sNom = inp_Nombre_AG.Value.ToString();
-            string sApe = inp_Apellidos_AG.Value.ToString();
-            string sTel = inp_Telefono_AG.Value.ToString();
-            int iTip = Convert.ToInt32(slc_IdTipoCliente_AG.Value.ToString());
-            char cEstado = Convert.ToChar(slc_Idestado_AG.Value.ToString());
+            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-            if (sId != "" && sCed != "" && sNom != "" && sApe != "" && sTel != "" && iTip != '0' && cEstado != '0')
+            if (obj_Usuario != null)
             {
-                WCF_BD.BDClient listarDatos = new WCF_BD.BDClient();
-                String sMensajeError = "";
-                DataTable parametros = new DataTable();
-                DataTable ObjListar = new DataTable();
+                string sId = inp_Idcliente_AG.Value.ToString();
+                string sCed = inp_Cedula_AG.Value.ToString();
+                string sNom = inp_Nombre_AG.Value.ToString();
+                string sApe = inp_Apellidos_AG.Value.ToString();
+                string sTel = inp_Telefono_AG.Value.ToString();
+                int iTip = Convert.ToInt32(slc_IdTipoCliente_AG.Value.ToString());
+                char cEstado = Convert.ToChar(slc_Idestado_AG.Value.ToString());
 
-                parametros = listarDatos.CrearDTParametros();
-                parametros.Rows.Add("@IdCliente", "1", sId);
-                parametros.Rows.Add("@Cedula", "1", sCed);
-                parametros.Rows.Add("@Nombre", "1", sNom);
-                parametros.Rows.Add("@Apellidos", "1", sApe);
-                parametros.Rows.Add("@Telefono", "1", sTel);
-                parametros.Rows.Add("@IdTipoCliente", "2", iTip);
-                parametros.Rows.Add("@IdEstado", "3", cEstado);
-
-                listarDatos.Ins_Mod_Eli_Datos("SP_Insertar_Clientes", true, parametros, ref sMensajeError);
-
-                if (sMensajeError == string.Empty)
+                if (sId != "" && sCed != "" && sNom != "" && sApe != "" && sTel != "" && iTip != '0' && cEstado != '0')
                 {
-                    RecargarPagina('L');
-                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL AGREGAR EL NUEVO CLIENTE, ERROR: [" + sMensajeError + "]');", true);
+                    WCF_BD.BDClient listarDatos = new WCF_BD.BDClient();
+                    String sMensajeError = "";
+                    DataTable parametros = new DataTable();
+                    DataTable ObjListar = new DataTable();
+
+                    parametros = listarDatos.CrearDTParametros();
+                    parametros.Rows.Add("@IdCliente", "1", sId);
+                    parametros.Rows.Add("@Cedula", "1", sCed);
+                    parametros.Rows.Add("@Nombre", "1", sNom);
+                    parametros.Rows.Add("@Apellidos", "1", sApe);
+                    parametros.Rows.Add("@Telefono", "1", sTel);
+                    parametros.Rows.Add("@IdTipoCliente", "2", iTip);
+                    parametros.Rows.Add("@IdEstado", "3", cEstado);
+
+                    listarDatos.Ins_Mod_Eli_Datos("SP_Insertar_Clientes", true, parametros, ref sMensajeError);
+
+                    if (sMensajeError == string.Empty)
+                    {
+                        RecargarPagina('L');
+                        ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL AGREGAR EL NUEVO CLIENTE, ERROR: [" + sMensajeError + "]');", true);
+                    }
+                    else
+                    {
+                        RecargarPagina('L');
+                        ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('SE AGREGO CORRECTAMENTE');", true);
+                    }
                 }
                 else
                 {
-                    RecargarPagina('L');
-                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('SE AGREGO CORRECTAMENTE');", true);
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('PARA AGREGAR UN NUEVO ITEM SE DEBEN LLENAR TODOS LOS CAMPOS');", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('PARA AGREGAR UN NUEVO ITEM SE DEBEN LLENAR TODOS LOS CAMPOS');", true);
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Sessión caducada, vuelve a iniciar sessión');", true);
             }
+
+            
 
         }
 
@@ -167,10 +207,20 @@ namespace Web_Consumo
 
             if (tipo == 'F')
             {
-                parametros = listarDatos.CrearDTParametros();
-                parametros.Rows.Add("@filtro", "1", inp_Filtrar.Value.ToString());
+                ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-                ObjListar = listarDatos.ListarFiltrarDatos("SP_Filtrar_Clientes", parametros, ref sMensajeError);
+                if (obj_Usuario != null)
+                {
+                    parametros = listarDatos.CrearDTParametros();
+                    parametros.Rows.Add("@filtro", "1", inp_Filtrar.Value.ToString());
+
+                    ObjListar = listarDatos.ListarFiltrarDatos("SP_Filtrar_Clientes", parametros, ref sMensajeError);
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Sessión caducada, vuelve a iniciar sessión');", true);
+                }
+                
             }
             else
             {

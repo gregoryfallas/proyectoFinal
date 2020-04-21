@@ -39,16 +39,26 @@ namespace Web_Consumo
             #endregion
 
             if (txt_filtroVuelos.Text == string.Empty)
-            {//ESTE LISTA LA INFORMACION DE LA TABLA
+            {
+                //ESTE LISTA LA INFORMACION DE LA TABLA
                 dtParametros = null;
                 sNombSP = "SP_Listar_Vuelos";
             }
             else
-            {   //ESTE PROCESO  REALIZA EL FILTRADO
-                dtParametros = Obj_WCF_BD.CrearDTParametros();
-                dtParametros.Rows.Add("@filtro", "1", txt_filtroVuelos.Text.Trim());
-                sNombSP = "SP_Filtrar_Vuelos";
+            {
+                ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
+                if (obj_Usuario != null)
+                {
+                    //ESTE PROCESO  REALIZA EL FILTRADO
+                    dtParametros = Obj_WCF_BD.CrearDTParametros();
+                    dtParametros.Rows.Add("@filtro", "1", txt_filtroVuelos.Text.Trim());
+                    sNombSP = "SP_Filtrar_Vuelos";
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Sessión caducada, vuelve a iniciar sessión');", true);
+                }
             }
 
             dt = Obj_WCF_BD.ListarFiltrarDatos(sNombSP, dtParametros, ref sMsjError);
@@ -77,128 +87,163 @@ namespace Web_Consumo
 
         protected void btn_Insertar_Click(object sender, EventArgs e)
         {
-            //
-            #region VARIABLES LOCALES
+            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-            DataTable dtParametros = new DataTable();
-            WCF_BD.BDClient Obj_WCF_BD = new WCF_BD.BDClient();
+            if (obj_Usuario != null)
+            {
+                //
+                #region VARIABLES LOCALES
 
-            string sNombSP = string.Empty;
-            string sMsjError = string.Empty;
+                DataTable dtParametros = new DataTable();
+                WCF_BD.BDClient Obj_WCF_BD = new WCF_BD.BDClient();
 
-            #endregion
+                string sNombSP = string.Empty;
+                string sMsjError = string.Empty;
 
-            dtParametros = Obj_WCF_BD.CrearDTParametros();
-            dtParametros.Rows.Add("@IdVuelo", "1", txt_ID_Vuelos.Text.Trim());
-            dtParametros.Rows.Add("@IdDestino", "1", txt_ID_Destinos.Text.Trim());
-            dtParametros.Rows.Add("@IdAerolinea", "2", txt_ID_Aerolinea.Text.Trim());
-            dtParametros.Rows.Add("@IdAvion", "1", txt_ID_Avion.Text.Trim());
-            dtParametros.Rows.Add("@FechaHoraSalida", "5", txt_FechaHoraSalida.Text.Trim());
-            dtParametros.Rows.Add("FechaHoraLlegada", "5", txt_FechaHoraLlegada.Text.Trim());
-            dtParametros.Rows.Add("@IdEstado", "3", txt_ID_Estado.Text.Trim());
-            sNombSP = "SP_Insertar_Vuelos";
+                #endregion
 
-            Obj_WCF_BD.Ins_Mod_Eli_Datos(sNombSP, false, dtParametros, ref sMsjError);
+                dtParametros = Obj_WCF_BD.CrearDTParametros();
+                dtParametros.Rows.Add("@IdVuelo", "1", txt_ID_Vuelos.Text.Trim());
+                dtParametros.Rows.Add("@IdDestino", "1", txt_ID_Destinos.Text.Trim());
+                dtParametros.Rows.Add("@IdAerolinea", "2", txt_ID_Aerolinea.Text.Trim());
+                dtParametros.Rows.Add("@IdAvion", "1", txt_ID_Avion.Text.Trim());
+                dtParametros.Rows.Add("@FechaHoraSalida", "5", txt_FechaHoraSalida.Text.Trim());
+                dtParametros.Rows.Add("FechaHoraLlegada", "5", txt_FechaHoraLlegada.Text.Trim());
+                dtParametros.Rows.Add("@IdEstado", "3", txt_ID_Estado.Text.Trim());
+                sNombSP = "SP_Insertar_Vuelos";
 
-            //ESTO MUESTRA UN ERROR EN PANTALLA AL USUARIO
-            if (sMsjError != string.Empty)
-            {   //DEFINE EL MENSAJE A MOSTRAR
-                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Se presento un error a la hora de insertar el estado.');" + sMsjError, true);
+                Obj_WCF_BD.Ins_Mod_Eli_Datos(sNombSP, false, dtParametros, ref sMsjError);
+
+                //ESTO MUESTRA UN ERROR EN PANTALLA AL USUARIO
+                if (sMsjError != string.Empty)
+                {   //DEFINE EL MENSAJE A MOSTRAR
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Se presento un error a la hora de insertar el estado.');" + sMsjError, true);
+                }
+
+                txt_filtroVuelos.Text = string.Empty;
+                txt_ID_Vuelos.Text = string.Empty;
+                txt_ID_Destinos.Text = string.Empty;
+                txt_ID_Aerolinea.Text = string.Empty;
+                txt_ID_Avion.Text = string.Empty;
+                txt_FechaHoraSalida.Text = string.Empty;
+                txt_FechaHoraLlegada.Text = string.Empty;
+                txt_ID_Estado.Text = string.Empty;
+
+                CargarDatos();
             }
-
-            txt_filtroVuelos.Text = string.Empty;
-            txt_ID_Vuelos.Text = string.Empty;
-            txt_ID_Destinos.Text = string.Empty;
-            txt_ID_Aerolinea.Text = string.Empty;
-            txt_ID_Avion.Text = string.Empty;
-            txt_FechaHoraSalida.Text = string.Empty;
-            txt_FechaHoraLlegada.Text = string.Empty;
-            txt_ID_Estado.Text = string.Empty;
-
-            CargarDatos();
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Sessión caducada, vuelve a iniciar sessión');", true);
+            }
         }
 
         protected void btn_Modificar_Click(object sender, EventArgs e)
         {
 
-            #region VARIABLES LOCALES
+            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-            DataTable dtParametros = new DataTable();
-            WCF_BD.BDClient Obj_WCF_BD = new WCF_BD.BDClient();
+            if (obj_Usuario != null)
+            {
+                #region VARIABLES LOCALES
 
-            string sNombSP = string.Empty;
-            string sMsjError = string.Empty;
+                DataTable dtParametros = new DataTable();
+                WCF_BD.BDClient Obj_WCF_BD = new WCF_BD.BDClient();
 
-            #endregion
+                string sNombSP = string.Empty;
+                string sMsjError = string.Empty;
 
-            dtParametros = Obj_WCF_BD.CrearDTParametros();
+                #endregion
 
-            dtParametros.Rows.Add("@IdVuelo", "1", txt_ID_Vuelos.Text.Trim());
-            dtParametros.Rows.Add("@IdDestino", "1", txt_ID_Destinos.Text.Trim());
-            dtParametros.Rows.Add("@IdAerolinea", "2", txt_ID_Aerolinea.Text.Trim());
-            dtParametros.Rows.Add("@IdAvion", "1", txt_ID_Avion.Text.Trim());
-            dtParametros.Rows.Add("@FechaHoraSalida", "5", txt_FechaHoraSalida.Text.Trim());
-            dtParametros.Rows.Add("FechaHoraLlegada", "5", txt_FechaHoraLlegada.Text.Trim());
-            dtParametros.Rows.Add("@IdEstado", "3", txt_ID_Estado.Text.Trim());
-            sNombSP = "SP_Modificar_Vuelos";
+                dtParametros = Obj_WCF_BD.CrearDTParametros();
 
-            Obj_WCF_BD.Ins_Mod_Eli_Datos(sNombSP, false, dtParametros, ref sMsjError);
+                dtParametros.Rows.Add("@IdVuelo", "1", txt_ID_Vuelos.Text.Trim());
+                dtParametros.Rows.Add("@IdDestino", "1", txt_ID_Destinos.Text.Trim());
+                dtParametros.Rows.Add("@IdAerolinea", "2", txt_ID_Aerolinea.Text.Trim());
+                dtParametros.Rows.Add("@IdAvion", "1", txt_ID_Avion.Text.Trim());
+                dtParametros.Rows.Add("@FechaHoraSalida", "5", txt_FechaHoraSalida.Text.Trim());
+                dtParametros.Rows.Add("FechaHoraLlegada", "5", txt_FechaHoraLlegada.Text.Trim());
+                dtParametros.Rows.Add("@IdEstado", "3", txt_ID_Estado.Text.Trim());
+                sNombSP = "SP_Modificar_Vuelos";
 
-            //ESTO MUESTRA UN ERROR EN PANTALLA AL USUARIO
-            if (sMsjError != string.Empty)
-            {   //DEFINE EL MENSAJE A MOSTRAR
-                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Se presento un error a la hora de modificar el estado.');", true);
+                Obj_WCF_BD.Ins_Mod_Eli_Datos(sNombSP, false, dtParametros, ref sMsjError);
+
+                //ESTO MUESTRA UN ERROR EN PANTALLA AL USUARIO
+                if (sMsjError != string.Empty)
+                {   //DEFINE EL MENSAJE A MOSTRAR
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Se presento un error a la hora de modificar el estado.');", true);
+                }
+
+                txt_filtroVuelos.Text = string.Empty;
+                txt_ID_Vuelos.Text = string.Empty;
+                txt_ID_Destinos.Text = string.Empty;
+                txt_ID_Aerolinea.Text = string.Empty;
+                txt_ID_Avion.Text = string.Empty;
+                txt_FechaHoraSalida.Text = string.Empty;
+                txt_FechaHoraLlegada.Text = string.Empty;
+                txt_ID_Estado.Text = string.Empty;
+
+                CargarDatos();
             }
-
-            txt_filtroVuelos.Text = string.Empty;
-            txt_ID_Vuelos.Text = string.Empty;
-            txt_ID_Destinos.Text = string.Empty;
-            txt_ID_Aerolinea.Text = string.Empty;
-            txt_ID_Avion.Text = string.Empty;
-            txt_FechaHoraSalida.Text = string.Empty;
-            txt_FechaHoraLlegada.Text = string.Empty;
-            txt_ID_Estado.Text = string.Empty;
-
-            CargarDatos();
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Sessión caducada, vuelve a iniciar sessión');", true);
+            }
         }
 
         protected void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            #region VARIABLES LOCALES
+            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-            DataTable dtParametros = new DataTable();
-            WCF_BD.BDClient Obj_WCF_BD = new WCF_BD.BDClient();
+            if (obj_Usuario != null)
+            {
+                if (obj_Usuario.iTipoUsuario == 8)
+                {
+                    #region VARIABLES LOCALES
+
+                    DataTable dtParametros = new DataTable();
+                    WCF_BD.BDClient Obj_WCF_BD = new WCF_BD.BDClient();
 
 
-            string sNombSP = string.Empty;
-            string sMsjError = string.Empty;
-            string message = string.Empty;
-            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                    string sNombSP = string.Empty;
+                    string sMsjError = string.Empty;
+                    string message = string.Empty;
+                    System.Text.StringBuilder sb = new System.Text.StringBuilder();
 
-            #endregion
-            ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Para eliminar solamente ingrese el ID del Vuelo.');", true);
-            txt_filtroVuelos.Visible = false;
-            txt_ID_Vuelos.Text = string.Empty;
-            txt_ID_Destinos.Visible = false;
-            txt_ID_Aerolinea.Visible = false;
-            txt_ID_Avion.Visible = false;
-            txt_FechaHoraSalida.Visible = false;
-            txt_FechaHoraLlegada.Visible = false;
-            txt_ID_Estado.Visible = false;
-            dtParametros = Obj_WCF_BD.CrearDTParametros();
-            dtParametros.Rows.Add("@IdVuelo", "1", txt_ID_Vuelos.Text.Trim());
-            sNombSP = "SP_Borrar_Vuelos";
+                    #endregion
 
-            Obj_WCF_BD.Ins_Mod_Eli_Datos(sNombSP, false, dtParametros, ref sMsjError);
-            //ESTO MUESTRA UN ERROR EN PANTALLA AL USUARIO
-            if (sMsjError != string.Empty)
-            {   //DEFINE EL MENSAJE A MOSTRAR
-                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Se presento un error a la hora de eliminar el estado.');", true);
-                //ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "alert", "alert('msg');", true);
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Para eliminar solamente ingrese el ID del Vuelo.');", true);
+                    txt_filtroVuelos.Visible = false;
+                    txt_ID_Vuelos.Text = string.Empty;
+                    txt_ID_Destinos.Visible = false;
+                    txt_ID_Aerolinea.Visible = false;
+                    txt_ID_Avion.Visible = false;
+                    txt_FechaHoraSalida.Visible = false;
+                    txt_FechaHoraLlegada.Visible = false;
+                    txt_ID_Estado.Visible = false;
+                    dtParametros = Obj_WCF_BD.CrearDTParametros();
+                    dtParametros.Rows.Add("@IdVuelo", "1", txt_ID_Vuelos.Text.Trim());
+                    sNombSP = "SP_Borrar_Vuelos";
+
+                    Obj_WCF_BD.Ins_Mod_Eli_Datos(sNombSP, false, dtParametros, ref sMsjError);
+                    //ESTO MUESTRA UN ERROR EN PANTALLA AL USUARIO
+                    if (sMsjError != string.Empty)
+                    {   //DEFINE EL MENSAJE A MOSTRAR
+                        ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Se presento un error a la hora de eliminar el estado.');", true);
+                        //ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "alert", "alert('msg');", true);
+                    }
+
+                    txt_ID_Vuelos.Text = string.Empty;
+                    CargarDatos();
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('El usuario logueado no tiene permisos de Administrador');", true);
+                }
             }
-
-            txt_ID_Vuelos.Text = string.Empty;
-            CargarDatos();
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Sessión caducada, vuelve a iniciar sessión');", true);
+            }
         }
 
         protected void btn_FiltrarVuelos_Click1(object sender, EventArgs e)
