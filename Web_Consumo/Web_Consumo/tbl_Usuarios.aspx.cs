@@ -270,6 +270,14 @@ namespace Web_Consumo
                         slc_IDESTAD_ED.Items.Add(new ListItem(row.ItemArray[1].ToString(), row.ItemArray[0].ToString()));
                     }
                 }
+
+                if (slc_IDESTAD_AG.Items.Count <= 1)
+                {
+                    foreach (DataRow row in ObjListar.Rows)
+                    {
+                        slc_IDESTAD_AG.Items.Add(new ListItem(row.ItemArray[1].ToString(), row.ItemArray[0].ToString()));
+                    }
+                }
             }
         }
 
