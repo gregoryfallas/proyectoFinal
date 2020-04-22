@@ -39,7 +39,7 @@
 
                         <!-- Modal Header -->
                         <div class="modal-header">
-                            <h4 class="modal-title">TIPOS EMPLEADOS</h4>
+                            <h4 class="modal-title">VUELOS</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
 
@@ -48,7 +48,7 @@
                             <div>
                                 <div class="input_field">
                                     <h4>ID VUELO</h4>
-                                    <input runat="server" id="inp_VUELO" class="form-control style_disabled" type="text" placeholder="ID TIPO EMPLEADO">
+                                <input runat="server" id="inp_IDVUELO" class="form-control" type="text">
                                 </div>
                                 <br />
                                 <div class="input_field">
@@ -71,20 +71,19 @@
                                 </div>
                                    <br />
                                 <div class="input_field">
-                                    <h4>ID ESTADO</h4>
-                                    <select runat="server" id="Select2" class="form-control" >
-                                    </select>
+                                    <h4>FECHA DE SALIDA</h4>
+                                    <input runat="server" id="inp_SALIDA" class="form-control" type="datetime-local">
+
+                                </div>
+                                   <br />
+                                <div class="input_field">
+                                    <h4>FECHA DE LLEGADA</h4>
+                                    <input runat="server" id="inp_LLEGADA" class="form-control" type="datetime-local">
                                 </div>
                                    <br />
                                 <div class="input_field">
                                     <h4>ID ESTADO</h4>
-                                    <select runat="server" id="Select3" class="form-control" >
-                                    </select>
-                                </div>
-                                   <br />
-                                <div class="input_field">
-                                    <h4>ID ESTADO</h4>
-                                    <select runat="server" id="Select4" class="form-control" >
+                                    <select runat="server" id="slc_IDESTAD" class="form-control" >
                                     </select>
                                 </div>
 
@@ -107,7 +106,7 @@
 
                         <!-- Modal Header -->
                         <div class="modal-header">
-                            <h4 class="modal-title">ELIMINAR TIPO EMPLEADO</h4>
+                            <h4 class="modal-title">ELIMINAR VUELO</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
 
@@ -115,7 +114,7 @@
                         <div class="modal-body">
                             <div>
                                 <div class="input_field">
-                                    <h4>DESEAS ELIMINAR ESTE TIPO EMPLEADO?</h4>
+                                    <h4>DESEAS ELIMINAR ESTE VUELO?</h4>
                                     <div class="row">
                                         <div class="col-3">
                                             <input runat="server" id="inp_IDTIP_ELIM" class="form-control style_disabled" type="text">
@@ -145,24 +144,54 @@
 
                         <!-- Modal Header -->
                         <div class="modal-header">
-                            <h4 class="modal-title">AGREGAR TIPO EMPLEADO</h4>
+                            <h4 class="modal-title">AGREGAR VUELO</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
 
-                        <!-- Modal body -->
+                         <!-- Modal body -->
                         <div class="modal-body">
                             <div>
                                 <div class="input_field">
-                                    <h4>DESCRIPCION</h4>
-                                    <input runat="server" id="inp_DESCRIP_AG" class="form-control" type="text" placeholder="DESCRIPCION">
+                                    <h4>ID VUELO</h4>
+                                    <input runat="server" id="inp_IDVUELO_AG" class="form-control" type="text">
                                 </div>
                                 <br />
                                 <div class="input_field">
-                                    <h4>ID ESTADO</h4>
-                                    <select runat="server" id="slc_IDESTAD_AG" class="form-control" >
-                                        <option value="0" selected disabled>SELECCIONAR</option>
+                                    <h4>ID DESTINO</h4>
+                                    <select runat="server" id="slc_IDDESTIN_AG" class="form-control" >
+                                    </select>           
+
+                                </div>
+                                <br />
+                                <div class="input_field">
+                                    <h4>ID AEROLINEA</h4>
+                                    <select runat="server" id="slc_IDAEROL_AG" class="form-control" >
                                     </select>
                                 </div>
+                                   <br />
+                                <div class="input_field">
+                                    <h4>ID AVION</h4>
+                                    <select runat="server" id="slc_IDAVION_AG" class="form-control" >
+                                    </select>
+                                </div>
+                                   <br />
+                                    <div class="input_field">
+                                    <h4>FECHA DE SALIDA</h4>
+                                    <input runat="server" id="inp_SALIDA_AG" class="form-control" type="datetime-local">
+
+                                </div>
+                                   <br />
+                                <div class="input_field">
+                                    <h4>FECHA DE LLEGADA</h4>
+                                    <input runat="server" id="inp_LLEGADA_AG" class="form-control" type="datetime-local">
+                                </div>
+                                   <br />
+                                <div class="input_field">
+                                    <h4>ID ESTADO</h4>
+                                    <select runat="server" id="slc_IDESTAD_AG" class="form-control" >
+                                    </select>
+                                </div>
+
                             </div>
                         </div>
 

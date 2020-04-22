@@ -42,13 +42,13 @@ namespace Web_Consumo
         protected global::System.Web.UI.WebControls.Label labelTable;
 
         /// <summary>
-        /// inp_VUELO control.
+        /// inp_IDVUELO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText inp_VUELO;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText inp_IDVUELO;
 
         /// <summary>
         /// slc_IDDESTIN control.
@@ -78,31 +78,31 @@ namespace Web_Consumo
         protected global::System.Web.UI.HtmlControls.HtmlSelect slc_IDAVION;
 
         /// <summary>
-        /// Select2 control.
+        /// inp_SALIDA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect Select2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl inp_SALIDA;
 
         /// <summary>
-        /// Select3 control.
+        /// inp_LLEGADA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect Select3;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl inp_LLEGADA;
 
         /// <summary>
-        /// Select4 control.
+        /// slc_IDESTAD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect Select4;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect slc_IDESTAD;
 
         /// <summary>
         /// btn_Editar control.
@@ -141,13 +141,58 @@ namespace Web_Consumo
         protected global::System.Web.UI.WebControls.Button btn_EliminarRegist;
 
         /// <summary>
-        /// inp_DESCRIP_AG control.
+        /// inp_IDVUELO_AG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText inp_DESCRIP_AG;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText inp_IDVUELO_AG;
+
+        /// <summary>
+        /// slc_IDDESTIN_AG control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect slc_IDDESTIN_AG;
+
+        /// <summary>
+        /// slc_IDAEROL_AG control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect slc_IDAEROL_AG;
+
+        /// <summary>
+        /// slc_IDAVION_AG control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect slc_IDAVION_AG;
+
+        /// <summary>
+        /// inp_SALIDA_AG control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl inp_SALIDA_AG;
+
+        /// <summary>
+        /// inp_LLEGADA_AG control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl inp_LLEGADA_AG;
 
         /// <summary>
         /// slc_IDESTAD_AG control.

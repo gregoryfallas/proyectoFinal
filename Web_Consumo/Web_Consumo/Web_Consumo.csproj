@@ -307,7 +307,6 @@
     <Content Include="js\wow.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="main.html" />
-    <Content Include="MP_Vuelos.aspx" />
     <Content Include="Paises.aspx" />
     <Content Include="readme.txt" />
     <Content Include="single-blog.html" />
@@ -435,13 +434,6 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MP_Vuelos.aspx.cs">
-      <DependentUpon>MP_Vuelos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MP_Vuelos.aspx.designer.cs">
-      <DependentUpon>MP_Vuelos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paises.aspx.cs">
       <DependentUpon>Paises.aspx</DependentUpon>

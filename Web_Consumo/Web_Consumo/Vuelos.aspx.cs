@@ -16,6 +16,9 @@ namespace Web_Consumo
             {
                 RecargarPagina('L');
                 LlenarSelectEstado();
+                LlenarSelectAerolinea();
+                LlenarSelectAvion();
+                LlenarSelectDestino();
             }
 
             protected void btn_Editar_Click(object sender, EventArgs e)
@@ -24,11 +27,16 @@ namespace Web_Consumo
 
                 if (obj_Usuario != null)
                 {
-                    string sId = inp_VUELO.Value.ToString();
-                    string sDesc = slc_IDDESTIN.Value.ToString();
-                    char cEstado = Convert.ToChar(slc_IDAEROL.Value.ToString());
+                    string sIdVuelo = inp_IDVUELO.Value.ToString();
+                    string sIdDestin = slc_IDDESTIN.Value.ToString();
+                    int iIdAerol = Convert.ToInt32(slc_IDAEROL.Value.ToString());
+                    string sIdAvion = slc_IDAVION.Value.ToString();
+                    DateTime dSalida = Convert.ToDateTime(inp_SALIDA.ToString());
+                    DateTime dLlegada = Convert.ToDateTime(inp_LLEGADA.Value.ToString());
+                    char cEstado = Convert.ToChar(slc_IDESTAD.Value.ToString());
 
-                    if (sId != "" && sDesc != "" && cEstado != '0')
+                if (sIdVuelo != "" && sIdDestin != "" && iIdAerol != '0' && sIdAvion != "" &&
+                    dSalida != null && dLlegada != null && cEstado != '0')
                     {
 
                         BDClient listarDatos = new BDClient();
@@ -37,15 +45,19 @@ namespace Web_Consumo
                         DataTable ObjListar = new DataTable();
 
                         parametros = listarDatos.CrearDTParametros();
-                        parametros.Rows.Add("@IdTipoEmpleado", "2", sId);
-                        parametros.Rows.Add("@DescTipo", "1", sDesc);
+                        parametros.Rows.Add("@IdVuelo", "1", sIdVuelo);
+                        parametros.Rows.Add("@IdDestino", "1", sIdDestin);
+                        parametros.Rows.Add("@IdAerolinea", "2", iIdAerol);
+                        parametros.Rows.Add("@IdAvion", "1", sIdAvion);
+                        parametros.Rows.Add("@FechaHoraSalida", "5", dSalida);
+                        parametros.Rows.Add("@FechaHoraLlegada", "5", dLlegada);
                         parametros.Rows.Add("@IdEstado", "3", cEstado);
 
-                        listarDatos.Ins_Mod_Eli_Datos("SP_Modificar_Vuelos", false, parametros, ref sMensajeError);
+                    listarDatos.Ins_Mod_Eli_Datos("SP_Modificar_Vuelos", false, parametros, ref sMensajeError);
 
                         if (sMensajeError != string.Empty)
                         {
-                            ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL MODIFICAR EL ITEM [" + sDesc + "], ERROR: [" + sMensajeError + "]');", true);
+                            ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL MODIFICAR EL ITEM [" + sIdVuelo + "], ERROR: [" + sMensajeError + "]');", true);
                         }
                         else
                         {
@@ -74,10 +86,9 @@ namespace Web_Consumo
                 {
                     if (obj_Usuario.iTipoUsuario == 8)
                     {
-                        string idTipoEmp = inp_IDTIP_ELIM.Value.ToString();
-                        string sDesc = inp_DESCR_ELIM.Value.ToString();
+                        string sIdVuelo = inp_IDTIP_ELIM.Value.ToString();
 
-                        if (idTipoEmp != "" && sDesc != "")
+                        if (sIdVuelo != "")
                         {
 
                             BDClient listarDatos = new BDClient();
@@ -86,13 +97,13 @@ namespace Web_Consumo
                             DataTable ObjListar = new DataTable();
 
                             parametros = listarDatos.CrearDTParametros();
-                            parametros.Rows.Add("@IdTipoEmpleado", "2", idTipoEmp);
+                            parametros.Rows.Add("@IdVuelo", "1", sIdVuelo);
 
                             listarDatos.Ins_Mod_Eli_Datos("SP_Borrar_Vuelos", false, parametros, ref sMensajeError);
 
                             if (sMensajeError != string.Empty)
                             {
-                                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL ELIMINAR EL ITEM [" + sDesc + "], ERROR: [" + sMensajeError + "]');", true);
+                                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL ELIMINAR EL ITEM [" + sIdVuelo + "], ERROR: [" + sMensajeError + "]');", true);
                             }
                             else
                             {
@@ -140,21 +151,33 @@ namespace Web_Consumo
 
                 if (obj_Usuario != null)
                 {
-                    string sDesc = inp_DESCRIP_AG.Value.ToString();
+                    string sIdVuelo = inp_IDVUELO_AG.Value.ToString();
+                    string sIdDestin = slc_IDDESTIN_AG.Value.ToString();
+                    int iIdAerol = Convert.ToInt32(slc_IDAEROL_AG.Value.ToString());
+                    string sIdAvion = slc_IDAVION_AG.Value.ToString();
+                    DateTime dSalida = Convert.ToDateTime(inp_SALIDA_AG.Value.ToString());
+                    DateTime dLlegada = Convert.ToDateTime(inp_LLEGADA_AG.Value.ToString());
                     char cEstado = Convert.ToChar(slc_IDESTAD_AG.Value.ToString());
 
-                    if (sDesc != "" && cEstado != '0')
+                    if (sIdVuelo != "" && sIdDestin != "" && iIdAerol != '0' && sIdAvion != "" &&
+                        dSalida != null && dLlegada != null && cEstado != '0')
                     {
+
                         BDClient listarDatos = new BDClient();
                         String sMensajeError = "";
                         DataTable parametros = new DataTable();
                         DataTable ObjListar = new DataTable();
 
                         parametros = listarDatos.CrearDTParametros();
-                        parametros.Rows.Add("@DescTipo", "1", sDesc);
+                        parametros.Rows.Add("@IdVuelo", "1", sIdVuelo);
+                        parametros.Rows.Add("@IdDestino", "1", sIdDestin);
+                        parametros.Rows.Add("@IdAerolinea", "2", iIdAerol);
+                        parametros.Rows.Add("@IdAvion", "1", sIdAvion);
+                        parametros.Rows.Add("@FechaHoraSalida", "5", dSalida);
+                        parametros.Rows.Add("@FechaHoraLlegada", "5", dLlegada);
                         parametros.Rows.Add("@IdEstado", "3", cEstado);
 
-                        listarDatos.Ins_Mod_Eli_Datos("SP_Insertar_Vuelos", true, parametros, ref sMensajeError);
+                    listarDatos.Ins_Mod_Eli_Datos("SP_Insertar_Vuelos", false, parametros, ref sMensajeError);
 
                         if (sMensajeError != string.Empty)
                         {
@@ -265,7 +288,7 @@ namespace Web_Consumo
                 BDClient listarDatos = new BDClient();
                 String sMensajeError = "";
 
-                DataTable ObjListar = listarDatos.ListarFiltrarDatos("SP_Listar_Vuelos", null, ref sMensajeError);
+                DataTable ObjListar = listarDatos.ListarFiltrarDatos("SP_Listar_Estados", null, ref sMensajeError);
 
                 if (sMensajeError != string.Empty)
                 {
@@ -276,11 +299,77 @@ namespace Web_Consumo
                     foreach (DataRow row in ObjListar.Rows)
                     {
                         //AGREGAMOS LA LISTA DE DATOS AL SELECT, EL PRIMER PARAMETRO ES EL TEXTO Y EL SEGUNDO ES EL VALUE
-                       // slc_IDESTAD.Items.Add(new ListItem(row.ItemArray[1].ToString(), row.ItemArray[0].ToString()));
+                        slc_IDESTAD.Items.Add(new ListItem(row.ItemArray[1].ToString(), row.ItemArray[0].ToString()));
                         slc_IDESTAD_AG.Items.Add(new ListItem(row.ItemArray[1].ToString(), row.ItemArray[0].ToString()));
                     }
                 }
             }
-            #endregion
-        }
+
+            private void LlenarSelectDestino()
+            {
+                BDClient listarDatos = new BDClient();
+                String sMensajeError = "";
+
+                DataTable ObjListar = listarDatos.ListarFiltrarDatos("SP_Listar_Destinos", null, ref sMensajeError);
+
+                if (sMensajeError != string.Empty)
+                {
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL CARGAR LOS DATOS DE LOS SELECTS');", true);
+                }
+                else
+                {
+                    foreach (DataRow row in ObjListar.Rows)
+                    {
+                        //AGREGAMOS LA LISTA DE DATOS AL SELECT, EL PRIMER PARAMETRO ES EL TEXTO Y EL SEGUNDO ES EL VALUE
+                        slc_IDDESTIN.Items.Add(new ListItem(row.ItemArray[1].ToString(), row.ItemArray[0].ToString()));
+                        slc_IDDESTIN_AG.Items.Add(new ListItem(row.ItemArray[1].ToString(), row.ItemArray[0].ToString()));
+                    }
+                }
+            }
+
+            private void LlenarSelectAerolinea()
+            {
+                BDClient listarDatos = new BDClient();
+                String sMensajeError = "";
+
+                DataTable ObjListar = listarDatos.ListarFiltrarDatos("SP_Listar_Aerolineas", null, ref sMensajeError);
+
+                if (sMensajeError != string.Empty)
+                {
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL CARGAR LOS DATOS DE LOS SELECTS');", true);
+                }
+                else
+                {
+                    foreach (DataRow row in ObjListar.Rows)
+                    {
+                        //AGREGAMOS LA LISTA DE DATOS AL SELECT, EL PRIMER PARAMETRO ES EL TEXTO Y EL SEGUNDO ES EL VALUE
+                        slc_IDAEROL.Items.Add(new ListItem(row.ItemArray[1].ToString(), row.ItemArray[0].ToString()));
+                        slc_IDAEROL_AG.Items.Add(new ListItem(row.ItemArray[1].ToString(), row.ItemArray[0].ToString()));
+                    }
+                }
+            }
+
+            private void LlenarSelectAvion()
+            {
+                BDClient listarDatos = new BDClient();
+                String sMensajeError = "";
+
+                DataTable ObjListar = listarDatos.ListarFiltrarDatos("SP_Listar_Aviones", null, ref sMensajeError);
+
+                if (sMensajeError != string.Empty)
+                {
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL CARGAR LOS DATOS DE LOS SELECTS');", true);
+                }
+                else
+                {
+                    foreach (DataRow row in ObjListar.Rows)
+                    {
+                        //AGREGAMOS LA LISTA DE DATOS AL SELECT, EL PRIMER PARAMETRO ES EL TEXTO Y EL SEGUNDO ES EL VALUE
+                        slc_IDAVION.Items.Add(new ListItem(row.ItemArray[1].ToString(), row.ItemArray[0].ToString()));
+                        slc_IDAVION_AG.Items.Add(new ListItem(row.ItemArray[1].ToString(), row.ItemArray[0].ToString()));
+                    }
+                }
+            }
+        #endregion
+    }
     }
