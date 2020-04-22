@@ -13,7 +13,10 @@ namespace Web_Consumo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Request.Cookies["Cookie"].Value != null)
+            {
+                Response.Redirect("tbl_Usuarios.aspx");
+            }
         }
 
         private void CargarDatos()
@@ -46,7 +49,7 @@ namespace Web_Consumo
                 else
                 {
                     HttpCookie cook = new HttpCookie("Cookie");
-                    cook.Expires = DateTime.Now.AddHours(1);
+                    cook.Expires = DateTime.Now.AddMinutes(45);
                     cook.Domain = "localhost";
                     cook.Value = dt.Rows[0]["IdTipoEmpleado"].ToString();
                     Response.Cookies.Add(cook);

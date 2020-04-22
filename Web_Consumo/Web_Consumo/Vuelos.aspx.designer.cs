@@ -7,243 +7,209 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Web_Consumo {
-    
-    
-    public partial class MP_Vuelos {
-        
+namespace Web_Consumo
+{
+
+
+    public partial class Vuelos
+    {
+
         /// <summary>
-        /// form1 control.
+        /// inp_Filtrar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlInputText inp_Filtrar;
+
         /// <summary>
-        /// lbl_filtar_Vuelos control.
+        /// btn_Filtrar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_filtar_Vuelos;
-        
+        protected global::System.Web.UI.WebControls.Button btn_Filtrar;
+
         /// <summary>
-        /// txt_filtroVuelos control.
+        /// labelTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_filtroVuelos;
-        
+        protected global::System.Web.UI.WebControls.Label labelTable;
+
         /// <summary>
-        /// btn_FiltrarVuelos control.
+        /// inp_IDVUELO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_FiltrarVuelos;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlInputText inp_IDVUELO;
+
         /// <summary>
-        /// lb_ID_Vuelos control.
+        /// slc_IDDESTIN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_ID_Vuelos;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlSelect slc_IDDESTIN;
+
         /// <summary>
-        /// txt_ID_Vuelos control.
+        /// slc_IDAEROL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_ID_Vuelos;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlSelect slc_IDAEROL;
+
         /// <summary>
-        /// lb_ID_Destinos control.
+        /// slc_IDAVION control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_ID_Destinos;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlSelect slc_IDAVION;
+
         /// <summary>
-        /// txt_ID_Destinos control.
+        /// inp_SALIDA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_ID_Destinos;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl inp_SALIDA;
+
         /// <summary>
-        /// lb_ID_Aerolinea control.
+        /// inp_LLEGADA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_ID_Aerolinea;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl inp_LLEGADA;
+
         /// <summary>
-        /// txt_ID_Aerolinea control.
+        /// slc_IDESTAD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_ID_Aerolinea;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlSelect slc_IDESTAD;
+
         /// <summary>
-        /// lb_ID_Avion control.
+        /// btn_Editar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_ID_Avion;
-        
+        protected global::System.Web.UI.WebControls.Button btn_Editar;
+
         /// <summary>
-        /// txt_ID_Avion control.
+        /// inp_IDTIP_ELIM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_ID_Avion;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlInputText inp_IDTIP_ELIM;
+
         /// <summary>
-        /// Calendar1 control.
+        /// inp_DESCR_ELIM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar1;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlInputText inp_DESCR_ELIM;
+
         /// <summary>
-        /// lb_FechaHoraSalida control.
+        /// btn_EliminarRegist control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_FechaHoraSalida;
-        
+        protected global::System.Web.UI.WebControls.Button btn_EliminarRegist;
+
         /// <summary>
-        /// txt_FechaHoraSalida control.
+        /// inp_IDVUELO_AG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_FechaHoraSalida;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlInputText inp_IDVUELO_AG;
+
         /// <summary>
-        /// ImageButton1 control.
+        /// slc_IDDESTIN_AG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlSelect slc_IDDESTIN_AG;
+
         /// <summary>
-        /// Calendar2 control.
+        /// slc_IDAEROL_AG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar2;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlSelect slc_IDAEROL_AG;
+
         /// <summary>
-        /// lb_FechaHoraLlegada control.
+        /// slc_IDAVION_AG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_FechaHoraLlegada;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlSelect slc_IDAVION_AG;
+
         /// <summary>
-        /// txt_FechaHoraLlegada control.
+        /// inp_SALIDA_AG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_FechaHoraLlegada;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl inp_SALIDA_AG;
+
         /// <summary>
-        /// ImageButton2 control.
+        /// inp_LLEGADA_AG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton2;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl inp_LLEGADA_AG;
+
         /// <summary>
-        /// lb_ID_Estado control.
+        /// slc_IDESTAD_AG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_ID_Estado;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlSelect slc_IDESTAD_AG;
+
         /// <summary>
-        /// txt_ID_Estado control.
+        /// btn_Agregar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_ID_Estado;
-        
-        /// <summary>
-        /// btn_Insertar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Insertar;
-        
-        /// <summary>
-        /// btn_Modificar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Modificar;
-        
-        /// <summary>
-        /// btn_Eliminar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Eliminar;
-        
-        /// <summary>
-        /// DGV_DATOSV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView DGV_DATOSV;
+        protected global::System.Web.UI.WebControls.Button btn_Agregar;
     }
 }
