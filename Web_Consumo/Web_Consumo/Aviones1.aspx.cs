@@ -163,7 +163,7 @@ namespace Web_Consumo
                     parametros.Rows.Add("@IdTipoAvion", "1", iIdTpAvion);
                     parametros.Rows.Add("@IdEstado", "3", cEstado);
 
-                    listarDatos.Ins_Mod_Eli_Datos("SP_Insertar_Aviones", true, parametros, ref sMensajeError);
+                    listarDatos.Ins_Mod_Eli_Datos("SP_Insertar_Aviones", false, parametros, ref sMensajeError);
 
                     if (sMensajeError != string.Empty)
                     {
