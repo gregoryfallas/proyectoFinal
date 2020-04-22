@@ -137,16 +137,19 @@
                                 </div>
                                 <br />
                                 <div class="input_field">
+                                    <br />
                                     <h4>ID_TIPO_EMPLEADO</h4>
                                     <select runat="server" id="slc_ID_Tipo_Empleado_ED" class="form-control" > </select>
                                 </div>
                                 <br />
                                 <div class="input_field">
+                                    <br />
                                     <h4>ID_AEROLINEA</h4>
                                     <select runat="server" id="slc_ID_Aerolinea_ED" class="form-control" > </select>
                                 </div>
                                 <br />
                                 <div class="input_field">
+                                    <br />
                                     <h4>ID_ESTADO</h4>
                                     <select runat="server" id="slc_ID_Estado_ED" class="form-control" > </select>
                                 </div>
@@ -268,6 +271,7 @@
                                 </div>
                                 <br />
                                 <div class="input_field">
+                                    <br />
                                     <h4>ID_TIPO_EMPLEADO</h4>
                                     <select runat="server" id="slc_IdTipoEmpleado_AG" class="form-control" >
                                         <option value="0" selected disabled aria-autocomplete="none" >2</option>
@@ -275,6 +279,7 @@
                                 </div>
                                 <br />
                                 <div class="input_field">
+                                    <br />
                                     <h4>ID_AEROLINEA</h4>
                                     <select runat="server" id="slc_IdAerolinea_AG" class="form-control" >
                                         <option value="0" selected disabled aria-autocomplete="none" >4</option>
@@ -282,6 +287,7 @@
                                 </div>
                                 <br />
                                 <div class="input_field">
+                                    <br />
                                     <h4>ID ESTADO</h4>
                                     <select runat="server" id="slc_IdEstado_AG" class="form-control" >
                                         <option value="0" selected disabled aria-autocomplete="none" >A</option>

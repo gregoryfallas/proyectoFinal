@@ -1,5 +1,4 @@
-﻿
-$(document).ready(function () {
+﻿$(document).ready(function () {
     $("#Body_inp_IDTIPOEMP").val("");
     $("#Body_inp_DESCRIP").val("");
     $("#Body_slc_IDESTAD").val("");

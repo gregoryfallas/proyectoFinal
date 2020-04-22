@@ -200,6 +200,7 @@
                                     <select runat="server" id="slc_ID_Aerolinea_AG" class="form-control" >
                                         <option value="0" selected disabled>SELECCIONAR</option>
                                     </select>
+                                    <br />
                                 </div>
                                 <br />
                                 <div class="input_field">
@@ -211,21 +212,26 @@
                                     <h4>PAIS SALIDA</h4>
                                    <select runat="server" id="slc_ID_PaisLlegada_AG" class="form-control" >
                                         <option value="0" selected disabled>SELECCIONAR</option>
-                                    </select>                                
+                                    </select> 
+                                    <br />
                                 </div>
                                 <br />
                                 <div class="input_field">
+                                    <br />
                                     <h4>PAIS LLEGADA</h4>
                                    <select runat="server" id="slc_ID_PaisSalida_AG" class="form-control" >
                                         <option value="0" selected disabled>SELECCIONAR</option>
-                                    </select>                                  
+                                    </select>        
+                                    <br />
                                 </div>
                                 <br />
                                 <div class="input_field">
+                                    <br />
                                     <h4>ID ESTADO</h4>
                                     <select runat="server" id="slc_ID_Estado_AG" class="form-control" >
                                         <option value="0" selected disabled >SELECCIONAR</option>
                                     </select>
+                                    <br />
                                 </div>
 
                             </div>
