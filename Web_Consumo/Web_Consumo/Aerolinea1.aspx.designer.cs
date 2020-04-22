@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Web_Consumo
-{
-
-
-    public partial class Aerolinea1
-    {
-
+namespace Web_Consumo {
+    
+    
+    public partial class Aerolinea1 {
+        
         /// <summary>
         /// inp_Filtrar control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace Web_Consumo
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText inp_Filtrar;
-
+        
         /// <summary>
         /// btn_Filtrar control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace Web_Consumo
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_Filtrar;
-
+        
         /// <summary>
         /// labelTable control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace Web_Consumo
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labelTable;
-
+        
         /// <summary>
         /// inp_IDTIPOEMP control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace Web_Consumo
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText inp_IDTIPOEMP;
-
+        
         /// <summary>
         /// inp_DESCRIP control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace Web_Consumo
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText inp_DESCRIP;
-
+        
         /// <summary>
         /// slc_IDESTAD control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace Web_Consumo
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlSelect slc_IDESTAD;
-
+        
         /// <summary>
         /// btn_Editar control.
         /// </summary>
@@ -76,7 +74,7 @@ namespace Web_Consumo
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_Editar;
-
+        
         /// <summary>
         /// inp_IDTIP_ELIM control.
         /// </summary>
@@ -85,7 +83,7 @@ namespace Web_Consumo
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText inp_IDTIP_ELIM;
-
+        
         /// <summary>
         /// inp_DESCR_ELIM control.
         /// </summary>
@@ -94,7 +92,7 @@ namespace Web_Consumo
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText inp_DESCR_ELIM;
-
+        
         /// <summary>
         /// btn_EliminarRegist control.
         /// </summary>
@@ -103,7 +101,7 @@ namespace Web_Consumo
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_EliminarRegist;
-
+        
         /// <summary>
         /// inp_DESCRIP_AG control.
         /// </summary>
@@ -112,7 +110,7 @@ namespace Web_Consumo
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText inp_DESCRIP_AG;
-
+        
         /// <summary>
         /// slc_IDESTAD_AG control.
         /// </summary>
@@ -121,7 +119,7 @@ namespace Web_Consumo
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlSelect slc_IDESTAD_AG;
-
+        
         /// <summary>
         /// btn_Agregar control.
         /// </summary>
