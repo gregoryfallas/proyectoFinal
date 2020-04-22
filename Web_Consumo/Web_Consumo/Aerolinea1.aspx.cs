@@ -23,8 +23,6 @@ namespace Web_Consumo
 
             if (Request.Cookies["Cookie"].Value != null)
             {
-                if (obj_Usuario.iTipoUsuario == 8)
-                {
                     string sId = inp_IDTIPOEMP.Value.ToString();
                     string sDesc = inp_DESCRIP.Value.ToString();
                     char cEstado = Convert.ToChar(slc_IDESTAD.Value.ToString());
@@ -57,11 +55,6 @@ namespace Web_Consumo
                     {
                         ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('PARA MODIFICAR UN ITEM SE DEBEN LLENAR TODOS LOS CAMPOS');", true);
                     }
-                }
-                else
-                {
-                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('El usuario logueado no tiene permisos de Administrador');", true);
-                }
             }
             else
             {
