@@ -24,8 +24,7 @@ namespace Web_Consumo
 
         protected void btn_Editar_Click(object sender, EventArgs e)
         {
-            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"].Value != null)
             {
                 Cls_Empleados_DAL objDal = new Cls_Empleados_DAL();
 
@@ -95,11 +94,9 @@ namespace Web_Consumo
 
         protected void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
-
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"].Value != null)
             {
-                if (obj_Usuario.iTipoUsuario == 8)
+                if (Request.Cookies["Cookie"].Value == "8")
                 {
                     string sIdEmpleado = inp_ID_Empleado_Elim.Value.ToString();
                     string sNombre = inp_Nombre_Elim.Value.ToString();
@@ -150,9 +147,7 @@ namespace Web_Consumo
 
         protected void btn_Agregar_Click(object sender, EventArgs e)
         {
-            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
-
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"].Value != null)
             {
                 Cls_Empleados_DAL objDal = new Cls_Empleados_DAL();
          
@@ -252,7 +247,7 @@ namespace Web_Consumo
             {
                 ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-                if (obj_Usuario != null)
+                if (Request.Cookies["Cookie"].Value != null)
                 {
                     parametros = listarDatos.CrearDTParametros();
                     parametros.Rows.Add("@filtro", "1", inp_Filtrar.Value.ToString());

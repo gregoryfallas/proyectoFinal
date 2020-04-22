@@ -18,9 +18,7 @@ namespace Web_Consumo
 
         protected void btn_Editar_Click(object sender, EventArgs e)
         {
-            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
-
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"].Value != null)
             {
                 int idPais = Convert.ToInt32(inp_IDPAIS.Value.ToString());
                 string nomPais = inp_NOMPAIS.Value.ToString();
@@ -68,12 +66,9 @@ namespace Web_Consumo
 
         protected void btn_Eliminar_Click(object sender, EventArgs e)
         {
-
-            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
-
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"].Value != null)
             {
-                if (obj_Usuario.iTipoUsuario == 8)
+                if (Request.Cookies["Cookie"].Value == "8")
                 {
                     int idPais = Convert.ToInt32(inp_ELIMIDPAIS.Value.ToString());
 
@@ -118,10 +113,7 @@ namespace Web_Consumo
 
         protected void btn_Agregar_Click(object sender, EventArgs e)
         {
-
-            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
-
-            if (obj_Usuario != null)
+            if (Request.Cookies["Cookie"].Value != null)
             {
                 if (inp_AGNOMPAIS.Value != "" && inp_AGCODPAIS.Value != "" && inp_AGCODAREA.Value != "" && slc_IDESTAD_AG.ToString() != "0")
                 {
@@ -174,7 +166,7 @@ namespace Web_Consumo
             {
                 ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-                if (obj_Usuario != null)
+                if (Request.Cookies["Cookie"].Value != null)
                 {
                     dtParametros = listarDatos.CrearDTParametros();
                     dtParametros.Rows.Add("@filtro", "1", inp_Filtrar.Value.ToString());
