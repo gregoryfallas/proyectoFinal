@@ -13,10 +13,7 @@ namespace Web_Consumo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.Cookies["Cookie"].Value != null)
-            {
-                Response.Redirect("tbl_Usuarios.aspx");
-            }
+            
         }
 
         private void CargarDatos()
