@@ -1,0 +1,8 @@
+﻿.cerrarSession {
+    padding: .375rem .75rem;
+    border: none;
+    background-color: rgb(52,58,64);
+    color: rgb(214,216,217);
+    width: 13%;
+    transition: background-color .15s ease-in-out;
+}

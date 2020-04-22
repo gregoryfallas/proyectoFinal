@@ -29,24 +29,12 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
-   <%--<div class="bradcam_area bradcam_bg_4">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="bradcam_text text-center">
-                        <h3>Países</h3>
-                        <p>Lugares asombrosos, intentamos conectar todo el mundo</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>--%>
+
 
         <div class="destination_details_info">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-9">
-                        <%-- <h2 class="tituloH">Países</h2>--%>
                         <div class="row">                           
                             <div class="col-lg-8 col-md-8">
                                  <div class="row">
@@ -208,109 +196,6 @@
                 </div>
             </div>
         </div>
-        <%--<div class="section-top-border">
-				<h3 class="mb-30">Países con mas visitas en el 2019</h3>
-				<div class="progress-table-wrap">
-					<div class="progress-table">
-						<div class="table-head">
-							<div class="serial">#</div>
-							<div class="country">País</div>
-							<div class="visit">Visitantes</div>
-							<div class="percentage">Porcentaje</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">01</div>
-							<div class="country"> <img src="img/elements/f1.jpg" alt="flag">Canada</div>
-							<div class="visit">1045032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-1" role="progressbar" style="width: 99%"
-										aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">02</div>
-							<div class="country"> <img src="img/elements/f2.jpg" alt="flag">Estados Unidos</div>
-							<div class="visit">845032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-2" role="progressbar" style="width: 84%"
-										aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">03</div>
-							<div class="country"> <img src="img/elements/f8.jpg" alt="flag">Belgica</div>
-							<div class="visit">645032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-3" role="progressbar" style="width: 64%"
-										aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">04</div>
-							<div class="country"> <img src="img/elements/f4.jpg" alt="flag">Alemania</div>
-							<div class="visit">445032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-4" role="progressbar" style="width: 44%"
-										aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">05</div>
-							<div class="country"> <img src="img/elements/f6.jpg" alt="flag">China</div>
-							<div class="visit">345032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-7" role="progressbar" style="width: 34%"
-										aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>--%>
-                
-        <%--<footer class="footer">
-            <div class="footer_top">
-                <div class="copy-right_text">
-                    <div class="container">
-                        <div class="footer_border"></div>
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <p class="copy_right text-center">
-                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    Copyright &copy;
-                                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>--%>
-
-        <!-- Modal -->
-        <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="serch_form">
-                        <input type="text" placeholder="Search">
-                        <button type="submit">search</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- link that opens popup -->
-    </form>
     <!--
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>

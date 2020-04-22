@@ -53,7 +53,7 @@
                                 <br />
                                 <div class="input_field">
                                     <h4>PASSWORD</h4>
-                                    <input runat="server" id="inp_PASS_ED" class="form-control" type="text" placeholder="PASSWORD" maxlength="8">
+                                    <input runat="server" id="inp_PASS_ED" class="form-control" type="password" placeholder="PASSWORD" maxlength="8">
                                 </div>
                                 <br />
                                 <div class="input_field">

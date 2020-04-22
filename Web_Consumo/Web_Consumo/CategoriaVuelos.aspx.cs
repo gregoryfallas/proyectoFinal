@@ -19,71 +19,96 @@ namespace Web_Consumo
 
         protected void btn_Editar_Click(object sender, EventArgs e)
         {
-            string sId = inp_CATVUELO.Value.ToString();
-            string sDesc = inp_DESCRIP.Value.ToString();
-            char cEstado = Convert.ToChar(slc_IDESTAD.Value.ToString());
-
-            if (sId != "" && sDesc != "" && cEstado != '0')
+            if (Request.Cookies["Cookie"].Value != null)
             {
-                WCF_BD.BDClient listarDatos = new WCF_BD.BDClient();
-                String sMensajeError = "";
-                DataTable parametros = new DataTable();
-                DataTable ObjListar = new DataTable();
+                string sId = inp_CATVUELO.Value.ToString();
+                string sDesc = inp_DESCRIP.Value.ToString();
+                char cEstado = Convert.ToChar(slc_IDESTAD.Value.ToString());
 
-                parametros = listarDatos.CrearDTParametros();
-                parametros.Rows.Add("@IdCategoria", "2", sId);
-                parametros.Rows.Add("@DescCategoria", "1", sDesc);
-                parametros.Rows.Add("@IdEstado", "3", cEstado);
-
-                listarDatos.Ins_Mod_Eli_Datos("SP_Modificar_CategoriasVuelos", false, parametros, ref sMensajeError);
-
-                if (sMensajeError != string.Empty)
+                if (sId != "" && sDesc != "" && cEstado != '0')
                 {
-                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL MODIFICAR EL ITEM [" + sDesc + "], ERROR: [" + sMensajeError + "]');", true);
+                    WCF_BD.BDClient listarDatos = new WCF_BD.BDClient();
+                    String sMensajeError = "";
+                    DataTable parametros = new DataTable();
+                    DataTable ObjListar = new DataTable();
+
+                    parametros = listarDatos.CrearDTParametros();
+                    parametros.Rows.Add("@IdCategoria", "2", sId);
+                    parametros.Rows.Add("@DescCategoria", "1", sDesc);
+                    parametros.Rows.Add("@IdEstado", "3", cEstado);
+
+                    listarDatos.Ins_Mod_Eli_Datos("SP_Modificar_CategoriasVuelos", false, parametros, ref sMensajeError);
+
+                    if (sMensajeError != string.Empty)
+                    {
+                        ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL MODIFICAR EL ITEM [" + sDesc + "], ERROR: [" + sMensajeError + "]');", true);
+                    }
+                    else
+                    {
+                        RecargarPagina('L');
+                        ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('SE MODIFICO CORRECTAMENTE');", true);
+                    }
                 }
                 else
                 {
-                    RecargarPagina('L');
-                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('SE MODIFICO CORRECTAMENTE');", true);
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('PARA MODIFICAR UN ITEM SE DEBEN LLENAR TODOS LOS CAMPOS');", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('PARA MODIFICAR UN ITEM SE DEBEN LLENAR TODOS LOS CAMPOS');", true);
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Sessión caducada, vuelve a iniciar sessión');", true);
             }
+
+            
         }
 
         protected void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            string IdCat = inp_CATVUELO_ELIM.Value.ToString();
-            string sDesc = inp_DESCR_ELIM.Value.ToString();
-
-            if (IdCat != "" && sDesc != "")
+            if (Request.Cookies["Cookie"].Value != null)
             {
-                WCF_BD.BDClient listarDatos = new WCF_BD.BDClient();
-                String sMensajeError = "";
-                DataTable parametros = new DataTable();
-                DataTable ObjListar = new DataTable();
-
-                parametros = listarDatos.CrearDTParametros();
-                parametros.Rows.Add("@IdCategoria", "2", IdCat);
-
-                listarDatos.Ins_Mod_Eli_Datos("SP_Borrar_CategoriasVuelos", false, parametros, ref sMensajeError);
-
-                if (sMensajeError != string.Empty)
+                if (Request.Cookies["Cookie"].Value == "8")
                 {
-                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL ELIMINAR EL ITEM [" + sDesc + "], ERROR: [" + sMensajeError + "]');", true);
+                    string IdCat = inp_CATVUELO_ELIM.Value.ToString();
+                    string sDesc = inp_DESCR_ELIM.Value.ToString();
+
+                    if (IdCat != "" && sDesc != "")
+                    {
+                        WCF_BD.BDClient listarDatos = new WCF_BD.BDClient();
+                        String sMensajeError = "";
+                        DataTable parametros = new DataTable();
+                        DataTable ObjListar = new DataTable();
+
+                        parametros = listarDatos.CrearDTParametros();
+                        parametros.Rows.Add("@IdCategoria", "2", IdCat);
+
+                        listarDatos.Ins_Mod_Eli_Datos("SP_Borrar_CategoriasVuelos", false, parametros, ref sMensajeError);
+
+                        if (sMensajeError != string.Empty)
+                        {
+                            ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL ELIMINAR EL ITEM [" + sDesc + "], ERROR: [" + sMensajeError + "]');", true);
+                        }
+                        else
+                        {
+                            RecargarPagina('L');
+                            ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('SE ELIMINO CORRECTAMENTE');", true);
+                        }
+                    }
+                    else
+                    {
+                        ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL LEER LO VALORES, FAVOR INTENTARLO NUEVAMENTE');", true);
+                    }
                 }
                 else
                 {
-                    RecargarPagina('L');
-                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('SE ELIMINO CORRECTAMENTE');", true);
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('El usuario logueado no tiene permisos de Administrador');", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL LEER LO VALORES, FAVOR INTENTARLO NUEVAMENTE');", true);
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Sessión caducada, vuelve a iniciar sessión');", true);
             }
+
+            
 
 
         }
@@ -104,37 +129,45 @@ namespace Web_Consumo
 
         protected void btn_Agregar_Click(object sender, EventArgs e)
         {
-            string sDesc = inp_DESCRIP_AG.Value.ToString();
-            char cEstado = Convert.ToChar(slc_IDESTAD_AG.Value.ToString());
+            ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-            if (sDesc != "" && cEstado != '0')
+            if (obj_Usuario != null)
             {
-                WCF_BD.BDClient listarDatos = new WCF_BD.BDClient();
-                String sMensajeError = "";
-                DataTable parametros = new DataTable();
-                DataTable ObjListar = new DataTable();
+                string sDesc = inp_DESCRIP_AG.Value.ToString();
+                char cEstado = Convert.ToChar(slc_IDESTAD_AG.Value.ToString());
 
-                parametros = listarDatos.CrearDTParametros();
-                parametros.Rows.Add("@DescCategoria", "1", sDesc);
-                parametros.Rows.Add("@IdEstado", "3", cEstado);
-
-                listarDatos.Ins_Mod_Eli_Datos("SP_Insertar_CategoriasVuelos", true, parametros, ref sMensajeError);
-
-                if (sMensajeError != string.Empty)
+                if (sDesc != "" && cEstado != '0')
                 {
-                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL AGREGAR EL NUEVO ITEM, ERROR: [" + sMensajeError + "]');", true);
+                    WCF_BD.BDClient listarDatos = new WCF_BD.BDClient();
+                    String sMensajeError = "";
+                    DataTable parametros = new DataTable();
+                    DataTable ObjListar = new DataTable();
+
+                    parametros = listarDatos.CrearDTParametros();
+                    parametros.Rows.Add("@DescCategoria", "1", sDesc);
+                    parametros.Rows.Add("@IdEstado", "3", cEstado);
+
+                    listarDatos.Ins_Mod_Eli_Datos("SP_Insertar_CategoriasVuelos", true, parametros, ref sMensajeError);
+
+                    if (sMensajeError != string.Empty)
+                    {
+                        ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('OCURRIO UN ERROR AL AGREGAR EL NUEVO ITEM, ERROR: [" + sMensajeError + "]');", true);
+                    }
+                    else
+                    {
+                        RecargarPagina('L');
+                        ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('SE AGREGO CORRECTAMENTE');", true);
+                    }
                 }
                 else
                 {
-                    RecargarPagina('L');
-                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('SE AGREGO CORRECTAMENTE');", true);
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('PARA AGREGAR UN NUEVO ITEM SE DEBEN LLENAR TODOS LOS CAMPOS');", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('PARA AGREGAR UN NUEVO ITEM SE DEBEN LLENAR TODOS LOS CAMPOS');", true);
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Sessión caducada, vuelve a iniciar sessión');", true);
             }
-
         }
 
         #region METODOS PRIVADOS
@@ -147,10 +180,19 @@ namespace Web_Consumo
 
             if (tipo == 'F')
             {
-                parametros = listarDatos.CrearDTParametros();
-                parametros.Rows.Add("@filtro", "1", inp_Filtrar.Value.ToString());
+                ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
 
-                ObjListar = listarDatos.ListarFiltrarDatos("SP_Filtrar_CategoriasVuelos", parametros, ref sMensajeError);
+                if (Request.Cookies["Cookie"].Value != null)
+                {
+                    parametros = listarDatos.CrearDTParametros();
+                    parametros.Rows.Add("@filtro", "1", inp_Filtrar.Value.ToString());
+
+                    ObjListar = listarDatos.ListarFiltrarDatos("SP_Filtrar_CategoriasVuelos", parametros, ref sMensajeError);
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Sessión caducada, vuelve a iniciar sessión');", true);
+                }
             }
             else
             {

@@ -40,7 +40,6 @@
                             <div class="slider_text text-center">
                                 <h3>Brasil</h3>
                                 <p>El mejor o el peor día para ir a Río de Janeiro, dependiendo de cómo lo mires, es el Domingo de Pascua. En los últimos años, esta ha sido una de las atracciones turísticas que más personas ha recibido durante las festividades religiosas, pasando la enorme cantidad de 14.000 visitantes.</p>
-                                <a href="travel_destination.html" class="boxed-btn3">Ir ahora</a>
                             </div>
                         </div>
                     </div>
@@ -53,7 +52,6 @@
                             <div class="slider_text text-center">
                                 <h3>Reino Unido</h3>
                                 <p>Este conjunto de monumentos históricos de piedra data de 2000 a 3000 a.C. Es un punto de referencia icónico y uno de los símbolos y atraccciones turísticas más conocidas del Reino Unido. Desde que Stonehenge se agregó a la lista del Patrimonio Mundial de la UNESCO en 1982, los visitantes anuales se han disparado a 1.3 millones de turistas por año. ¿Te gustaría visitar este atractivo turístico? </p>
-                                <a href="travel_destination.html" class="boxed-btn3">Ir ahora</a>
                             </div>
                         </div>
                     </div>
@@ -66,7 +64,6 @@
                             <div class="slider_text text-center">
                                 <h3>Perú</h3>
                                 <p>Los turistas cada vez se interesan más por América del Sur, ya que buscan lugares menos conocidos en el mundo. Machu Picchu es uno de los iconos más reconocidos del continente y las cifras de turismo lo reflejan. </p>
-                                <a href="travel_destination.html" class="boxed-btn3">Ir ahora</a>
                             </div>
                         </div>
                     </div>
@@ -363,30 +360,30 @@
                                 <a href="#">+506 4010 3050</a> <br>
                                 <a href="#">info@travelo.com</a>
                             </p>
-                            <div class="socail_links">
+                         <div class="socail_links">
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="http://facebook.com" target="_blank">
                                             <i class="ti-facebook"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="http://twitter.com" target="_blank">
                                             <i class="ti-twitter-alt"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="http://instagram.com" target="_blank">
                                             <i class="fa fa-instagram"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="http://pinterest.com" target="_blank">
                                             <i class="fa fa-pinterest"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="http://youtube.com" target="_blank">
                                             <i class="fa fa-youtube-play"></i>
                                         </a>
                                     </li>
@@ -401,10 +398,9 @@
                                 Company
                             </h3>
                             <ul class="links">
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#"> Gallery</a></li>
-                                <li><a href="#"> Contact</a></li>
+                                <li><a href="Index.aspx">Inicio</a></li>
+                                <li><a href="About.aspx">Acerca de nosotros</a></li>
+                                <li><a href="Login.aspx"> Login</a></li>
                             </ul>
                         </div>
                     </div>
@@ -415,35 +411,20 @@
                             </h3>
                             <div class="instagram_feed">
                                 <div class="single_insta">
-                                    <a href="https://www.instagram.com/p/B_AEL8FhDGC/?utm_source=ig_web_copy_link" target="_blank">
-                                        <img src="img/instagram/1.png" alt="">
+                                    <a href="https://www.instagram.com/p/B_PgVdXhsgo/" target="_blank">
+                                        <img src="img/instagr/ing1.png" alt="">
                                     </a>
                                 </div>
                                 <div class="single_insta">
-                                    <a href="#">
-                                        <img src="img/instagram/2.png" alt="">
+                                   <a href="https://www.instagram.com/p/B_M-yG3huGp/" target="_blank">
+                                        <img src="img/instagr/ing2.png" alt="">
                                     </a>
                                 </div>
                                 <div class="single_insta">
-                                    <a href="#">
-                                        <img src="img/instagram/3.png" alt="">
+                                    <a href="https://www.instagram.com/p/B_KWbiUBGiC/" target="_blank">
+                                        <img src="img/instagr/ing3.png" alt="">
                                     </a>
-                                </div>
-                                <div class="single_insta">
-                                    <a href="#">
-                                        <img src="img/instagram/4.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="single_insta">
-                                    <a href="#">
-                                        <img src="img/instagram/5.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="single_insta">
-                                    <a href="#">
-                                        <img src="img/instagram/6.png" alt="">
-                                    </a>
-                                </div>
+                                </div>                          
                             </div>
                         </div>
                     </div>
@@ -456,27 +437,13 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <p class="copy_right text-center">
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
-
-  <!-- Modal -->
-  <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="serch_form">
-            <input type="text" placeholder="Search" >
-            <button type="submit">search</button>
-        </div>
-      </div>
-    </div>
-  </div>
-    <!-- link that opens popup -->
 <!--     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>

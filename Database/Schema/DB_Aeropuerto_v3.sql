@@ -2004,3 +2004,30 @@ BEGIN
     WHERE [Username] = @username and [Password] = @password
 END
 
+use [DB_AEROPUERTO]
+go
+
+ 
+
+insert into [dbo].[T_TiposAviones]
+values ('CM001','Comercial','Avion Comercial',50,1000,'A')
+
+ 
+
+insert into [dbo].[T_Aviones]
+values ('AV001','Allstar','Descripcion Avion',1,'CM001','A')
+
+ 
+
+insert into [dbo].[T_Paises]
+values ('Francia','506','506','A')
+
+ 
+
+insert into [dbo].[T_Destinos]
+values ('FRN',1,'Paris',1,1,'A')
+
+ 
+
+insert into [dbo].[T_Vuelos]
+values ('VL005','FRN',1,'AV001',GETDATE(),GETDATE(),'A')

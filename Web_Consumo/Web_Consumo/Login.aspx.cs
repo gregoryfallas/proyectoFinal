@@ -45,10 +45,12 @@ namespace Web_Consumo
                 }
                 else
                 {
-                    ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL obj_Usuario = new ClassLibrary2.Catalogo_DAL.Cls_UsuarioLogueado_DAL();
-                    obj_Usuario.sUserName = dt.Rows[0]["Username"].ToString();
-                    obj_Usuario.iTipoUsuario = Convert.ToInt32(dt.Rows[0]["IdTipoEmpleado"]);
-                    Response.Redirect("CategoriaVuelos.aspx");
+                    HttpCookie cook = new HttpCookie("Cookie");
+                    cook.Expires = DateTime.Now.AddMinutes(45);
+                    cook.Domain = "localhost";
+                    cook.Value = dt.Rows[0]["IdTipoEmpleado"].ToString();
+                    Response.Cookies.Add(cook);
+                    Response.Redirect("tbl_Usuarios.aspx");
                 }
             }
             else
